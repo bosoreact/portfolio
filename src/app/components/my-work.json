@@ -42,8 +42,29 @@
           ]
             }
         ],
-        "Other Tools Used": ["Visual Studio Code","PM2","Jiraboard","pipelines","scrum","React-Typescript","PM2"]
+        "Other Tools Used": ["Visual Studio Code","PM2","Jiraboard","pipelines","scrum","React-Typescript","PM2","REST API"]
     },
+    "Submix Platform":{
+  "Brief":  "My first serious commercial project, I was working on a serverless Amazon service, specifically on Lambda functions. My primary task involved creating a REST API using API Gateway. Additionally, I took on the responsibility of designing the database and providing support to the front-end developers using Vue.js. Although I'm proud of the project's success, I am unable to share the repository due to a confidentiality agreement.",
+  "Learned": [
+    {
+      "Serverless functions":"I have to admit, this task was very challenging when I first encountered it. I had to grasp the concept of serverless and event-driven compute services, even though I was already familiar with Amazon services due to using it for a cheap database service. Navigating through the serverless environment proved to be difficult initially. However, I was determined to succeed, and I delved into documentation, watched YouTube videos, followed LinkedIn Learning tutorials, and explored examples on GitHub. Through this extensive learning process, I eventually figured out how to effectively utilize this powerful tool."
+    },
+    {
+      "AWS":"I made significant progress in understanding how to navigate and utilize Amazon Web Services (AWS). I learned how to efficiently manage and edit various cloud services offered by AWS, which has expanded my capabilities and confidence in working with cloud-based infrastructures."
+    },
+    {
+      "Linear Kanban board": "I learned about another agile project management tool called the Linear Kanban board. Exploring different tools like this allows me to see the various alternatives available and gain insights into what different development teams use for managing their projects effectively."
+    },
+    {
+      "ESLint":"During this project, I worked with ESLint, which proved to be a highly effective tool for analyzing and checking my JavaScript code. ESLint's capabilities for code linting and ensuring code quality were invaluable in maintaining a clean and consistent codebase throughout the development process."
+    },
+    {
+      "Vuex": "I learned how to use Vuex, the state management library for Vue.js, and found it to be extremely useful. I realized that in some projects, Vuex could be considered essential, as it simplifies the management of state and data throughout the application. Additionally, I understood that Vuex serves as a powerful alternative to React's Redux for managing state in Vue.js applications."
+    }
+  ],
+  "Other Tools Used":["Visual Studio Code","MySQL","Designing Database","css","REST API","Github"]
+},
     "web-chat":{
   "Brief":  "The web chat project was a collaborative effort by a group of students. It was a significant milestone for me as I took on the role of the Scrum Master, despite having team members with more experience. We successfully connected a MySQL database to a REST API on Express. To ensure compatibility, we used different programming languages for testing purposes, and Socket.IO proved to be highly compatible. The repository mainly focused on two frameworks, React and Vue, which were the key areas I concentrated on during the project.",
   "Learned": [
@@ -60,7 +81,7 @@
       "Designing Database": "Based on lessons learned from past projects, I understood the importance of designing the database before starting any new project, especially when dealing with a high volume of data. This time, I made sure to plan and design the database thoroughly, with the intention of creating a structure that would not require frequent changes during the development process."
     }
   ],
-  "Other Tools Used":["Visual Studio Code","Live Share","MySQL","IBM server","Express/Node","css","Jiraboard"]
+  "Other Tools Used":["Visual Studio Code","Live Share","MySQL","IBM server","Express/Node","css","Jiraboard","REST API"]
 },
     "Shoes Shop Project":{
   "Brief": "It was one of my first student projects, and I used Vue.js as its framework. Since I had never coded in Vue.js before, it was something new and exciting for me.",
@@ -81,7 +102,7 @@
       "Bitbucket": "I found that Bitbucket, as another repository storage option, has a distinct advantage over others due to its seamless integration with Jira. This integration between Bitbucket and Jira provides a powerful and streamlined workflow, making it easier to manage code repositories and track project progress in a cohesive manner."
     },
     {
-      "IBM server":"what i leraned"
+      "IBM server":"In my course, we frequently use IBM servers as the company is a partial sponsor of the program. Initially, navigating through hundreds of functions and services was challenging. However, by delving into the extensive documentation and utilizing customer support, I was able to explore the full potential of the available resources. Personally, I find IBM's cloud service to be very reliable and robust, providing a solid foundation for various projects and applications."
     }
   ],
   "Other Tools Used":["Visual Studio Code","Live Share","Github"]
