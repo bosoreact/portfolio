@@ -1,0 +1,84 @@
+.main-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+.main-page .Top {
+  display: flex;
+  flex-direction: row;
+  width: 70vw;
+  align-items: center;
+}
+.main-page .box-wrapper {
+  width: 100%;
+  margin: 1vw;
+}
+.main-page .box-wrapper .box-line {
+  width: 100%;
+  margin: 1vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 30vh;
+}
+.main-page .box-wrapper .box-line .greetings-box {
+  width: 48%;
+  background-color: brown;
+}
+.main-page .box-wrapper .box-line .right-nested-box {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-page .box-wrapper .box-line .right-nested-box .moving-phrase {
+  width: 100%;
+  height: 16.6666666667%;
+  background-color: rgb(125, 169, 114);
+}
+.main-page .box-wrapper .box-line .right-nested-box .credentials-and-portfolio {
+  width: 100%;
+  height: 22vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main-page .box-wrapper .box-line .right-nested-box .credentials-and-portfolio .c-and-p-box {
+  position: relative;
+  border-radius: 15%;
+  width: 48%;
+}
+.main-page .box-line-s {
+  width: 100%;
+  margin: 1vw;
+  background-color: aqua;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 22vh;
+}
+.main-page .box-line-s .cv-box {
+  background-color: brown;
+  width: 23.04%;
+}
+.main-page .box-line-s .offered-services-box {
+  width: 48%;
+  background-color: brown;
+}
+.main-page .box-line-s .profiles-box {
+  background-color: brown;
+  width: 23.04%;
+}
+.main-page .box-line-s .statistic-and-notes {
+  width: 48%;
+  background-color: brown;
+}
+.main-page .Bottom {
+  display: flex;
+  flex-direction: row;
+  width: 70vw;
+  align-items: center;
+}
+/*# sourceMappingURL=main.module.css.map */
