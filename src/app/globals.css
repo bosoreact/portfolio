@@ -1,7 +1,7 @@
 body{
   margin-right: 5vw auto;
-  margin-left: 5vw auto;
-  /* background-color: beige; */
+  margin-left: 5vw auto;   
+  background-color: #e8eaec;
   display: flex;
   justify-content: center;
 }

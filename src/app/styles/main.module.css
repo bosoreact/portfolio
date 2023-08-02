@@ -11,12 +11,16 @@
   align-items: center;
 }
 .main-page .box-wrapper {
+  margin-top: 10vw;
   width: 100%;
   margin: 1vw;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2vh;
 }
 .main-page .box-wrapper .box-line {
   width: 100%;
-  margin: 1vw;
+  margin-top: 10vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -24,10 +28,12 @@
 }
 .main-page .box-wrapper .box-line .greetings-box {
   width: 48%;
-  background-color: brown;
+  border-radius: 15%;
+  box-shadow: 1vh 1vh 3vh rgba(13, 39, 80, 0.25), -0.8vh -0.9vh 1.1vh white;
 }
 .main-page .box-wrapper .box-line .right-nested-box {
   width: 48%;
+  background-color: #e8eaec;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,7 +42,8 @@
 .main-page .box-wrapper .box-line .right-nested-box .moving-phrase {
   width: 100%;
   height: 16.6666666667%;
-  background-color: rgb(125, 169, 114);
+  border-radius: 10px;
+  box-shadow: 1vh 1vh 3vh rgba(13, 39, 80, 0.25), -0.8vh -0.9vh 1.1vh white;
 }
 .main-page .box-wrapper .box-line .right-nested-box .credentials-and-portfolio {
   width: 100%;
@@ -48,32 +55,36 @@
 .main-page .box-wrapper .box-line .right-nested-box .credentials-and-portfolio .c-and-p-box {
   position: relative;
   border-radius: 15%;
+  box-shadow: 1vh 1vh 3vh rgba(13, 39, 80, 0.25), -0.8vh -0.9vh 1.1vh white;
   width: 48%;
 }
 .main-page .box-line-s {
   width: 100%;
   margin: 1vw;
-  background-color: aqua;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   height: 22vh;
 }
 .main-page .box-line-s .cv-box {
-  background-color: brown;
+  border-radius: 15%;
+  box-shadow: 1vh 1vh 3vh rgba(13, 39, 80, 0.25), -0.8vh -0.9vh 1.1vh white;
   width: 23.04%;
 }
 .main-page .box-line-s .offered-services-box {
   width: 48%;
-  background-color: brown;
+  border-radius: 10%;
+  box-shadow: 1vh 1vh 3vh rgba(13, 39, 80, 0.25), -0.8vh -0.9vh 1.1vh white;
 }
 .main-page .box-line-s .profiles-box {
-  background-color: brown;
+  border-radius: 15%;
+  box-shadow: 1vh 1vh 3vh rgba(13, 39, 80, 0.25), -0.8vh -0.9vh 1.1vh white;
   width: 23.04%;
 }
 .main-page .box-line-s .statistic-and-notes {
   width: 48%;
-  background-color: brown;
+  border-radius: 10%;
+  box-shadow: 1vh 1vh 3vh rgba(13, 39, 80, 0.25), -0.8vh -0.9vh 1.1vh white;
 }
 .main-page .Bottom {
   display: flex;
