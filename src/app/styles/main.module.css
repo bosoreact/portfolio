@@ -163,6 +163,8 @@
           animation-delay: 10s;
 }
 .main-page .box-wrapper .box-line .right-nested-box .credentials-and-portfolio {
+  -moz-column-gap: 3vw;
+       column-gap: 3vw;
   width: 100%;
   height: 22vh;
   display: flex;
@@ -181,31 +183,46 @@
   justify-content: space-evenly;
 }
 .main-page .box-wrapper .box-line .right-nested-box .credentials-and-portfolio .c-and-p-box .top-sign {
+  display: flex;
+  align-items: center;
   font-family: Prestigeo;
   font-size: 6ch;
+  height: 70%;
 }
-.main-page .box-wrapper .box-line .right-nested-box .credentials-and-portfolio .c-and-p-box .c-description-and-link {
+.main-page .box-wrapper .box-line .right-nested-box .credentials-and-portfolio .c-and-p-box .bg-info {
+  align-items: center;
+  font-weight: bold;
+  display: flex;
+  font-size: 4ch;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.2196078431) 50%, #000000 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  height: 70%;
+  -webkit-text-fill-color: transparent;
+}
+.main-page .box-wrapper .box-line .right-nested-box .credentials-and-portfolio .c-and-p-box .description-and-link {
+  height: 30%;
   width: 100%;
   display: flex;
   flex-direction: row;
 }
-.main-page .box-wrapper .box-line .right-nested-box .credentials-and-portfolio .c-and-p-box .c-description-and-link .credentials-description {
+.main-page .box-wrapper .box-line .right-nested-box .credentials-and-portfolio .c-and-p-box .description-and-link .description {
   width: 65%;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
 }
-.main-page .box-wrapper .box-line .right-nested-box .credentials-and-portfolio .c-and-p-box .c-description-and-link .credentials-description p {
+.main-page .box-wrapper .box-line .right-nested-box .credentials-and-portfolio .c-and-p-box .description-and-link .description p {
   margin: 0;
+  margin-left: 2vw;
 }
-.main-page .box-wrapper .box-line .right-nested-box .credentials-and-portfolio .c-and-p-box .c-description-and-link .credentials-description p:nth-child(1) {
+.main-page .box-wrapper .box-line .right-nested-box .credentials-and-portfolio .c-and-p-box .description-and-link .description p:nth-child(1) {
   font-size: 1em;
 }
-.main-page .box-wrapper .box-line .right-nested-box .credentials-and-portfolio .c-and-p-box .c-description-and-link .credentials-description p:nth-child(2) {
+.main-page .box-wrapper .box-line .right-nested-box .credentials-and-portfolio .c-and-p-box .description-and-link .description p:nth-child(2) {
   font-size: 1.5em;
   font-weight: bold;
 }
-.main-page .box-wrapper .box-line .right-nested-box .credentials-and-portfolio .c-and-p-box .c-description-and-link .route-link {
+.main-page .box-wrapper .box-line .right-nested-box .credentials-and-portfolio .c-and-p-box .description-and-link .route-link {
   height: 100%;
   width: 35%;
   display: flex;
@@ -213,8 +230,10 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  justify-content: flex-end;
+  margin-right: 3vw;
 }
-.main-page .box-wrapper .box-line .right-nested-box .credentials-and-portfolio .c-and-p-box .c-description-and-link .route-link .arrow {
+.main-page .box-wrapper .box-line .right-nested-box .credentials-and-portfolio .c-and-p-box .description-and-link .route-link .arrow {
   position: absolute;
   width: 1.2vw;
   height: 1.2vw;
@@ -224,19 +243,19 @@
   margin: -10px;
   transform: rotate(-45deg) translate(-5px, -5px);
 }
-.main-page .box-wrapper .box-line .right-nested-box .credentials-and-portfolio .c-and-p-box .c-description-and-link .route-link .arrow:nth-child(2) {
+.main-page .box-wrapper .box-line .right-nested-box .credentials-and-portfolio .c-and-p-box .description-and-link .route-link .arrow:nth-child(2) {
   transform: rotate(-45deg) translate(-15px, -15px);
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
 }
-.main-page .box-wrapper .box-line .right-nested-box .credentials-and-portfolio .c-and-p-box .c-description-and-link .route-link .arrow:nth-child(3) {
+.main-page .box-wrapper .box-line .right-nested-box .credentials-and-portfolio .c-and-p-box .description-and-link .route-link .arrow:nth-child(3) {
   transform: rotate(-45deg) translate(-25px, -25px);
 }
-.main-page .box-wrapper .box-line .right-nested-box .credentials-and-portfolio .c-and-p-box .c-description-and-link .route-link:hover {
+.main-page .box-wrapper .box-line .right-nested-box .credentials-and-portfolio .c-and-p-box .description-and-link .route-link:hover {
   -webkit-animation: route-link-anim 2s infinite;
           animation: route-link-anim 2s infinite;
 }
 .main-page .box-line-s {
+  -moz-column-gap: 3vw;
+       column-gap: 3vw;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -247,11 +266,152 @@
   border-radius: 15%;
   box-shadow: 1vh 1vh 3vh rgba(13, 39, 80, 0.25), -0.8vh -0.9vh 1.1vh white;
   width: 23.04%;
+  position: relative;
+  box-shadow: 1vh 1vh 3vh rgba(13, 39, 80, 0.25), -0.8vh -0.9vh 1.1vh white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+.main-page .box-line-s .cv-box .image-wraper {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  width: 50%;
+  border-radius: 30px;
+}
+.main-page .box-line-s .cv-box .image-wraper .photo-style {
+  height: 70%;
+  width: auto;
+}
+.main-page .box-line-s .cv-box .description-and-link {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.main-page .box-line-s .cv-box .description-and-link .description {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+}
+.main-page .box-line-s .cv-box .description-and-link .description p {
+  margin: 0;
+  margin-left: 2vw;
+}
+.main-page .box-line-s .cv-box .description-and-link .description p:nth-child(1) {
+  font-size: 1em;
+}
+.main-page .box-line-s .cv-box .description-and-link .description p:nth-child(2) {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.main-page .box-line-s .cv-box .description-and-link .route-link {
+  height: 100%;
+  width: 35%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  justify-content: flex-end;
+  margin-right: 3vw;
+}
+.main-page .box-line-s .cv-box .description-and-link .route-link .arrow {
+  position: absolute;
+  width: 1.2vw;
+  height: 1.2vw;
+  border-bottom: 4px solid #000000;
+  border-right: 4px solid #000000;
+  transform: rotate(45deg);
+  margin: -10px;
+  transform: rotate(-45deg) translate(-5px, -5px);
+}
+.main-page .box-line-s .cv-box .description-and-link .route-link .arrow:nth-child(2) {
+  transform: rotate(-45deg) translate(-15px, -15px);
+}
+.main-page .box-line-s .cv-box .description-and-link .route-link .arrow:nth-child(3) {
+  transform: rotate(-45deg) translate(-25px, -25px);
+}
+.main-page .box-line-s .cv-box .description-and-link .route-link:hover {
+  -webkit-animation: route-link-anim 2s infinite;
+          animation: route-link-anim 2s infinite;
 }
 .main-page .box-line-s .offered-services-box {
   width: 48%;
   border-radius: 10%;
   box-shadow: 1vh 1vh 3vh rgba(13, 39, 80, 0.25), -0.8vh -0.9vh 1.1vh white;
+}
+.main-page .box-line-s .offered-services-box .image-wraper {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  justify-content: space-evenly;
+  border-radius: 30px;
+  -moz-column-gap: 0.01vw;
+       column-gap: 0.01vw;
+}
+.main-page .box-line-s .offered-services-box .image-wraper .photo-style {
+  height: 4vw;
+  width: auto;
+}
+.main-page .box-line-s .offered-services-box .description-and-link {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.main-page .box-line-s .offered-services-box .description-and-link .description {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+}
+.main-page .box-line-s .offered-services-box .description-and-link .description p {
+  margin: 0;
+  margin-left: 2vw;
+}
+.main-page .box-line-s .offered-services-box .description-and-link .description p:nth-child(1) {
+  font-size: 1em;
+}
+.main-page .box-line-s .offered-services-box .description-and-link .description p:nth-child(2) {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.main-page .box-line-s .offered-services-box .description-and-link .route-link {
+  height: 100%;
+  width: 35%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  justify-content: flex-end;
+  margin-right: 3vw;
+}
+.main-page .box-line-s .offered-services-box .description-and-link .route-link .arrow {
+  position: absolute;
+  width: 1.2vw;
+  height: 1.2vw;
+  border-bottom: 4px solid #000000;
+  border-right: 4px solid #000000;
+  transform: rotate(45deg);
+  margin: -10px;
+  transform: rotate(-45deg) translate(-5px, -5px);
+}
+.main-page .box-line-s .offered-services-box .description-and-link .route-link .arrow:nth-child(2) {
+  transform: rotate(-45deg) translate(-15px, -15px);
+}
+.main-page .box-line-s .offered-services-box .description-and-link .route-link .arrow:nth-child(3) {
+  transform: rotate(-45deg) translate(-25px, -25px);
+}
+.main-page .box-line-s .offered-services-box .description-and-link .route-link:hover {
+  -webkit-animation: route-link-anim 2s infinite;
+          animation: route-link-anim 2s infinite;
 }
 .main-page .box-line-s .profiles-box {
   border-radius: 15%;
