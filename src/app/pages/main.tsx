@@ -110,7 +110,7 @@ export default function Main() {
           </div>
 
           <div className={style["notes"]}>
-          <div className={style["first-line"]}><p>Lets</p></div>
+          <div className={style["first-line"]}><p>Let &#769;s</p></div>
             <div className={style["second-line"]}><p>work</p><p>together</p></div>
           </div>
         </div>

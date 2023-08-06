@@ -194,7 +194,6 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
       }
       .right-nested-box {
         width: 48%;
-        background-color: #e8eaec;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -397,28 +396,30 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        p {
-          // height: 20%;
-          // margin: 0%;
+        height: 20%;
+        justify-content: center;
+        p {        
+          font-size: 3em;
           margin-left: 3%;
           font-weight: bold;
-          font-size: 100%;
         }
       }
       .second-line{
-        // height: 20%;
-        margin-bottom: 5%;
+        align-items: center;
+        margin-top: 0%;
+        height: 10%;
+        margin-bottom: 10%;
         display: flex;
         flex-direction: row;
         column-gap: 1%;
         p{
-          
+          margin-left: 3%;
           font-weight: bold;
           font-size: 3em;
         }
         p:nth-child(2){
           margin-left: 0%;
-          color: #0d2750;
+          color: #3562ac;
         }
       }
     }
