@@ -59,7 +59,7 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
     justify-content: center;
     cursor: pointer;
     justify-content: flex-end;
-    margin-right: 3vw;
+    margin-right: 30px;
     .arrow {
       position: absolute;
       width: 1.2vw;
@@ -112,8 +112,8 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
   flex-direction: column;
   align-items: center;
   width: 90%;
-  max-width: 1280px;
-  min-width: 1024px;
+  min-width: 1150px;
+  width: 1285px;
   .Top {
     display: flex;
     flex-direction: row;
@@ -300,14 +300,13 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
         .photo-style {
           height: 70%;
           width: auto;
-
         }
       }
       @include d-and-l-pack();
     }
     .offered-services-box {
       width: 48%;
-      border-radius: 10%;
+      border-radius: 30px;
       box-shadow: $dropShadow;
       .image-wraper {
         display: flex;
@@ -321,7 +320,6 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
         .photo-style {
           height: 4vw;
           width: auto;
-
         }
       }
       @include d-and-l-pack();
@@ -330,11 +328,99 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
       border-radius: 15%;
       box-shadow: $dropShadow;
       width: calc((100% * 0.48) * 0.48);
+      .image-wraper {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        height: 70%;
+        justify-content: space-evenly;
+        border-radius: 30px;
+        column-gap: 0.01vw;
+
+        .photo-style {
+          height: 4vw;
+          width: auto;
+        }
+      }
+      @include d-and-l-pack();
     }
-    .statistic-and-notes {
+    .statistic {
+      display: flex;
+      flex-direction: row;
       width: 48%;
-      border-radius: 10%;
+      border-radius: 30px;
       box-shadow: $dropShadow;
+      align-items: center;
+      justify-content: center;
+      column-gap: 4%;
+      .stat-box {
+        flex-direction: column;
+        justify-content: flex-end;
+        display: flex;
+        box-shadow: $dropShadow;
+        width: 25%;
+        height: 60%;
+        border-radius: 30px;
+        align-items: center;
+
+        //inner shadow on hover?
+        // box-shadow: $dropShadow, $innerShadow;
+        p {
+          margin-top: 20%;
+          position: relative;
+          font-size: 200%;
+          height: 10%;
+          text-align: center;
+          font-weight: bold;
+        }
+        p:nth-child(2) {
+          margin-top: 0%;
+          font-size: 100%;
+          text-align: center;
+          height: 20%;
+          width: 80%;
+          margin-bottom: 20%;
+          margin-right: 10%;
+        }
+      }
+    }
+    .notes{
+      display: flex;
+      flex-direction: column;
+      width: 48%;
+      border-radius: 30px;
+      box-shadow: $dropShadow;
+      justify-content: flex-end;
+      row-gap: 0%;
+      .first-line{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        p {
+          // height: 20%;
+          // margin: 0%;
+          margin-left: 3%;
+          font-weight: bold;
+          font-size: 100%;
+        }
+      }
+      .second-line{
+        // height: 20%;
+        margin-bottom: 5%;
+        display: flex;
+        flex-direction: row;
+        column-gap: 1%;
+        p{
+          
+          font-weight: bold;
+          font-size: 3em;
+        }
+        p:nth-child(2){
+          margin-left: 0%;
+          color: #0d2750;
+        }
+      }
     }
   }
 

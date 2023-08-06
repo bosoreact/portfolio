@@ -6,6 +6,11 @@ export const portfolio ={
         "p3": "I am a software engineer based in Inverness (Scottish Highlands)",
     },
     "scrolingText":"I Am Available For Contract or Freelance Work",
-    "sign":"Todorow"
+    "sign":"Todorow",
+    "stats":{
+        "experience":"04",
+        "colaborators":"+35",
+        "projects":"+14"
+    }
 
 }

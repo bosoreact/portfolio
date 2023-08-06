@@ -3,10 +3,12 @@ import { portfolio } from "../../../public/portfolio";
 import photo from "../../../images/photo.png";
 import cvImage from "../../../images/download_image/128x128.png";
 import Image, { StaticImageData } from "next/image";
-import dbImage from "../../../images/database/128x128.png"
-import codingImage from "../../../images/coding/128x128.png"
-import uiImage from "../../../images/ui/128x128.png"
-import cloudImage from "../../../images/servers/cloud-data.png"
+import dbImage from "../../../images/database/128x128.png";
+import codingImage from "../../../images/coding/128x128.png";
+import uiImage from "../../../images/ui/128x128.png";
+import cloudImage from "../../../images/servers/cloud-data.png";
+import twitterImage from "../../../images/socials/twitter.png";
+import linkedinImage from "../../../images/socials/linkedin.png";
 import path from "path";
 
 const ShowImage = (imageSrc: StaticImageData) => {
@@ -92,11 +94,25 @@ export default function Main() {
             </div>
             {descriptionAndLink("SPECIALIZATION", "Services Offering")}
           </div>
-          <div className={style["profiles-box"]}>profile</div>
+          <div className={style["profiles-box"]}>
+            <div className={style["image-wraper"]}>
+              {ShowImage(twitterImage)}
+              {ShowImage(linkedinImage)}
+            </div>
+            {descriptionAndLink("STAY WITH ME", "Profiles")}
+          </div>
         </div>
         <div className={style["box-line-s"]}>
-          <div className={style["statistic-and-notes"]}>statistic</div>
-          <div className={style["statistic-and-notes"]}>note</div>
+          <div className={style["statistic"]}>
+            <div className={style["stat-box"]}><p>{portfolio.stats.experience}</p><p>YEARS EXPERIENCE</p></div>
+            <div className={style["stat-box"]}><p>{portfolio.stats.colaborators}</p><p>COLLABORATORS WORLDWIDE</p></div>
+            <div className={style["stat-box"]}><p>{portfolio.stats.projects}</p><p>TOTAL PROJECTS</p></div>
+          </div>
+
+          <div className={style["notes"]}>
+          <div className={style["first-line"]}><p>Lets</p></div>
+            <div className={style["second-line"]}><p>work</p><p>together</p></div>
+          </div>
         </div>
       </div>
       <div className={style["Bottom"]}>
