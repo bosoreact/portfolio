@@ -9,6 +9,11 @@
 }
 $darkShadow: #0d2750;
 $lightShadow: #ffffff;
+$squarelength: 295px;
+$gapsInFlex: 45px;
+$longBoxWidth: 620px;
+$smallfont:14px;
+
 
 $dropShadow: 1vh 1vh 3vh rgba($darkShadow, 0.25),
   -0.8vh -0.9vh 1.1vh rgba($lightShadow, 1);
@@ -93,7 +98,7 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
       flex-direction: column;
       p {
         margin: 0;
-        margin-left: 2vw;
+        margin-left: 25px;
       }
       p:nth-child(1) {
         font-size: 1em;
@@ -112,7 +117,7 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
   flex-direction: column;
   align-items: center;
   width: 90%;
-  min-width: 1150px;
+  // min-width: 1150px;
   width: 1285px;
   .Top {
     display: flex;
@@ -139,22 +144,26 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
     width: 100%;
     display: flex;
     flex-direction: column;
-    row-gap: 3vh;
+    row-gap: $gapsInFlex;
+    justify-content: center;
 
     .box-line {
-      width: 100%;
+      column-gap: $gapsInFlex;
+      // width: 100%;
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
-      height: 30vh;
+      justify-content: center;
+      // justify-content: space-between;
+      // height: 30vh;
 
       .greetings-box {
-        width: 48%;
+        width: 620px;
         border-radius: 30px;
         box-shadow: $dropShadow;
         display: flex;
         flex-direction: row;
         column-gap: 2vh;
+        height:380px;
         .image-wraper {
           display: flex;
           flex-direction: row-reverse;
@@ -193,11 +202,12 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
         }
       }
       .right-nested-box {
-        width: 48%;
+        width: 620px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+        // justify-content: space-between;
+        row-gap: 45px;
 
         .moving-phrase {
           font-weight: bold;
@@ -226,18 +236,19 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
           animation-delay: 10s;
         }
         .credentials-and-portfolio {
-          column-gap: 3vw;
+          // column-gap: 3vw;
           width: 100%;
-          height: 22vh;
+          height: $squarelength;
           display: flex;
           flex-direction: row;
-          justify-content: space-between;
+          column-gap: $gapsInFlex;
+          // justify-content: space-between;
 
           .c-and-p-box {
             position: relative;
             border-radius: 15%;
             box-shadow: $dropShadow;
-            width: 48%;
+            width: $squarelength;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -266,165 +277,215 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
         }
       }
     }
-  }
-
-  .box-line-s {
-    column-gap: 3vw;
-    width: 100%;
-    // margin: 1vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 22vh;
-
-    .cv-box {
-      border-radius: 15%;
-      box-shadow: $dropShadow;
-      width: calc((100% * 0.48) * 0.48);
-      position: relative;
-      box-shadow: $dropShadow;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      justify-content: space-evenly;
-      .image-wraper {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: center;
+    @media (max-width: 1300px) {
+      .box-line {
+        flex-direction: column;
         align-items: center;
-        height: 70%;
-        width: 50%;
-        border-radius: 30px;
-        .photo-style {
-          height: 70%;
-          width: auto;
+        row-gap: $gapsInFlex;
+        .greetings-box {
+          .image-wraper {
+            width: 50%;
+            justify-content: space-evenly;
+          }
         }
       }
-      @include d-and-l-pack();
     }
-    .offered-services-box {
-      width: 48%;
-      border-radius: 30px;
-      box-shadow: $dropShadow;
-      .image-wraper {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: center;
-        align-items: center;
-        height: 70%;
-        justify-content: space-evenly;
-        border-radius: 30px;
-        column-gap: 0.01vw;
-        .photo-style {
-          height: 4vw;
-          width: auto;
-        }
-      }
-      @include d-and-l-pack();
-    }
-    .profiles-box {
-      border-radius: 15%;
-      box-shadow: $dropShadow;
-      width: calc((100% * 0.48) * 0.48);
-      .image-wraper {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: center;
-        align-items: center;
-        height: 70%;
-        justify-content: space-evenly;
-        border-radius: 30px;
-        column-gap: 0.01vw;
 
-        .photo-style {
-          height: 4vw;
-          width: auto;
-        }
-      }
-      @include d-and-l-pack();
-    }
-    .statistic {
+    .box-line-s {
+      column-gap: $gapsInFlex;
+      width: 100%;
+      // margin: 1vw;
       display: flex;
       flex-direction: row;
-      width: 48%;
-      border-radius: 30px;
-      box-shadow: $dropShadow;
-      align-items: center;
-      justify-content: center;
-      column-gap: 4%;
-      .stat-box {
-        flex-direction: column;
-        justify-content: flex-end;
-        display: flex;
-        box-shadow: $dropShadow;
-        width: 25%;
-        height: 60%;
-        border-radius: 30px;
-        align-items: center;
+      // justify-content: space-between;
+      height: $squarelength;
 
-        //inner shadow on hover?
-        // box-shadow: $dropShadow, $innerShadow;
-        p {
-          margin-top: 20%;
-          position: relative;
-          font-size: 200%;
-          height: 10%;
-          text-align: center;
-          font-weight: bold;
-        }
-        p:nth-child(2) {
-          margin-top: 0%;
-          font-size: 100%;
-          text-align: center;
-          height: 20%;
-          width: 80%;
-          margin-bottom: 20%;
-          margin-right: 10%;
-        }
-      }
-    }
-    .notes{
-      display: flex;
-      flex-direction: column;
-      width: 48%;
-      border-radius: 30px;
-      box-shadow: $dropShadow;
-      justify-content: flex-end;
-      row-gap: 0%;
-      .first-line{
+      .cv-box {
+        border-radius: 15%;
+        box-shadow: $dropShadow;
+        width: $squarelength;
+        position: relative;
+        box-shadow: $dropShadow;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
-        height: 20%;
-        justify-content: center;
-        p {        
-          font-size: 3em;
-          margin-left: 3%;
-          font-weight: bold;
-        }
-      }
-      .second-line{
         align-items: center;
-        margin-top: 0%;
-        height: 10%;
-        margin-bottom: 10%;
+        justify-content: center;
+        justify-content: space-evenly;
+        .image-wraper {
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: center;
+          align-items: center;
+          height: 70%;
+          width: 50%;
+          border-radius: 30px;
+          .photo-style {
+            height: 70%;
+            width: auto;
+          }
+        }
+        @include d-and-l-pack();
+      }
+      .offered-services-box {
+        width: 620px;
+        border-radius: 30px;
+        box-shadow: $dropShadow;
+        .image-wraper {
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: center;
+          align-items: center;
+          height: 70%;
+          justify-content: space-evenly;
+          border-radius: 30px;
+          column-gap: 0.01vw;
+          .photo-style {
+            height: 80px;
+            width: auto;
+          }
+        }
+        @include d-and-l-pack();
+      }
+      .profiles-box {
+        border-radius: 15%;
+        box-shadow: $dropShadow;
+        width: $squarelength;
+        .image-wraper {
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: center;
+          align-items: center;
+          height: 70%;
+          justify-content: space-evenly;
+          border-radius: 30px;
+          column-gap: 10px;
+
+          .photo-style {
+            height: 80px;
+            width: auto;
+          }
+        }
+        @include d-and-l-pack();
+      }
+      .statistic {
         display: flex;
         flex-direction: row;
-        column-gap: 1%;
-        p{
-          margin-left: 3%;
-          font-weight: bold;
-          font-size: 3em;
+        width: 48%;
+        border-radius: 30px;
+        box-shadow: $dropShadow;
+        align-items: center;
+        justify-content: center;
+        column-gap: 4%;
+        .stat-box {
+          flex-direction: column;
+          justify-content: flex-end;
+          display: flex;
+          box-shadow: $dropShadow;
+          width: 25%;
+          height: 60%;
+          border-radius: 30px;
+          align-items: center;
+
+          //inner shadow on hover?
+          // box-shadow: $dropShadow, $innerShadow;
+          p {
+            margin-top: 20%;
+            position: relative;
+            font-size: 200%;
+            height: 10%;
+            text-align: center;
+            font-weight: bold;
+          }
+          p:nth-child(2) {
+            margin-top: 0%;
+            font-size: 100%;
+            text-align: center;
+            height: 20%;
+            width: 80%;
+            margin-bottom: 20%;
+            margin-right: 10%;
+          }
         }
-        p:nth-child(2){
-          margin-left: 0%;
-          color: #3562ac;
+      }
+      .notes {
+        display: flex;
+        flex-direction: column;
+        width: 48%;
+        border-radius: 30px;
+        box-shadow: $dropShadow;
+        justify-content: flex-end;
+        row-gap: 0%;
+        .first-line {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          height: 20%;
+          justify-content: center;
+          p {
+            font-size: 3em;
+            margin-left: 3%;
+            font-weight: bold;
+          }
+        }
+        .second-line {
+          align-items: center;
+          margin-top: 0%;
+          height: 10%;
+          margin-bottom: 10%;
+          display: flex;
+          flex-direction: row;
+          column-gap: 1%;
+          p {
+            margin-left: 3%;
+            font-weight: bold;
+            font-size: 3em;
+          }
+          p:nth-child(2) {
+            margin-left: 0%;
+            color: #3562ac;
+          }
         }
       }
     }
   }
-
+  @media (max-width: 1300px) {
+    .box-wrapper{
+      width: 100%;
+      height: 100%;
+      row-gap: 2%;
+      align-items: center;
+      
+      .box-line{
+        height: 100%;
+      }
+      .box-line-s {
+        column-gap: 2%;
+    row-gap: 5%;
+        // justify-content: center;
+        width: 48%;
+        flex-wrap: wrap;
+        flex-direction: row;
+        // flex-direction: column;
+        align-items: center;
+        // justify-content: space-between;
+        .cv-box{
+          height: 46%;
+          width: 48%;
+          order: 1;
+        }
+        .profiles-box{
+          height: 46%;
+          width: 48%;
+          order:2;
+        }
+        .offered-services-box{
+          width: 100%;
+          order: 3;
+        }
+        // height: 30%;
+      }
+    }
+  }
   .Bottom {
     margin-top: 10vw;
     display: flex;
@@ -442,6 +503,14 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
       column-gap: 1vw;
       .nav-button {
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .box-line {
+    .box-wrapper {
+     
     }
   }
 }
