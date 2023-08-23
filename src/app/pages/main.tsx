@@ -114,6 +114,7 @@ export default function Main() {
             <div className={style["second-line"]}><p>work</p><p>together</p></div>
           </div>
         </div>
+        
       </div>
       <div className={style["Bottom"]}>
         <div className={style["placement"]}>{portfolio.CompanyName}</div>

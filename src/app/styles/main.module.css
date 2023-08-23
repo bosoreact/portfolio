@@ -61,11 +61,12 @@
 .main-page .Top .navigation-buttons {
   display: flex;
   flex-direction: row;
-  -moz-column-gap: 1vw;
-       column-gap: 1vw;
+  -moz-column-gap: 14px;
+       column-gap: 14px;
 }
 .main-page .box-wrapper {
   margin-top: 100px;
+  margin-bottom: 100px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -108,14 +109,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  row-gap: 0.5vw;
+  row-gap: 8px;
 }
 .main-page .box-wrapper .box-line .greetings-box p {
   margin: 0;
 }
 .main-page .box-wrapper .box-line .greetings-box .greeting-note p:nth-child(1) {
   font-weight: bold;
-  font-size: 1em;
+  font-size: 16px;
 }
 .main-page .box-wrapper .box-line .greetings-box .greeting-note p:nth-child(2) {
   font-weight: bold;
@@ -123,7 +124,7 @@
 }
 .main-page .box-wrapper .box-line .greetings-box .greeting-note p:nth-child(3) {
   font-weight: bold;
-  font-size: 1em;
+  font-size: 16px;
 }
 .main-page .box-wrapper .box-line .right-nested-box {
   width: 620px;
@@ -141,6 +142,7 @@
   box-shadow: 1vh 1vh 3vh rgba(13, 39, 80, 0.25), -0.8vh -0.9vh 1.1vh white;
   display: flex;
   position: relative;
+  align-items: center;
 }
 .main-page .box-wrapper .box-line .right-nested-box .moving-phrase p {
   position: absolute;
@@ -163,7 +165,6 @@
           animation-delay: 10s;
 }
 .main-page .box-wrapper .box-line .right-nested-box .credentials-and-portfolio {
-  width: 100%;
   height: 295px;
   display: flex;
   flex-direction: row;
@@ -262,16 +263,25 @@
     width: 50%;
     justify-content: space-evenly;
   }
+  .main-page .box-wrapper .box-line .right-nested-box {
+    height: 408px;
+  }
+}
+@media (max-width: 700px) {
+  .main-page .box-wrapper .Top {
+    background-color: #0d2750;
+    display: none;
+  }
 }
 .main-page .box-wrapper .box-line-s {
   -moz-column-gap: 45px;
        column-gap: 45px;
-  width: 100%;
   display: flex;
   flex-direction: row;
   height: 295px;
 }
 .main-page .box-wrapper .box-line-s .cv-box {
+  width: 295px;
   border-radius: 15%;
   box-shadow: 1vh 1vh 3vh rgba(13, 39, 80, 0.25), -0.8vh -0.9vh 1.1vh white;
   width: 295px;
@@ -351,6 +361,7 @@
 }
 .main-page .box-wrapper .box-line-s .offered-services-box {
   width: 620px;
+  height: 295px;
   border-radius: 30px;
   box-shadow: 1vh 1vh 3vh rgba(13, 39, 80, 0.25), -0.8vh -0.9vh 1.1vh white;
 }
@@ -498,13 +509,14 @@
 .main-page .box-wrapper .box-line-s .statistic {
   display: flex;
   flex-direction: row;
-  width: 48%;
+  width: 620px;
+  height: 295px;
   border-radius: 30px;
   box-shadow: 1vh 1vh 3vh rgba(13, 39, 80, 0.25), -0.8vh -0.9vh 1.1vh white;
   align-items: center;
   justify-content: center;
-  -moz-column-gap: 4%;
-       column-gap: 4%;
+  -moz-column-gap: 45px;
+       column-gap: 45px;
 }
 .main-page .box-wrapper .box-line-s .statistic .stat-box {
   flex-direction: column;
@@ -536,8 +548,9 @@
 .main-page .box-wrapper .box-line-s .notes {
   display: flex;
   flex-direction: column;
-  width: 48%;
+  width: 620px;
   border-radius: 30px;
+  height: 295px;
   box-shadow: 1vh 1vh 3vh rgba(13, 39, 80, 0.25), -0.8vh -0.9vh 1.1vh white;
   justify-content: flex-end;
   row-gap: 0%;
@@ -557,12 +570,12 @@
 .main-page .box-wrapper .box-line-s .notes .second-line {
   align-items: center;
   margin-top: 0%;
-  height: 10%;
-  margin-bottom: 10%;
+  height: 14px;
+  margin-bottom: 45px;
   display: flex;
   flex-direction: row;
-  -moz-column-gap: 1%;
-       column-gap: 1%;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
 }
 .main-page .box-wrapper .box-line-s .notes .second-line p {
   margin-left: 3%;
@@ -575,40 +588,39 @@
 }
 @media (max-width: 1300px) {
   .main-page .box-wrapper {
-    width: 100%;
     height: 100%;
-    row-gap: 2%;
+    row-gap: 45px;
     align-items: center;
   }
   .main-page .box-wrapper .box-line {
     height: 100%;
   }
   .main-page .box-wrapper .box-line-s {
-    -moz-column-gap: 2%;
-         column-gap: 2%;
-    row-gap: 5%;
-    width: 48%;
+    -moz-column-gap: 45px;
+         column-gap: 45px;
+    row-gap: 45px;
+    justify-content: center;
+    height: 100%;
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
   }
   .main-page .box-wrapper .box-line-s .cv-box {
-    height: 46%;
-    width: 48%;
+    height: 295px;
+    width: 295px;
     order: 1;
   }
   .main-page .box-wrapper .box-line-s .profiles-box {
-    height: 46%;
-    width: 48%;
+    height: 295px;
+    width: 295px;
     order: 2;
   }
   .main-page .box-wrapper .box-line-s .offered-services-box {
-    width: 100%;
+    width: 620px;
     order: 3;
   }
 }
 .main-page .Bottom {
-  margin-top: 10vw;
   display: flex;
   flex-direction: column;
   row-gap: 2vh;
