@@ -1,5 +1,8 @@
+import Afoota from "../components/afoota";
+import TopBar from "../components/top-bar";
+
 export default function Page(){
 
 
- return (<div>credentials</div>)   
+ return (<><TopBar /> credentials <Afoota/></>)   
 }
