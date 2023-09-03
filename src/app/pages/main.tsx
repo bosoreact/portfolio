@@ -20,6 +20,7 @@ const ShowImage = (imageSrc: StaticImageData) => {
     />
   );
 };
+
 export default function Main() {
   const routeLink = (
     <div className={style["route-link"]}>
@@ -28,6 +29,7 @@ export default function Main() {
       <div className={style["arrow"]}></div>
     </div>
   );
+
   const descriptionAndLink = (p1: string, p2: string) => {
     return (
       <div className={style["description-and-link"]}>
@@ -39,6 +41,7 @@ export default function Main() {
       </div>
     );
   };
+
   return (
     <div className={style["main-page"]}>
       <div className={style["Top"]}>
@@ -50,7 +53,12 @@ export default function Main() {
           <div className={style["nav-button"]}>navbutton</div>
           <div className={style["nav-button"]}>navbutton</div>
         </div>
-        <div className={style["right-placement"]}>placement</div>
+        <div className={style["right-placement"]}>
+          <div className={style["button-wrapper"]}>
+            <div className={style["theme-button"]}> Dark mode </div>
+            <div className={style["theme-button-switch"]}>X</div>
+          </div>
+        </div>
       </div>
       <div className={style["box-wrapper"]}>
         <div className={style["box-line"]}>
@@ -104,17 +112,30 @@ export default function Main() {
         </div>
         <div className={style["box-line-s"]}>
           <div className={style["statistic"]}>
-            <div className={style["stat-box"]}><p>{portfolio.stats.experience}</p><p>YEARS EXPERIENCE</p></div>
-            <div className={style["stat-box"]}><p>{portfolio.stats.colaborators}</p><p>COLLABORATORS WORLDWIDE</p></div>
-            <div className={style["stat-box"]}><p>{portfolio.stats.projects}</p><p>TOTAL PROJECTS</p></div>
+            <div className={style["stat-box"]}>
+              <p>{portfolio.stats.experience}</p>
+              <p>YEARS EXPERIENCE</p>
+            </div>
+            <div className={style["stat-box"]}>
+              <p>{portfolio.stats.colaborators}</p>
+              <p>COLLABORATORS WORLDWIDE</p>
+            </div>
+            <div className={style["stat-box"]}>
+              <p>{portfolio.stats.projects}</p>
+              <p>TOTAL PROJECTS</p>
+            </div>
           </div>
 
           <div className={style["notes"]}>
-          <div className={style["first-line"]}><p>Let &#769;s</p></div>
-            <div className={style["second-line"]}><p>work</p><p>together</p></div>
+            <div className={style["first-line"]}>
+              <p>Let &#769;s</p>
+            </div>
+            <div className={style["second-line"]}>
+              <p>work</p>
+              <p>together</p>
+            </div>
           </div>
         </div>
-        
       </div>
       <div className={style["Bottom"]}>
         <div className={style["placement"]}>{portfolio.CompanyName}</div>

@@ -7,11 +7,15 @@
   font-family: Prestigeo;
   src: url("../../../public/Prestigeo.ttf");
 }
-$darkShadow: #0d2750;
-$lightShadow: #ffffff;
-$squarelength: 295px;
+
+
+$darkShadow: #02111B;
+$lightShadow: #3F4045;
+
+$squareLength: 295px;
 $gapsInFlex: 45px;
 $longBoxWidth: 620px;
+
 $smallfont: 14px;
 $mediumfont: 16px;
 
@@ -86,6 +90,7 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
     animation: route-link-anim 2s infinite;
   }
 }
+
 @mixin d-and-l-pack {
   .description-and-link {
     height: 30%;
@@ -240,7 +245,7 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
         .credentials-and-portfolio {
           // column-gap: 3vw;
           // width: 100%;
-          height: $squarelength;
+          height: $squareLength;
           display: flex;
           flex-direction: row;
           column-gap: $gapsInFlex;
@@ -250,7 +255,7 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
             position: relative;
             border-radius: 15%;
             box-shadow: $dropShadow;
-            width: $squarelength;
+            width: $squareLength;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -310,13 +315,13 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
       display: flex;
       flex-direction: row;
       // justify-content: space-between;
-      height: $squarelength;
+      height: $squareLength;
 
       .cv-box {
-        width: $squarelength;
+        width: $squareLength;
         border-radius: 15%;
         box-shadow: $dropShadow;
-        width: $squarelength;
+        width: $squareLength;
         position: relative;
         box-shadow: $dropShadow;
         display: flex;
@@ -341,7 +346,7 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
       }
       .offered-services-box {
         width: $longBoxWidth;
-        height: $squarelength;
+        height: $squareLength;
         border-radius: 30px;
         box-shadow: $dropShadow;
         .image-wraper {
@@ -363,7 +368,7 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
       .profiles-box {
         border-radius: 15%;
         box-shadow: $dropShadow;
-        width: $squarelength;
+        width: $squareLength;
         .image-wraper {
           display: flex;
           flex-direction: row-reverse;
@@ -385,7 +390,7 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
         display: flex;
         flex-direction: row;
         width: $longBoxWidth;
-        height: $squarelength;
+        height: $squareLength;
         border-radius: 30px;
         box-shadow: $dropShadow;
         align-items: center;
@@ -427,7 +432,7 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
         flex-direction: column;
         width: $longBoxWidth;
         border-radius: 30px;
-        height: $squarelength;
+        height: $squareLength;
         box-shadow: $dropShadow;
         justify-content: flex-end;
         row-gap: 0%;
@@ -485,13 +490,13 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
         align-items: center;
         // justify-content: space-between;
         .cv-box {
-          height: $squarelength;
-          width: $squarelength;
+          height: $squareLength;
+          width: $squareLength;
           order: 1;
         }
         .profiles-box {
-          height: $squarelength;
-          width: $squarelength;
+          height: $squareLength;
+          width: $squareLength;
           order: 2;
         }
         .offered-services-box {
