@@ -104,17 +104,30 @@ export default function Main() {
         </div>
         <div className={style["box-line-s"]}>
           <div className={style["statistic"]}>
-            <div className={style["stat-box"]}><p>{portfolio.stats.experience}</p><p>YEARS EXPERIENCE</p></div>
-            <div className={style["stat-box"]}><p>{portfolio.stats.colaborators}</p><p>COLLABORATORS WORLDWIDE</p></div>
-            <div className={style["stat-box"]}><p>{portfolio.stats.projects}</p><p>TOTAL PROJECTS</p></div>
+            <div className={style["stat-box"]}>
+              <p>{portfolio.stats.experience}</p>
+              <p>YEARS EXPERIENCE</p>
+            </div>
+            <div className={style["stat-box"]}>
+              <p>{portfolio.stats.colaborators}</p>
+              <p>COLLABORATORS WORLDWIDE</p>
+            </div>
+            <div className={style["stat-box"]}>
+              <p>{portfolio.stats.projects}</p>
+              <p>TOTAL PROJECTS</p>
+            </div>
           </div>
 
           <div className={style["notes"]}>
-          <div className={style["first-line"]}><p>Let &#769;s</p></div>
-            <div className={style["second-line"]}><p>work</p><p>together</p></div>
+            <div className={style["first-line"]}>
+              <p>Let &#769;s</p>
+            </div>
+            <div className={style["second-line"]}>
+              <p>work</p>
+              <p>together</p>
+            </div>
           </div>
         </div>
-        
       </div>
       <div className={style["Bottom"]}>
         <div className={style["placement"]}>{portfolio.CompanyName}</div>
