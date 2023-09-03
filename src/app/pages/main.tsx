@@ -10,6 +10,9 @@ import cloudImage from "../../../images/servers/cloud-data.png";
 import twitterImage from "../../../images/socials/twitter.png";
 import linkedinImage from "../../../images/socials/linkedin.png";
 import path from "path";
+import TopBar from "../components/top-bar";
+import Afoota from "../components/afoota";
+import Link from 'next/link';
 
 const ShowImage = (imageSrc: StaticImageData) => {
   return (
@@ -35,23 +38,13 @@ export default function Main() {
           <p>{p1}</p>
           <p>{p2}</p>
         </div>
-        {routeLink}
+        <Link href ="/credentials"> {routeLink} </Link>
       </div>
     );
   };
   return (
     <div className={style["main-page"]}>
-      <div className={style["Top"]}>
-        <div className={style["left-placement"]}>{portfolio.CompanyName}</div>
-        <div className={style["navigation-buttons"]}>
-          <div className={style["nav-button"]}>navbutton</div>
-          <div className={style["nav-button"]}>navbutton</div>
-          <div className={style["nav-button"]}>navbutton</div>
-          <div className={style["nav-button"]}>navbutton</div>
-          <div className={style["nav-button"]}>navbutton</div>
-        </div>
-        <div className={style["right-placement"]}>placement</div>
-      </div>
+      <TopBar />
       <div className={style["box-wrapper"]}>
         <div className={style["box-line"]}>
           <div className={style["greetings-box"]}>
@@ -129,16 +122,7 @@ export default function Main() {
           </div>
         </div>
       </div>
-      <div className={style["Bottom"]}>
-        <div className={style["placement"]}>{portfolio.CompanyName}</div>
-        <div className={style["navigation-buttons"]}>
-          <div className={style["nav-button"]}>navbutton</div>
-          <div className={style["nav-button"]}>navbutton</div>
-          <div className={style["nav-button"]}>navbutton</div>
-          <div className={style["nav-button"]}>navbutton</div>
-          <div className={style["nav-button"]}>navbutton</div>
-        </div>
-      </div>
+      <Afoota />
     </div>
   );
 }
