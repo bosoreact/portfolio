@@ -23,6 +23,7 @@ const ShowImage = (imageSrc: StaticImageData) => {
     />
   );
 };
+
 export default function Main() {
   const routeLink = (
     <div className={style["route-link"]}>
@@ -31,6 +32,7 @@ export default function Main() {
       <div className={style["arrow"]}></div>
     </div>
   );
+
   const descriptionAndLink = (p1: string, p2: string) => {
     return (
       <div className={style["description-and-link"]}>
@@ -42,6 +44,7 @@ export default function Main() {
       </div>
     );
   };
+
   return (
     <div className={style["main-page"]}>
       <TopBar />
