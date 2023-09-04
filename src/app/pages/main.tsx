@@ -9,10 +9,9 @@ import uiImage from "../../../images/ui/128x128.png";
 import cloudImage from "../../../images/servers/cloud-data.png";
 import twitterImage from "../../../images/socials/twitter.png";
 import linkedinImage from "../../../images/socials/linkedin.png";
-import path from "path";
 import TopBar from "../components/top-bar";
 import Afoota from "../components/afoota";
-import Link from 'next/link';
+import Link from "next/link";
 
 const ShowImage = (imageSrc: StaticImageData) => {
   return (
@@ -40,7 +39,7 @@ export default function Main() {
           <p>{p1}</p>
           <p>{p2}</p>
         </div>
-        <Link href ="/credentials"> {routeLink} </Link>
+        <Link href="/credentials"> {routeLink} </Link>
       </div>
     );
   };

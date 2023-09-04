@@ -1,0 +1,34 @@
+// Theme configuration
+
+// Colors:
+$backgroundLight: #ffffff;
+$backgroundDark: #02111b;
+$textLight: #02111b;
+$textDark: #ffffff;
+
+// Shadows:
+$darkShadow: #02111b;
+$lightShadow: #3f4045;
+$dropShadow: 1vh 1vh 3vh rgba($darkShadow, 0.25),
+  -0.8vh -0.9vh 1.1vh rgba($lightShadow, 1);
+$innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
+  inset 8px 8px 30px rgba($darkShadow, 0.2);
+
+// Lengths:
+$squareLength: 295px;
+$gapsInFlex: 45px;
+$longBoxWidth: 620px;
+// Fonts:
+$smallFont: 14px;
+$mediumFont: 16px;
+$mobileViewWidth: calc(80vw * 0.9);
+
+.light {
+  background-color: $backgroundLight;
+  color: $textLight;
+}
+
+.dark {
+  background-color: $backgroundDark;
+  color: $textDark;
+}

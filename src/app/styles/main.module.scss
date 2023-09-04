@@ -1,3 +1,5 @@
+@import "./theme/theme.module.scss";
+
 @font-face {
   font-family: Mintmolly;
   src: url("../../../public/Mintmolly.otf");
@@ -7,24 +9,6 @@
   font-family: Prestigeo;
   src: url("../../../public/Prestigeo.ttf");
 }
-
-
-$darkShadow: #02111B;
-$lightShadow: #3F4045;
-
-$squareLength: 295px;
-$gapsInFlex: 45px;
-$longBoxWidth: 620px;
-
-$smallfont: 14px;
-$mediumfont: 16px;
-$mobileWievWidth: calc(80vw * 0.9);
-
-$dropShadow: 1vh 1vh 3vh rgba($darkShadow, 0.25),
-  -0.8vh -0.9vh 1.1vh rgba($lightShadow, 1);
-
-$innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
-  inset 8px 8px 30px rgba($darkShadow, 0.2);
 
 @keyframes text-scroll {
   from {
@@ -123,7 +107,6 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
   flex-direction: column;
   align-items: center;
   width: 90%;
-  // min-width: 1150px;
   width: 1285px;
   .Top {
     display: flex;
@@ -138,11 +121,23 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
     .navigation-buttons {
       display: flex;
       flex-direction: row;
-      column-gap: $smallfont;
+      column-gap: $smallFont;
       .nav-button {
       }
     }
     .right-placement {
+      display: flex;
+      .button-wrapper {
+        border-style: none;
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        .button-content {
+          font-weight: 500;
+        }
+        .button-switch {
+        }
+      }
     }
   }
   @media (max-width: 700px) {
@@ -161,12 +156,9 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
 
     .box-line {
       column-gap: $gapsInFlex;
-      // width: 100%;
       display: flex;
       flex-direction: row;
       justify-content: center;
-      // justify-content: space-between;
-      // height: 30vh;
 
       .greetings-box {
         width: $longBoxWidth;
@@ -202,7 +194,7 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
         }
         .greeting-note p:nth-child(1) {
           font-weight: bold;
-          font-size: $mediumfont;
+          font-size: $mediumFont;
         }
         .greeting-note p:nth-child(2) {
           font-weight: bold;
@@ -210,7 +202,7 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
         }
         .greeting-note p:nth-child(3) {
           font-weight: bold;
-          font-size: $mediumfont;
+          font-size: $mediumFont;
         }
       }
       .right-nested-box {
@@ -248,7 +240,7 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
           animation-delay: 10s;
         }
         .credentials-and-portfolio {
-          height: $squarelength;
+          height: $squareLength;
           display: flex;
           flex-direction: row;
           column-gap: $gapsInFlex;
@@ -308,7 +300,7 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
         .greetings-box {
           flex-direction: column;
           height: 100%;
-          width: $mobileWievWidth;
+          width: $mobileViewWidth;
           align-items: center;
           .image-wraper {
             height: calc(60vw * 0.9);
@@ -322,7 +314,7 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
         }
         .right-nested-box {
           height: 100%;
-          width: $mobileWievWidth;
+          width: $mobileViewWidth;
           .moving-phrase {
             height: 40px;
           }
@@ -331,7 +323,7 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
             height: 100%;
             row-gap: $gapsInFlex;
             .c-and-p-box {
-              height: $squarelength;
+              height: $squareLength;
             }
           }
         }
@@ -479,7 +471,7 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
         .second-line {
           align-items: center;
           margin-top: 0%;
-          height: $smallfont;
+          height: $smallFont;
           margin-bottom: 45px;
           display: flex;
           flex-direction: row;
@@ -540,7 +532,7 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
     .box-wrapper {
       .box-line-s {
         .offered-services-box {
-          width: $squarelength;
+          width: $squareLength;
           .image-wraper {
             flex-direction: column;
             flex-wrap: wrap;
@@ -549,11 +541,11 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
         .statistic {
           row-gap: $gapsInFlex;
           height: $longBoxWidth;
-          width: $squarelength;
+          width: $squareLength;
           flex-direction: column;
           .stat-box {
             width: 150px;
-            height: 150px; 
+            height: 150px;
           }
           .stat-box:nth-child(1) p:nth-child(2) {
             margin-right: 0;
@@ -566,16 +558,15 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
           .stat-box:nth-child(3) p:nth-child(2) {
             margin-right: 20%;
             margin-left: 20%;
-
           }
         }
-        .notes{
-          height: $squarelength;
-          width: $mobileWievWidth;
-          .first-line{
-            font-size: $smallfont;
+        .notes {
+          height: $squareLength;
+          width: $mobileViewWidth;
+          .first-line {
+            font-size: $smallFont;
           }
-          .second-line{
+          .second-line {
             font-size: 10px;
           }
         }
@@ -609,7 +600,7 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
       margin-top: 1px;
       margin-bottom: 1px;
     }
-    .Bottom{
+    .Bottom {
       display: none;
     }
   }
