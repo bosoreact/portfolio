@@ -6,6 +6,15 @@ import { portfolio } from "../../../public/portfolio";
 import c_style from "@/app/credentials/credentials.module.css";
 
 export default function Page() {
+
+const aboutMe = (
+<div className={c_style["about-me"]}><h1>ABOUT ME</h1>
+{portfolio.aboutMe.long.map((x,y) => {
+  return (<p key={y}>{x}</p>)}
+)}
+</div>
+)
+
   return (
     <div className={style["main-page"]}>
       <TopBar />
@@ -30,6 +39,7 @@ export default function Page() {
           </div>
         </div>
         <div className={c_style["right-side-credentials"]}>
+          {aboutMe}
           <div className={c_style["education-box"]}>education</div>
           <div className={c_style["skills-box"]}>skills</div>
           <div className={c_style["badges-and-awards"]}>badges and awards</div>
