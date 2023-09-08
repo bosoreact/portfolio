@@ -1,14 +1,14 @@
 import style from "../styles/main.module.css";
 import { portfolio } from "../../../public/portfolio";
 import photo from "../../../images/photo.png";
-import cvImage from "../../../images/download_image/128x128.png";
+import cvImage from "../../../images/download_image/download.svg";
 import Image, { StaticImageData } from "next/image";
-import dbImage from "../../../images/database/128x128.png";
-import codingImage from "../../../images/coding/128x128.png";
-import uiImage from "../../../images/ui/128x128.png";
-import cloudImage from "../../../images/servers/cloud-data.png";
-import twitterImage from "../../../images/socials/twitter.png";
-import linkedinImage from "../../../images/socials/linkedin.png";
+import dbImage from "../../../images/database/database.svg";
+import codingImage from "../../../images/coding/coding.svg";
+import uiImage from "../../../images/ui/user-interface.svg";
+import cloudImage from "../../../images/servers/servers.svg";
+import githubImage from "../../../images/socials/github.svg";
+import linkedinImage from "../../../images/socials/linkedin-round.svg";
 import TopBar from "../components/top-bar";
 import Afoota from "../components/afoota";
 import Link from "next/link";
@@ -91,7 +91,7 @@ export default function Main() {
           </div>
           <div className={style["profiles-box"]}>
             <div className={style["image-wraper"]}>
-              {ShowImage(twitterImage)}
+              {ShowImage(githubImage)}
               {ShowImage(linkedinImage)}
             </div>
             {descriptionAndLink("STAY WITH ME", "Profiles")}
