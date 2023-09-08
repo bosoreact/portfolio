@@ -64,11 +64,15 @@ export default function Main() {
             <div className={style["credentials-and-portfolio"]}>
               <div className={style["c-and-p-box"]}>
                 <div className={style["top-sign"]}>{portfolio.sign}</div>
-                {descriptionAndLink("MORE ABOUT ME", "Credentials","credentials")}
+                {descriptionAndLink(
+                  "MORE ABOUT ME",
+                  "Credentials",
+                  "credentials"
+                )}
               </div>
               <div className={style["c-and-p-box"]}>
                 <div className={style["bg-info"]}>MY WORK</div>
-                {descriptionAndLink("SHOWCASE", "Portfolio","mywork")}
+                {descriptionAndLink("SHOWCASE", "Portfolio", "mywork")}
               </div>
             </div>
           </div>
@@ -76,7 +80,7 @@ export default function Main() {
         <div className={style["box-line-s"]}>
           <div className={style["cv-box"]}>
             <div className={style["image-wraper"]}>{ShowImage(cvImage)}</div>
-            {descriptionAndLink("MY CV", "Download","cv")}
+            {descriptionAndLink("MY CV", "Download", "cv")}
           </div>
           <div className={style["offered-services-box"]}>
             <div className={style["image-wraper"]}>
@@ -85,14 +89,18 @@ export default function Main() {
               {ShowImage(uiImage)}
               {ShowImage(cloudImage)}
             </div>
-            {descriptionAndLink("SPECIALIZATION", "Services Offering","services")}
+            {descriptionAndLink(
+              "SPECIALIZATION",
+              "Services Offering",
+              "services"
+            )}
           </div>
           <div className={style["profiles-box"]}>
             <div className={style["image-wraper"]}>
               {ShowImage(twitterImage)}
               {ShowImage(linkedinImage)}
             </div>
-            {descriptionAndLink("STAY WITH ME", "Profiles","contact")}
+            {descriptionAndLink("STAY WITH ME", "Profiles", "contact")}
           </div>
         </div>
         <div className={style["box-line-s"]}>
