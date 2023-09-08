@@ -12,7 +12,7 @@ import linkedinImage from "../../../images/socials/linkedin.png";
 import path from "path";
 import TopBar from "../components/top-bar";
 import Afoota from "../components/afoota";
-import Link from 'next/link';
+import Link from "next/link";
 
 const ShowImage = (imageSrc: StaticImageData) => {
   return (
@@ -31,14 +31,14 @@ export default function Main() {
       <div className={style["arrow"]}></div>
     </div>
   );
-  const descriptionAndLink = (p1: string, p2: string) => {
+  const descriptionAndLink = (p1: string, p2: string, route: string) => {
     return (
       <div className={style["description-and-link"]}>
         <div className={style["description"]}>
           <p>{p1}</p>
           <p>{p2}</p>
         </div>
-        <Link href ="/credentials"> {routeLink} </Link>
+        <Link href={`${route}`}> {routeLink} </Link>
       </div>
     );
   };
@@ -64,11 +64,11 @@ export default function Main() {
             <div className={style["credentials-and-portfolio"]}>
               <div className={style["c-and-p-box"]}>
                 <div className={style["top-sign"]}>{portfolio.sign}</div>
-                {descriptionAndLink("MORE ABOUT ME", "Credentials")}
+                {descriptionAndLink("MORE ABOUT ME", "Credentials","credentials")}
               </div>
               <div className={style["c-and-p-box"]}>
                 <div className={style["bg-info"]}>MY WORK</div>
-                {descriptionAndLink("SHOWCASE", "Portfolio")}
+                {descriptionAndLink("SHOWCASE", "Portfolio","mywork")}
               </div>
             </div>
           </div>
@@ -76,7 +76,7 @@ export default function Main() {
         <div className={style["box-line-s"]}>
           <div className={style["cv-box"]}>
             <div className={style["image-wraper"]}>{ShowImage(cvImage)}</div>
-            {descriptionAndLink("MY CV", "Download")}
+            {descriptionAndLink("MY CV", "Download","cv")}
           </div>
           <div className={style["offered-services-box"]}>
             <div className={style["image-wraper"]}>
@@ -85,14 +85,14 @@ export default function Main() {
               {ShowImage(uiImage)}
               {ShowImage(cloudImage)}
             </div>
-            {descriptionAndLink("SPECIALIZATION", "Services Offering")}
+            {descriptionAndLink("SPECIALIZATION", "Services Offering","services")}
           </div>
           <div className={style["profiles-box"]}>
             <div className={style["image-wraper"]}>
               {ShowImage(twitterImage)}
               {ShowImage(linkedinImage)}
             </div>
-            {descriptionAndLink("STAY WITH ME", "Profiles")}
+            {descriptionAndLink("STAY WITH ME", "Profiles","contact")}
           </div>
         </div>
         <div className={style["box-line-s"]}>
