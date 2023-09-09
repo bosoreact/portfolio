@@ -1,7 +1,9 @@
 .light {
+  background-image: linear-gradient(to top left, #fffffa, #cccccc);
   color: #232020;
 }
 
 .dark {
-  color: #ffffff;
+  background-color: #272932;
+  color: #fffffa;
 }/*# sourceMappingURL=theme.module.css.map */

@@ -1,3 +1,5 @@
+@use "sass:list";
+
 // Theme configuration
 
 // Colors:
@@ -7,23 +9,29 @@ $codGrayMid: #181616;
 $mineShaft: #232020;
 // light theme colors
 $doveGray: #747070;
-$white: #ffffff;
 $porcelain: #e8eaec;
+$silver: #cccccc;
 
+$babyPowder: #fffffa;
+$cinereous: #93827f;
+$raisinBlack: #272932;
 $blueCharcoal: #02111b;
 $tuna: #3f4045;
 
 // body background dark/light
-$backgroundLight: $porcelain;
-$backgroundDark: $codGray;
-// text colors
-$textLight: $mineShaft;
-$textDark: $white;
+$lightMainColorSet: $mineShaft, $porcelain;
+$darkMainColorSet: $babyPowder, $raisinBlack;
 
 // Shadows:
 $darkShadows: 34px 34px 73px $codGrayMid, -34px -34px 73px $mineShaft;
-$lightShadows: 34px 34px 73px $doveGray, -34px -34px 73px $white;
+$lightShadows: 34px 34px 73px $doveGray, -34px -34px 73px $babyPowder;
 
+// Background gradient - light
+$simpleGradient: $babyPowder, $silver;
+$schemeSimpleGradient: $mineShaft, $simpleGradient;
+// Background gradient - dark
+$simpleGradientDark: $raisinBlack, $doveGrey;
+$schemeSimpleGradientDark: $babyPowder, $simpleGradientDark;
 // Lengths:
 $squareLength: 295px;
 $gapsInFlex: 45px;
@@ -33,10 +41,19 @@ $smallFont: 14px;
 $mediumFont: 16px;
 $mobileViewWidth: calc(80vw * 0.9);
 
+@mixin color-scheme($text, $bg) {
+  @if list.length($bg) == 1 {
+    background-color: $bg;
+  } @else {
+    background-image: linear-gradient(to top left, $bg);
+  }
+  color: $text;
+}
+
 .light {
-  color: $mineShaft;
+  @include color-scheme($schemeSimpleGradient...);
 }
 
 .dark {
-  color: $white;
+  @include color-scheme($schemeSimpleGradientDark...);
 }
