@@ -1,34 +1,42 @@
 // Theme configuration
 
 // Colors:
-$backgroundLight: #ffffff;
-$backgroundDark: #02111b;
-$textLight: #02111b;
-$textDark: #ffffff;
+// dark theme colors
+$codGray: #0d0c0c;
+$codGrayMid: #181616;
+$mineShaft: #232020;
+// light theme colors
+$doveGray: #747070;
+$white: #ffffff;
+$porcelain: #e8eaec;
+
+$blueCharcoal: #02111b;
+$tuna: #3f4045;
+
+// body background dark/light
+$backgroundLight: $porcelain;
+$backgroundDark: $codGray;
+// text colors
+$textLight: $mineShaft;
+$textDark: $white;
 
 // Shadows:
-$darkShadow: #02111b;
-$lightShadow: #3f4045;
-$dropShadow: 1vh 1vh 3vh rgba($darkShadow, 0.25),
-  -0.8vh -0.9vh 1.1vh rgba($lightShadow, 1);
-$innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
-  inset 8px 8px 30px rgba($darkShadow, 0.2);
+$darkShadows: 34px 34px 73px $codGrayMid, -34px -34px 73px $mineShaft;
+$lightShadows: 34px 34px 73px $doveGray, -34px -34px 73px $white;
 
 // Lengths:
 $squareLength: 295px;
 $gapsInFlex: 45px;
 $longBoxWidth: 620px;
-// Fonts:
+// Font size:
 $smallFont: 14px;
 $mediumFont: 16px;
 $mobileViewWidth: calc(80vw * 0.9);
 
 .light {
-  background-color: $backgroundLight;
-  color: $textLight;
+  color: $mineShaft;
 }
 
 .dark {
-  background-color: $backgroundDark;
-  color: $textDark;
+  color: $white;
 }

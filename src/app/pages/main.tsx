@@ -13,7 +13,7 @@ import TopBar from "../components/top-bar";
 import Afoota from "../components/afoota";
 import Link from "next/link";
 
-const ShowImage = (imageSrc: StaticImageData) => {
+const showImage = (imageSrc: StaticImageData) => {
   return (
     <Image
       src={imageSrc}
@@ -23,34 +23,34 @@ const ShowImage = (imageSrc: StaticImageData) => {
   );
 };
 
-export default function Main() {
-  const routeLink = (
-    <div className={style["route-link"]}>
-      <div className={style["arrow"]}></div>
-      <div className={style["arrow"]}></div>
-      <div className={style["arrow"]}></div>
+const routeLink = (
+  <div className={style["route-link"]}>
+    <div className={style["arrow"]}></div>
+    <div className={style["arrow"]}></div>
+    <div className={style["arrow"]}></div>
+  </div>
+);
+
+const descriptionAndLink = (p1: string, p2: string) => {
+  return (
+    <div className={style["description-and-link"]}>
+      <div className={style["description"]}>
+        <p>{p1}</p>
+        <p>{p2}</p>
+      </div>
+      <Link href="/credentials"> {routeLink} </Link>
     </div>
   );
+};
 
-  const descriptionAndLink = (p1: string, p2: string) => {
-    return (
-      <div className={style["description-and-link"]}>
-        <div className={style["description"]}>
-          <p>{p1}</p>
-          <p>{p2}</p>
-        </div>
-        <Link href="/credentials"> {routeLink} </Link>
-      </div>
-    );
-  };
-
+export default function Main() {
   return (
     <div className={style["main-page"]}>
       <TopBar />
       <div className={style["box-wrapper"]}>
         <div className={style["box-line"]}>
           <div className={style["greetings-box"]}>
-            <div className={style["image-wraper"]}> {ShowImage(photo)}</div>
+            <div className={style["image-wraper"]}> {showImage(photo)}</div>
             <div className={style["greeting-note"]}>
               <p>{portfolio.description.p1}</p>
               <p>{portfolio.description.p2}</p>
@@ -77,22 +77,22 @@ export default function Main() {
         </div>
         <div className={style["box-line-s"]}>
           <div className={style["cv-box"]}>
-            <div className={style["image-wraper"]}>{ShowImage(cvImage)}</div>
+            <div className={style["image-wraper"]}>{showImage(cvImage)}</div>
             {descriptionAndLink("MY CV", "Download")}
           </div>
           <div className={style["offered-services-box"]}>
             <div className={style["image-wraper"]}>
-              {ShowImage(dbImage)}
-              {ShowImage(codingImage)}
-              {ShowImage(uiImage)}
-              {ShowImage(cloudImage)}
+              {showImage(dbImage)}
+              {showImage(codingImage)}
+              {showImage(uiImage)}
+              {showImage(cloudImage)}
             </div>
             {descriptionAndLink("SPECIALIZATION", "Services Offering")}
           </div>
           <div className={style["profiles-box"]}>
             <div className={style["image-wraper"]}>
-              {ShowImage(githubImage)}
-              {ShowImage(linkedinImage)}
+              {showImage(githubImage)}
+              {showImage(linkedinImage)}
             </div>
             {descriptionAndLink("STAY WITH ME", "Profiles")}
           </div>
