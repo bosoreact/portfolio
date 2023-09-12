@@ -1,12 +1,12 @@
 import Afoota from "../components/afoota";
 import TopBar from "../components/top-bar";
 import style from "@/app/styles/main.module.css";
-import { portfolio } from "../../../public/portfolio";
+import { portfolio } from "@/app/portfolio";
 import Image, { StaticImageData } from "next/image";
 import c_style from "@/app/credentials/credentials.module.css";
-import photo from "@/../../images/photo.png";
-import twitterImage from "@/../../images/socials/twitter.png";
-import linkedinImage from "@/../../images/socials/linkedin.png";
+import photo from "@/../images/profile/photo.png";
+import twitterImage from "@/../images/main/socials/twitter.png";
+import linkedinImage from "@/../images/main/socials/linkedin.png";
 
 export default function Page() {
   const ShowImage = (imageSrc: StaticImageData) => {
