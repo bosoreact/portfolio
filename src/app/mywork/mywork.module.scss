@@ -1,0 +1,55 @@
+$squarelength: 295px;
+$gapsInFlex: 45px;
+$darkShadow: #0d2750;
+$lightShadow: #ffffff;
+$dropShadow: 1vh 1vh 3vh rgba($darkShadow, 0.25),
+  -0.8vh -0.9vh 1.1vh rgba($lightShadow, 1);
+
+$innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
+  inset 8px 8px 30px rgba($darkShadow, 0.2);
+
+@mixin big-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+@mixin projectBox {
+  .project-box {
+    display: flex;
+    border-radius: 30px;
+    width: calc($squarelength * 0.95);
+    height: calc($squarelength * 0.95);
+    box-shadow: $dropShadow;
+    justify-content: center;
+    align-items: center;
+    .photo-style {
+      margin-top: 15px;
+      width: calc($squarelength * 0.7);
+      height: auto;
+      border-radius: 5% 25%;
+    }
+  }
+}
+.box-wrapper {
+  display: grid;
+  gap: 10px;
+
+  padding: 10px;
+  grid-template-columns: auto auto auto;
+  .collumn-one {
+    grid-column: 1/2;
+    @include projectBox;
+  }
+  .page-title{
+    grid-column: 2/  4;
+  grid-row: 1 ;
+  height: 30px;
+  }
+  .collumn-two{
+    grid-column: 2;
+    @include projectBox;
+  }
+  .collumn-three{
+    grid-column: 3;
+    @include projectBox;
+  }
+}

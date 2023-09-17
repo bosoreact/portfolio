@@ -1,0 +1,66 @@
+.box-wrapper {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+  grid-template-columns: auto auto auto;
+}
+.box-wrapper .collumn-one {
+  grid-column: 1/2;
+}
+.box-wrapper .collumn-one .project-box {
+  display: flex;
+  border-radius: 30px;
+  width: 280.25px;
+  height: 280.25px;
+  box-shadow: 1vh 1vh 3vh rgba(13, 39, 80, 0.25), -0.8vh -0.9vh 1.1vh white;
+  justify-content: center;
+  align-items: center;
+}
+.box-wrapper .collumn-one .project-box .photo-style {
+  margin-top: 15px;
+  width: 206.5px;
+  height: auto;
+  border-radius: 5% 25%;
+}
+.box-wrapper .page-title {
+  grid-column: 2/4;
+  grid-row: 1;
+  height: 30px;
+}
+.box-wrapper .collumn-two {
+  grid-column: 2;
+}
+.box-wrapper .collumn-two .project-box {
+  display: flex;
+  border-radius: 30px;
+  width: 280.25px;
+  height: 280.25px;
+  box-shadow: 1vh 1vh 3vh rgba(13, 39, 80, 0.25), -0.8vh -0.9vh 1.1vh white;
+  justify-content: center;
+  align-items: center;
+}
+.box-wrapper .collumn-two .project-box .photo-style {
+  margin-top: 15px;
+  width: 206.5px;
+  height: auto;
+  border-radius: 5% 25%;
+}
+.box-wrapper .collumn-three {
+  grid-column: 3;
+}
+.box-wrapper .collumn-three .project-box {
+  display: flex;
+  border-radius: 30px;
+  width: 280.25px;
+  height: 280.25px;
+  box-shadow: 1vh 1vh 3vh rgba(13, 39, 80, 0.25), -0.8vh -0.9vh 1.1vh white;
+  justify-content: center;
+  align-items: center;
+}
+.box-wrapper .collumn-three .project-box .photo-style {
+  margin-top: 15px;
+  width: 206.5px;
+  height: auto;
+  border-radius: 5% 25%;
+}
+/*# sourceMappingURL=mywork.module.css.map */
