@@ -14,7 +14,7 @@ import TopBar from "../components/top-bar";
 import Afoota from "../components/afoota";
 import Link from "next/link";
 
-const ShowImage = (imageSrc: StaticImageData) => {
+export const ShowImage = (imageSrc: StaticImageData) => {
   return (
     <Image
       src={imageSrc}
@@ -23,6 +23,7 @@ const ShowImage = (imageSrc: StaticImageData) => {
     />
   );
 };
+
 export default function Main() {
   const routeLink = (
     <div className={style["route-link"]}>
