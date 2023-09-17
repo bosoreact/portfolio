@@ -1,4 +1,4 @@
-import { portfolio } from "../../../public/portfolio";
+import { portfolio } from "@/app/portfolio";
 import style from "../styles/main.module.css";
 
 export default function Afoota(){
