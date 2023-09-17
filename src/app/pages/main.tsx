@@ -9,12 +9,11 @@ import uiImage from "../../../images/ui/128x128.png";
 import cloudImage from "../../../images/servers/cloud-data.png";
 import twitterImage from "../../../images/socials/twitter.png";
 import linkedinImage from "../../../images/socials/linkedin.png";
-import path from "path";
 import TopBar from "../components/top-bar";
 import Afoota from "../components/afoota";
 import Link from 'next/link';
 
-const ShowImage = (imageSrc: StaticImageData) => {
+export const ShowImage = (imageSrc: StaticImageData) => {
   return (
     <Image
       src={imageSrc}
@@ -23,6 +22,7 @@ const ShowImage = (imageSrc: StaticImageData) => {
     />
   );
 };
+
 export default function Main() {
   const routeLink = (
     <div className={style["route-link"]}>
