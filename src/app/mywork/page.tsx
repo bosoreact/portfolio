@@ -7,6 +7,14 @@ import exampleImage from "@/../images/my-work/figma_shoes_shop.png";
 import Image, { StaticImageData } from "next/image";
 
 export default function Page() {
+  /*here I will create function that will read mywork array of objects
+  and depending on amount of objects will divide 1/3 obejct to left-side-mywork
+  and 2/3 object to right-side-mywork. 
+    */
+   const extractMyWork = () => {
+    
+     
+   }
   const projectBox = () => {
     return MyWork.length;
   };
@@ -19,7 +27,6 @@ export default function Page() {
       />
     );
   };
-
   const exampleProject = (
     <div className={m_style["project-box"]}>{ShowImage(exampleImage)}</div>
   );
@@ -27,10 +34,19 @@ export default function Page() {
     <div className={style["main-page"]}>
       <TopBar />
       <div className={m_style["box-wrapper"]}>
-        <div className={m_style["collumn-one"]}>{exampleProject}</div>
-        <div className={m_style["page-title"]}>MY PROJECTS</div>
-        <div className={m_style["collumn-two"]}>{exampleProject}</div>
-        <div className={m_style["collumn-three"]}>{exampleProject}</div>
+        <div className={m_style["left-side-mywork"]}>
+          <div className={m_style["project-box"]}>{exampleProject}</div>
+          <div className={m_style["project-box"]}>{exampleProject}</div>
+          <div className={m_style["project-box"]}>{exampleProject}</div>
+        </div>
+        <div className={m_style["right-side-mywork"]}>
+        <div className={m_style["page-title"]}>✴ALL PROJECTS✴</div>
+          <div className={m_style["project-box"]}>{exampleProject}</div>
+          <div className={m_style["project-box"]}>{exampleProject}</div>
+          <div className={m_style["project-box"]}>{exampleProject}</div>
+          <div className={m_style["project-box"]}>{exampleProject}</div>
+          <div className={m_style["project-box"]}>{exampleProject}</div>
+        </div>
       </div>
       {projectBox()}
       <Afoota />

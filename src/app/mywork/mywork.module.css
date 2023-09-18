@@ -1,66 +1,60 @@
 .box-wrapper {
-  display: grid;
-  gap: 10px;
+  margin-top: 100px;
+  -moz-column-gap: 45px;
+       column-gap: 45px;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  width: 90%;
   padding: 10px;
-  grid-template-columns: auto auto auto;
 }
-.box-wrapper .collumn-one {
-  grid-column: 1/2;
+.box-wrapper .left-side-mywork {
+  display: flex;
+  flex-direction: column;
+  row-gap: 45px;
 }
-.box-wrapper .collumn-one .project-box {
+.box-wrapper .left-side-mywork .project-box {
   display: flex;
   border-radius: 30px;
-  width: 280.25px;
-  height: 280.25px;
+  width: 351.5px;
+  height: 351.5px;
   box-shadow: 1vh 1vh 3vh rgba(13, 39, 80, 0.25), -0.8vh -0.9vh 1.1vh white;
   justify-content: center;
   align-items: center;
 }
-.box-wrapper .collumn-one .project-box .photo-style {
+.box-wrapper .left-side-mywork .project-box .photo-style {
   margin-top: 15px;
-  width: 206.5px;
+  width: 259px;
   height: auto;
   border-radius: 5% 25%;
 }
-.box-wrapper .page-title {
-  grid-column: 2/4;
-  grid-row: 1;
-  height: 30px;
+.box-wrapper .right-side-mywork {
+  row-gap: 45px;
+  -moz-column-gap: 45px;
+       column-gap: 45px;
+  display: flex;
+  flex-wrap: wrap;
+  display: flex;
 }
-.box-wrapper .collumn-two {
-  grid-column: 2;
-}
-.box-wrapper .collumn-two .project-box {
+.box-wrapper .right-side-mywork .project-box {
   display: flex;
   border-radius: 30px;
-  width: 280.25px;
-  height: 280.25px;
+  width: 351.5px;
+  height: 351.5px;
   box-shadow: 1vh 1vh 3vh rgba(13, 39, 80, 0.25), -0.8vh -0.9vh 1.1vh white;
   justify-content: center;
   align-items: center;
 }
-.box-wrapper .collumn-two .project-box .photo-style {
+.box-wrapper .right-side-mywork .project-box .photo-style {
   margin-top: 15px;
-  width: 206.5px;
+  width: 259px;
   height: auto;
   border-radius: 5% 25%;
 }
-.box-wrapper .collumn-three {
-  grid-column: 3;
-}
-.box-wrapper .collumn-three .project-box {
-  display: flex;
-  border-radius: 30px;
-  width: 280.25px;
-  height: 280.25px;
-  box-shadow: 1vh 1vh 3vh rgba(13, 39, 80, 0.25), -0.8vh -0.9vh 1.1vh white;
-  justify-content: center;
-  align-items: center;
-}
-.box-wrapper .collumn-three .project-box .photo-style {
-  margin-top: 15px;
-  width: 206.5px;
-  height: auto;
-  border-radius: 5% 25%;
+.box-wrapper .right-side-mywork .page-title {
+  width: 760px;
+  text-align: center;
+  font-size: 65px;
+  font-weight: 800;
 }
 /*# sourceMappingURL=mywork.module.css.map */
