@@ -1,3 +1,8 @@
+.dark {
+  background-image: linear-gradient(to top left, #272932, #747070);
+  color: #fffffa;
+}
+
 @font-face {
   font-family: Mintmolly;
   src: url("../../../public/Mintmolly.otf");
@@ -85,7 +90,6 @@
   align-self: center;
 }
 .main-page .Top .right-placement .theme-button .icon-wrapper {
-  background: grey;
   display: flex;
   align-items: center;
   justify-content: center;
