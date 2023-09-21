@@ -1,5 +1,7 @@
 $projectSquareLength: 370px;
 $bigTitleFont: 65px;
+$smallfont: 14px;
+$mediumfont: 16px;
 $gapsInFlex: 45px;
 $longBoxWidth: 760px;
 $darkShadow: #0d2750;
@@ -17,6 +19,7 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
 @mixin projectBox {
   .project-box {
     display: flex;
+    flex-direction: column;
     border-radius: 30px;
     width: calc($projectSquareLength * 0.95);
     height: calc($projectSquareLength * 0.95);
@@ -29,6 +32,15 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
       height: auto;
       border-radius: 5% 25%;
     }
+  }
+}
+@mixin projectDescription{
+  p:nth-child(1) {
+    font-size: 1em;
+  }
+  p:nth-child(2) {
+    font-size: $mediumfont;
+    font-weight: bold;
   }
 }
 .box-wrapper {

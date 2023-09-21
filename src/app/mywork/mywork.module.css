@@ -15,6 +15,7 @@
 }
 .box-wrapper .left-side-mywork .project-box {
   display: flex;
+  flex-direction: column;
   border-radius: 30px;
   width: 351.5px;
   height: 351.5px;
@@ -38,6 +39,7 @@
 }
 .box-wrapper .right-side-mywork .project-box {
   display: flex;
+  flex-direction: column;
   border-radius: 30px;
   width: 351.5px;
   height: 351.5px;

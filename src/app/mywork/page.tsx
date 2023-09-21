@@ -21,13 +21,11 @@ export default function Page() {
     let tempwork = mywork;
     let left = [];
     let right = [];
-    for (let i = 0; i < mywork.length ; i++) {
+    for (let i = 0; tempwork.length > 0; i++) {
       if (tempwork.length > 0) left[left.length] = tempwork.shift();
       if (tempwork.length > 0) right[right.length] = tempwork.shift();
       if (tempwork.length > 0) right[right.length] = tempwork.shift();
     }
-    console.log("left", Object.keys(left[0])[0],left.length);
-    console.log("right", right.length);
     return { left, right };
   };
   const ShowImage = (imageSrc: StaticImageData) => {
@@ -40,32 +38,34 @@ export default function Page() {
     );
   };
   const exampleProject = (
-    <div className={m_style["project-box"]}>{ShowImage(exampleImage)}</div>
+    <>
+    {ShowImage(exampleImage)}
+    </>
   );
-console.log(Object.keys(mywork[0])[0]);
   const displayMywork = () => {
-    // console.log("twoSides",  divideMyworkOnTwoSides())
     const { left, right } = divideMyworkOnTwoSides();
     return (
       <div className={m_style["box-wrapper"]}>
         <div className={m_style["left-side-mywork"]}>
-          {left.map((x:any) => {
+          {left.map((x: any) => {
             return (
               <div key={Object.keys(x)[0]} className={m_style["project-box"]}>
                 {exampleProject}
+                <p>{Object.keys(x)[0]}</p>
               </div>
             );
           })}
         </div>
         <div className={m_style["right-side-mywork"]}>
-          {right.map((x:any) => {
+          <div className={m_style["page-title"]}>✴ALL PROJECTS✴</div>
+          {right.map((x: any) => {
             return (
               <div key={Object.keys(x)[0]} className={m_style["project-box"]}>
                 {exampleProject}
+                <p>{Object.keys(x)[0]}</p>
               </div>
             );
           })}
-          {<div className={m_style["project-box"]}>{exampleProject}</div>}
         </div>
       </div>
     );
@@ -79,22 +79,6 @@ console.log(Object.keys(mywork[0])[0]);
     <div className={style["main-page"]}>
       <TopBar />
       {displayMywork()}
-      {/* <div className={m_style["box-wrapper"]}>
-        <div className={m_style["left-side-mywork"]}>
-          <div className={m_style["project-box"]}>{exampleProject}</div>
-          <div className={m_style["project-box"]}>{exampleProject}</div>
-          <div className={m_style["project-box"]}>{exampleProject}</div>
-        </div>
-        <div className={m_style["right-side-mywork"]}>
-          <div className={m_style["page-title"]}>✴ALL PROJECTS✴</div>
-          <div className={m_style["project-box"]}>{exampleProject}</div>
-          <div className={m_style["project-box"]}>{exampleProject}</div>
-          <div className={m_style["project-box"]}>{exampleProject}</div>
-          <div className={m_style["project-box"]}>{exampleProject}</div>
-          <div className={m_style["project-box"]}>{exampleProject}</div>
-        </div>
-      </div> */}
-      {projectBox()}
       <Afoota />
     </div>
   );
