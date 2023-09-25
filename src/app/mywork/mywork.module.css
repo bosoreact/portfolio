@@ -29,6 +29,13 @@
   height: auto;
   border-radius: 5% 25%;
 }
+.box-wrapper .left-side-mywork p:nth-child(1) {
+  font-size: 16px;
+}
+.box-wrapper .left-side-mywork p:nth-child(2) {
+  font-size: 16px;
+  font-weight: bold;
+}
 .box-wrapper .right-side-mywork {
   row-gap: 45px;
   -moz-column-gap: 45px;
@@ -52,6 +59,13 @@
   width: 259px;
   height: auto;
   border-radius: 5% 25%;
+}
+.box-wrapper .right-side-mywork p:nth-child(1) {
+  font-size: 16px;
+}
+.box-wrapper .right-side-mywork p:nth-child(2) {
+  font-size: 16px;
+  font-weight: bold;
 }
 .box-wrapper .right-side-mywork .page-title {
   width: 760px;

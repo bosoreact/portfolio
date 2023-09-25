@@ -5,7 +5,7 @@ import Afoota from "../components/afoota";
 import style from "@/app/styles/main.module.css";
 import m_style from "@/app/mywork/mywork.module.css";
 import { MyWork } from "@/app/my-work";
-import exampleImage from "@/../images/my-work/figma_shoes_shop.png";
+import exampleImage from "@/../images/main/default_images/default_project.png";
 import Image, { StaticImageData } from "next/image";
 import { resolve } from "path";
 import { useEffect, useState } from "react";
@@ -17,6 +17,7 @@ export default function Page() {
   and 2/3 object to right-side-mywork. zero index must be at the begining of left-side-mywork.
   index one and two must be at the begining of right-side-mywork
 */
+// const exampleImage = "/images/main/default_images/default_project.png"
   const divideMyworkOnTwoSides = () => {
     let tempwork = mywork;
     let left = [];
@@ -34,6 +35,8 @@ export default function Page() {
         src={imageSrc}
         className={m_style["photo-style"]}
         alt="Picture of the author"
+
+        //width={100}
       />
     );
   };

@@ -33,16 +33,16 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
       border-radius: 5% 25%;
     }
   }
-}
-@mixin projectDescription{
   p:nth-child(1) {
-    font-size: 1em;
+    font-size: $mediumfont;
   }
   p:nth-child(2) {
     font-size: $mediumfont;
     font-weight: bold;
   }
 }
+
+
 .box-wrapper {
   margin-top: 100px;
   column-gap: $gapsInFlex;
