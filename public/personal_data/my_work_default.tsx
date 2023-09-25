@@ -1,225 +1,38 @@
 export const MyWork = 
-  [{
-    "Campbells": {
-      "Breif": "My latest project was developed using Next.js for the owner of a luxury tailoring company. I enhanced the way reports could be accessed and viewed. In this project, I compared two or three reports provided by the current digital system provider. The algorithm I implemented compared arrays of objects, with each array containing over 6000 objects. I enabled the functionality to upload an XML file and convert it into JSON format. Once the desired report was selected, the file could be downloaded in Excel format.",
-      "Learned": [
-        {
-          "x2js": "I utilized a library that enables the conversion between XML and JavaScript objects. This library played a crucial role in the project, allowing seamless transformation of XML data into JavaScript objects, and vice versa. It greatly facilitated data processing and manipulation, making it easier to work with XML-based reports and integrate them into the project's workflow."
-        },
-        {
-          "formidable": "For handling larger file uploads and parsing form data efficiently, I incorporated a specialized library into my project. This library excels at parsing and managing form data, specifically designed to handle larger file uploads seamlessly. By leveraging this library, the project was able to handle the processing of substantial file sizes while maintaining optimal performance and reliability."
-        },
-        {
-          "react-csv": "Library proved to be invaluable in my project as it facilitated the generation of downloadable CSV files from JavaScript objects. By leveraging this library, I was able to effortlessly convert and format the data from JavaScript objects into CSV format. This feature enabled users to easily download the generated CSV file, allowing for seamless data export and compatibility with various spreadsheet applications. The 'react-csv' library greatly simplified the process of working with CSV files, making it an essential tool for data management in the project."
-        },
-        {
-          "woocommerce-rest-api": "By utilizing this library, I was able to establish seamless communication with WooCommerce, a popular e-commerce platform built on WordPress. This integration enabled me to fetch and retrieve essential data from customer websites, such as customer information, order details, and product data."
-        },
-        {
-          "stakeholder": [
-            "During my project, I gained valuable insights into the significance of effective communication with stakeholders and the importance of efficient time management. I learned that establishing clear lines of communication with stakeholders is crucial for project success. Understanding their needs and priorities helped me prioritize features accordingly. Meeting deadlines and delivering a minimum viable product (MVP) with all requested features became a key focus, even if I identified other areas for improvement.",
-
-            "Furthermore I discovered that through open discussions about the project, I could influence stakeholders and guide the project in a different direction. However, I realized the importance of simplifying complex concepts and presenting tangible results to effectively communicate my ideas. This approach proved instrumental in gaining stakeholder buy-in and ensuring project alignment with their objectives. Ultimately, I recognized that effective communication, time management, and understanding stakeholder priorities are vital aspects for project success."
-          ]
-        }
-      ],
-      "Other Tools Used": ["Next.js", "Github", "Visual Studio Code", "PM2"]
-    }},
-    {
-    "COORD": {
-      "Brief": "This student project helps delivery drivers find difficult-to-locate addresses by providing a community-driven database. It allows drivers to search for addresses, add notes about access issues, and rate address accuracy. The main target audience is delivery drivers, and the app will initially be developed as a React Progressive Web App (PWA).",
-      "Learned": [
-        {
-          "Nextjs": "This is my first project with Next.js, and I find it incredibly exciting. Next.js feels like an enhanced version of React, providing a range of powerful features. One notable feature is its support for various rendering types, including server-side rendering (SSR), client-side rendering (CSR), static site generation (SSG), and incremental static regeneration (ISG). This versatility allows for efficient and flexible rendering strategies depending on the specific needs of the project."
-        },
-        {
-          "Tailwind CSS": ["It is a remarkable CSS framework that significantly simplifies the process of styling components in my applications. It provides a set of pre-prepared styles and utility classes that accelerate the styling process and promote consistent design patterns. While Tailwind CSS is highly efficient and speeds up development, my personal preferences lean towards using CSS with the SCSS library.",
-            "The reason for my preference lies in the deep customization capabilities that SCSS offers. With SCSS, I can create modular and reusable styles, making it easier to maintain and organize my code. This level of control over styling allows me to fine-tune the appearance of components to match specific design requirements. While Tailwind CSS is an excellent tool for rapid development and maintaining a consistent look, combining it with SCSS enables me to achieve a perfect balance between efficiency and customization in my projects."
-          ]
-        },
-        {
-          "gitlab": ["Powerful source code repository platform that I recently discovered. It offers a wide range of features that simplify code maintenance, including integrated pipelines for automated testing and deployment. The platform emphasizes security, ensuring that code is protected and vulnerabilities are minimized.",
-            "One of the additional benefits of GitLab is the ability to install its software in trial versions on various Linux distributions. it involves installing and configuring the GitLab software on a dedicated server or cloud platform, setting up user accounts, repositories, and other necessary configurations."
-          ]
-        }
-      ],
-      "Other Tools Used": ["Visual Studio Code", "PM2", "Jiraboard", "pipelines", "scrum", "React-Typescript", "PM2", "REST API"]
-    },
-  },{
-    "Submix Platform": {
-      "Brief": "My first serious commercial project, I was working on a serverless Amazon service, specifically on Lambda functions. My primary task involved creating a REST API using API Gateway. Additionally, I took on the responsibility of designing the database and providing support to the front-end developers using Vue.js. Although I'm proud of the project's success, I am unable to share the repository due to a confidentiality agreement.",
-      "Learned": [
-        {
-          "Serverless functions": "I have to admit, this task was very challenging when I first encountered it. I had to grasp the concept of serverless and event-driven compute services, even though I was already familiar with Amazon services due to using it for a cheap database service. Navigating through the serverless environment proved to be difficult initially. However, I was determined to succeed, and I delved into documentation, watched YouTube videos, followed LinkedIn Learning tutorials, and explored examples on GitHub. Through this extensive learning process, I eventually figured out how to effectively utilize this powerful tool."
-        },
-        {
-          "AWS": "I made significant progress in understanding how to navigate and utilize Amazon Web Services (AWS). I learned how to efficiently manage and edit various cloud services offered by AWS, which has expanded my capabilities and confidence in working with cloud-based infrastructures."
-        },
-        {
-          "Linear Kanban board": "I learned about another agile project management tool called the Linear Kanban board. Exploring different tools like this allows me to see the various alternatives available and gain insights into what different development teams use for managing their projects effectively."
-        },
-        {
-          "ESLint": "During this project, I worked with ESLint, which proved to be a highly effective tool for analyzing and checking my JavaScript code. ESLint's capabilities for code linting and ensuring code quality were invaluable in maintaining a clean and consistent codebase throughout the development process."
-        },
-        {
-          "Vuex": "I learned how to use Vuex, the state management library for Vue.js, and found it to be extremely useful. I realized that in some projects, Vuex could be considered essential, as it simplifies the management of state and data throughout the application. Additionally, I understood that Vuex serves as a powerful alternative to React's Redux for managing state in Vue.js applications."
-        }
-      ],
-      "Other Tools Used": ["Visual Studio Code", "MySQL", "Designing Database", "css", "REST API", "Github"]
-    },},{
-    "Web-chat": {
-      "Brief": "The web chat project was a collaborative effort by a group of students. It was a significant milestone for me as I took on the role of the Scrum Master, despite having team members with more experience. We successfully connected a MySQL database to a REST API on Express. To ensure compatibility, we used different programming languages for testing purposes, and Socket.IO proved to be highly compatible. The repository mainly focused on two frameworks, React and Vue, which were the key areas I concentrated on during the project.",
-      "Learned": [
-        {
-          "Nuxtjs": "Nuxt.js is a server-side rendering (SSR) framework based on Vue.js. During this project, I explored and compared the approaches of React and Vue in connecting to REST APIs. It was a valuable learning experience to understand how each framework handles data "
-        },
-        {
-          "socketIO": "Socket.IO is an event-driven library, and I was pleasantly surprised by its speed and efficiency. I believe this library would be incredibly useful for building multi-user applications in the future. Its real-time capabilities and seamless communication between clients and servers make it an ideal choice for creating interactive and dynamic web applications with real-time updates and collaboration features."
-        },
-        {
-          "Scrum-master": "As the person who initiated the idea for the web chat app project, I took on the role of Scrum Master. It was a highly responsible position, and my main focus was to ensure that everyone followed the Scrum rules and principles. I provided support to other team members when needed and ensured that the project progressed smoothly. Although challenging, being the Scrum Master was a valuable and rewarding experience that allowed me to strengthen my leadership and project management skills."
-        },
-        {
-          "Designing Database": "Based on lessons learned from past projects, I understood the importance of designing the database before starting any new project, especially when dealing with a high volume of data. This time, I made sure to plan and design the database thoroughly, with the intention of creating a structure that would not require frequent changes during the development process."
-        }
-      ],
-      "Other Tools Used": ["Visual Studio Code", "Live Share", "MySQL", "IBM server", "Express/Node", "css", "Jiraboard", "REST API"]
-    },},{
-    "Shoes Shop Project": {
-      "Brief": "It was one of my first student projects, and I used Vue.js as its framework. Since I had never coded in Vue.js before, it was something new and exciting for me.",
-      "Learned": [
-        {
-          "Vuejs": "Since I already knew React, I was curious to explore another popular front-end framework. After delving into it, I was pleasantly surprised to find that Vue.js had a low entry level, making it a perfect choice for beginners in web development. Its intuitive syntax allowed me to grasp its concepts quickly, and I soon became a valuable contributor to the team's projects, thanks to my newfound expertise in Vue.js."
-        },
-        {
-          "Jiraboard": "I found Jira to be much better than Notion or Trello, which I had been using for other projects. It offers great customization options and caters to various project management methodologies like Scrum or Kanban. It took me a while to understand all the basic features of Jira, and I realized that there is still a lot more to learn about its capabilities."
-        },
-        {
-          "Small team workflow": "I was accustomed to working independently or with a close friend on individual projects. However, the experience of collaborating with six other students during the Shoes Shop project was a game-changer. It not only taught me the value of respecting diverse ideas and managing time efficiently but also brought a sense of inspiration and fulfillment in sharing our passion for development and collectively crafting something extraordinary together."
-        },
-        {
-          "Figma": "I discovered a powerful design tool called Figma, which greatly aids in creating user interfaces. It offers a wide range of useful features, including CSS styles, and the ability to measure distances between components. Learning and using Figma has significantly enhanced my design workflow and made the UI design process more efficient and effective."
-        },
-        {
-          "Bitbucket": "I found that Bitbucket, as another repository storage option, has a distinct advantage over others due to its seamless integration with Jira. This integration between Bitbucket and Jira provides a powerful and streamlined workflow, making it easier to manage code repositories and track project progress in a cohesive manner."
-        },
-        {
-          "IBM server": "In my course, we frequently use IBM servers as the company is a partial sponsor of the program. Initially, navigating through hundreds of functions and services was challenging. However, by delving into the extensive documentation and utilizing customer support, I was able to explore the full potential of the available resources. Personally, I find IBM's cloud service to be very reliable and robust, providing a solid foundation for various projects and applications."
-        }
-      ],
-      "Other Tools Used": ["Visual Studio Code", "Live Share", "Github"]
-    },},{
-    "bosoreactproject": {
-      "Brief": "I was practicing React in this project, and in pair programming, we created a few semi-projects like a calculator, a rock-paper-scissors game, and CSS animations. Additionally, we used REST API on Node/Express to send data to a MySQL database.",
-      "Learned": [
-        {
-          "yarn": "I learned another package manager. Some people may say it's better and more stable, but for me, it was just different."
-        },
-        {
-          "MySql": "I learned a database programming language. I started noticing how important it is to design the database before starting a project."
-        },
-        {
-          "REST API": "I created my own application programming interface to communicate with the database."
-        },
-        {
-          "Scss": "I learned that it is compiled into Cascading Style Sheets. SCSS makes code more readable and uses fewer lines of code than CSS, which helps the code load faster."
-        },
-        {
-          "Scrum board": "I did not know about Scrum board, but we realized the need for it. We used a semi-Scrum board on Notion, which helped us organize tasks in the project."
-        }
-      ],
-      "Other Tools Used": ["Visual Studio Code", "React-Typescript", "Github", "Live Share", "Express/Node"]
-    },},{
-    "Shopping List App": {
-      "Brief": "My first bigger project in React. I wanted to create an app that would help users create a customized basket for their weekly shopping. The app allowed users to add products to the basket, add their own products, or customize dishes which would automatically fill up the user's basket. I learned a lot during this project.",
-      "Learned": [
-        {
-          "Express/Node": "I have been learning Node.js and its framework Express to deploy my single web application. During this process, I learned how to set up routes and send JSON objects from the server."
-        },
-        {
-          "JSON": "I was using this lightweight data format as my small database for this project. I learned its syntax and how to modify it."
-        },
-        {
-          "SSR": "I learned that thanks to server-side rendering, I can reduce the amount of JavaScript that needs to be downloaded and executed on the client. In my case, it improves performance."
-        },
-        {
-          "React-Typescript": "Since I already knew TypeScript, I wanted to take it to a higher level, so I started writing a React app combined with TypeScript. It was challenging, but I have been enjoying the process."
-        },
-        {
-          "Working on branches": "As I aimed to adopt a more professional coding approach, I ventured into industry best practices and discovered the significance of working on branches. By utilizing branches, I learned that it not only safeguards the main codebase but also enables the team to work asynchronously."
-        }
-      ],
-      "Other Tools Used": ["Visual Studio Code", "css", "Hosting Service", "Github"]
-    },},{
-    "Roll a Dice Game": {
-      "Brief": "It was my first contact with React. My friend and I were creating a dice game for fun and to learn the basics of React and its functional components.",
-      "Learned": [
-        {
-          "React": "I learned the basics of React states and its syntax."
-        },
-        {
-          "Pair programming": "I discovered how beneficial pair programming can be, where one person acts as a navigator, and the other is the driver."
-        }
-      ],
-      "Other Tools Used": ["Visual Studio Code", "Live Share", "Github"]
-    },},{
-    "PCC highlands": {
-      "Brief": "I created this website for a local priest as a voluntary project. I wanted to test myself in semi-professional website creation.",
-      "Learned": [
-        {
-          "Webpacks": "It is my first attempt to build a website using a module bundler. I wanted to learn something more advanced and researched something called Webpack. I found it very useful for creating builds and specifying the targeted version of JavaScript."
-        },
-        {
-          "Github": "I discovered cloud-based repository storage. I was taking my baby steps with source control and started to see how powerful and beneficial this tool is."
-        }
-      ],
-      "Other Tools Used": ["Fetch API", "Visual Studio Code", "Hosting Service", "Typescript", "css"]
-    },},{
-    "First js project": {
-      "Brief": "It was my first project in JavaScript, and I created a website to achieve two goals. The first one was to provide a tool that would calculate what date sticker I should put on products at my workplace. I received positive feedback, and everyone was surprised by how easy it was to use. The second goal was to learn object-oriented programming using classes and to learn TypeScript.",
-      "Learned": [
-        {
-          "TypeScript": "I took my first steps in TypeScript, and since I was familiar with adding types while programming in C#, it was an entertaining activity to do the same in JavaScript."
-        },
-        {
-          "JavaScript Classes": "I also stared learning classes in JavaScript beacuse it is a fundamental concept in object-oriented programming and can be used to create reusable and organized code structures. "
-        },
-        {
-          "fetching data": "I learned how to use the Fetch API, which helped me to transfer data back and forth."
-        },
-        {
-          "css": "I started using Cascading Style Sheets (CSS) in my project to create a nice UI design. I found it easy to work with and it greatly improved the overall look and feel of my project."
-        }
-      ],
-      "Other Tools Used": ["Visual Studio Code", "Hosting Service"]
-    },},{
-    "c# game": {
-      "Breif": "I wanted to come back to my programming passion and started writing a game in Unity using C#. Unity allowed me to generate a JS code with WebGL. It was a simple Wheel of Fortune game,",
-      "Learned": [
-        {
-          "c#": "I learned the basics of C#, coding in its workspaces using loops, variables, simple functions, and working with arrays."
-        }
-      ],
-      "Other Tools Used": ["Visual Studio", "Unity", "Hosting Service"]
-    }
-
-  }
+  [{"project":{
+    "Brief": "text",
+    "Learned": [
+      {
+        "learned":"what i leraned"
+      },
+      {
+        "learned":"what i leraned"
+      },
+      {
+        "learned":"what i leraned"
+      },
+      {
+        "learned":"what i leraned"
+      },
+    ],
+    "Other Tools Used":["other tools"]
+  },},{
+  "project":{
+    "Brief": "text",
+    "Learned": [
+      {
+        "learned":"what i leraned"
+      },
+      {
+        "learned":"what i leraned"
+      },
+      {
+        "learned":"what i leraned"
+      },
+      {
+        "learned":"what i leraned"
+      },
+    ],
+    "Other Tools Used":["other tools"]
+  },}
   ]
-// "project":{
-//   "Brief": "text",
-//   "Learned": [
-//     {
-//       "learned":"what i leraned"
-//     },
-//     {
-//       "learned":"what i leraned"
-//     },
-//     {
-//       "learned":"what i leraned"
-//     },
-//     {
-//       "learned":"what i leraned"
-//     },
-//   ],
-//   "Other Tools Used":["other tools"]
-// },

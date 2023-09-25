@@ -1,13 +1,13 @@
 export const portfolio = {
-    "CompanyName": "B.A.TODOROW",
-    "domain": "@atodorow",
+    "CompanyName": "your company",
+    "domain": "@alias",
     "description": {
-        "p1": "A SOFTWARE ENGINEER",
-        "p2": "Bogdan Andrew Todorow",
-        "p3": "I am a software engineer based in Inverness (Scottish Highlands)",
+        "p1": "profession title",
+        "p2": "your full name",
+        "p3": "short describtion of ur profession",
     },
     "scrolingText": "I Am Available For Contract or Freelance Work",
-    "sign": "Todorow",
+    "sign": "Surname",
     "stats": {
         "experience": "04",
         "colaborators": "+35",
