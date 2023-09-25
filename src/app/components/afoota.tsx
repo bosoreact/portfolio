@@ -1,4 +1,4 @@
-import { portfolio } from "@/app/portfolio";
+import { portfolio } from "../../../public/personal_data/portfolio";
 import style from "../styles/main.module.css";
 import Link from "next/link";
 
