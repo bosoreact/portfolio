@@ -1,10 +1,10 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/src/app/portfolio.tsx
-/src/app/my-work.tsx
-/images/profile/
-/images/my-work/
+/public/personal_data/portfolio.tsx
+/public/personal_data/my_work.tsx
+/public/images/profile/*
+/public/images/my_work/*
 /node_modules
 /.pnp
 .pnp.js

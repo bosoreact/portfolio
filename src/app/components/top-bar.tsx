@@ -1,6 +1,6 @@
-import { portfolio } from "@/app/portfolio";
+import { portfolio } from "../../../public/personal_data/portfolio";
 import style from "../styles/main.module.css";
-import modeImg from "../../../images/dark_mode.svg";
+import modeImg from "@pub/images/main/dark_mode.svg";
 import { ShowImage } from "../pages/main";
 import Link from "next/link";
 

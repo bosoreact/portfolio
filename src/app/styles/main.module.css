@@ -1,10 +1,18 @@
 @font-face {
   font-family: Mintmolly;
-  src: url("../../../public/Mintmolly.otf");
+  src: url("/fonts/Mintmolly.otf");
 }
 @font-face {
   font-family: Prestigeo;
-  src: url("../../../public/Prestigeo.ttf");
+  src: url("/fonts/Prestigeo.ttf");
+}
+@-webkit-keyframes text-scroll {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(250%);
+  }
 }
 @keyframes text-scroll {
   from {
@@ -12,6 +20,15 @@
   }
   to {
     transform: translateX(250%);
+  }
+}
+@-webkit-keyframes route-link-anim {
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(20px);
   }
 }
 @keyframes route-link-anim {
@@ -187,17 +204,20 @@
   text-align: right;
   white-space: nowrap;
   transform: translateX(-100%);
+  -webkit-animation: text-scroll 15s linear infinite;
   animation: text-scroll 15s linear infinite;
 }
 .box-wrapper .box-line .right-nested-box .moving-phrase p:nth-child(2) {
   text-align: right;
   white-space: nowrap;
-  animation-delay: 5s;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
 }
 .box-wrapper .box-line .right-nested-box .moving-phrase p:nth-child(3) {
   text-align: right;
   white-space: nowrap;
-  animation-delay: 10s;
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
 }
 .box-wrapper .box-line .right-nested-box .credentials-and-portfolio {
   height: 295px;
@@ -285,7 +305,8 @@
   transform: rotate(-45deg) translate(-25px, -25px);
 }
 .box-wrapper .box-line .right-nested-box .credentials-and-portfolio .c-and-p-box .description-and-link .route-link:hover {
-  animation: route-link-anim 2s infinite;
+  -webkit-animation: route-link-anim 2s infinite;
+          animation: route-link-anim 2s infinite;
 }
 @media (max-width: 1300px) {
   .box-wrapper .box-line {
@@ -416,7 +437,8 @@
   transform: rotate(-45deg) translate(-25px, -25px);
 }
 .box-wrapper .box-line-s .cv-box .description-and-link .route-link:hover {
-  animation: route-link-anim 2s infinite;
+  -webkit-animation: route-link-anim 2s infinite;
+          animation: route-link-anim 2s infinite;
 }
 .box-wrapper .box-line-s .offered-services-box {
   width: 620px;
@@ -489,7 +511,8 @@
   transform: rotate(-45deg) translate(-25px, -25px);
 }
 .box-wrapper .box-line-s .offered-services-box .description-and-link .route-link:hover {
-  animation: route-link-anim 2s infinite;
+  -webkit-animation: route-link-anim 2s infinite;
+          animation: route-link-anim 2s infinite;
 }
 .box-wrapper .box-line-s .profiles-box {
   border-radius: 15%;
@@ -561,7 +584,8 @@
   transform: rotate(-45deg) translate(-25px, -25px);
 }
 .box-wrapper .box-line-s .profiles-box .description-and-link .route-link:hover {
-  animation: route-link-anim 2s infinite;
+  -webkit-animation: route-link-anim 2s infinite;
+          animation: route-link-anim 2s infinite;
 }
 .box-wrapper .box-line-s .statistic {
   display: flex;
@@ -759,4 +783,5 @@
   .main-page .Bottom {
     display: none;
   }
-}/*# sourceMappingURL=main.module.css.map */
+}
+/*# sourceMappingURL=main.module.css.map */
