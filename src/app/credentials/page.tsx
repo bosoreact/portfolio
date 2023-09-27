@@ -1,22 +1,27 @@
+"use client";
 import Afoota from "../components/afoota";
 import TopBar from "../components/top-bar";
 import style from "@/app/styles/main.module.css";
-import { portfolio } from "@pub/personal_data/portfolio";
-import Image, { StaticImageData } from "next/image";
 import c_style from "@/app/credentials/credentials.module.css";
-import photo from "@pub/images/profile/photo.png";
-import twitterImage from "@pub/images/main/socials/twitter.png";
-import linkedinImage from "@pub/images/main/socials/linkedin.png";
+import React, { useState } from "react";
+import ImagesCheck from "../components/image_check";
+import { PortfolioTypes } from "@pub/personal_data/portfolio_default";
+
+let portfolio: PortfolioTypes;
+
+try {
+  // Attempt to import the main profile component
+  portfolio = require("@pub/personal_data/portfolio").portfolio;
+} catch (error) {
+  // If the main profile component is missing, import the default_profile component
+  portfolio = require("@pub/personal_data/portfolio_default").portfolio;
+}
 
 export default function Page() {
-  const ShowImage = (imageSrc: StaticImageData) => {
-    return (
-      <Image
-        src={imageSrc}
-        className={c_style["photo-style"]}
-        alt="Picture of the author"
-      />
-    );
+  if (portfolio !== undefined)
+    console.log(JSON.stringify(portfolio.aboutMe.long));
+  const ShowImage = (imageSrc: string) => {
+    return <ImagesCheck source={imageSrc} className={c_style["photo-style"]} />;
   };
 
   const aboutMe = (
@@ -95,15 +100,17 @@ export default function Page() {
       <div className={c_style["box-wrapper"]}>
         <div className={c_style["left-side-credentials"]}>
           <div className={c_style["photo-and-profile"]}>
-            <div className={c_style["image-wrapper"]}>{ShowImage(photo)}</div>
+            <div className={c_style["image-wrapper"]}>
+              {ShowImage("/images/profile/photo.png")}
+            </div>
             <div className={c_style["profile-note"]}>
               <p>{portfolio.description.p2}</p>
               <p>{portfolio.domain}</p>
             </div>
             <div className={c_style["profiles-box"]}>
               <div className={c_style["image-wraper"]}>
-                {ShowImage(twitterImage)}
-                {ShowImage(linkedinImage)}
+                {ShowImage("/images/main/socials/twitter.png")}
+                {ShowImage("/images/main/socials/linkedin.png")}
               </div>
             </div>
             <div className={c_style["contact-button"]}>Contact me</div>
