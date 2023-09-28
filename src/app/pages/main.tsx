@@ -1,26 +1,23 @@
+"use client";
 import style from "../styles/main.module.css";
-import { portfolio } from "@pub/personal_data/portfolio";
-import photo from "@pub/images/profile/photo.png";
-import cvImage from "@pub/images/main/download_image/128x128.png";
-import Image, { StaticImageData } from "next/image";
-import dbImage from "@pub/images/main/database/128x128.png";
-import codingImage from "@pub//images/main/coding/128x128.png";
-import uiImage from "@pub//images/main/ui/128x128.png";
-import cloudImage from "@pub/images/main/cloud-data.png";
-import twitterImage from "@pub/images/main/socials/twitter.png";
-import linkedinImage from "@pub/images/main/socials/linkedin.png";
 import TopBar from "../components/top-bar";
 import Afoota from "../components/afoota";
 import Link from "next/link";
+import ImagesCheck from "../components/image_check";
+import { PortfolioTypes } from "@pub/personal_data/portfolio_default";
 
-export const ShowImage = (imageSrc: StaticImageData) => {
-  return (
-    <Image
-      src={imageSrc}
-      className={style["photo-style"]}
-      alt="Picture of the author"
-    />
-  );
+let portfolio: PortfolioTypes;
+
+try {
+  // Attempt to import the main profile component
+  portfolio = require("@pub/personal_data/portfolio").portfolio;
+} catch (error) {
+  // If the main profile component is missing, import the default_profile component
+  portfolio = require("@pub/personal_data/portfolio_default").portfolio;
+}
+
+export const ShowImage = (imageSrc: string) => {
+  return <ImagesCheck source={imageSrc} className={style["photo-style"]} />;
 };
 
 export default function Main() {
@@ -48,7 +45,10 @@ export default function Main() {
       <div className={style["box-wrapper"]}>
         <div className={style["box-line"]}>
           <div className={style["greetings-box"]}>
-            <div className={style["image-wraper"]}> {ShowImage(photo)}</div>
+            <div className={style["image-wraper"]}>
+              {" "}
+              {ShowImage("/images/profile/photo.png")}
+            </div>
             <div className={style["greeting-note"]}>
               <p>{portfolio.description.p1}</p>
               <p>{portfolio.description.p2}</p>
@@ -79,15 +79,17 @@ export default function Main() {
         </div>
         <div className={style["box-line-s"]}>
           <div className={style["cv-box"]}>
-            <div className={style["image-wraper"]}>{ShowImage(cvImage)}</div>
+            <div className={style["image-wraper"]}>
+              {ShowImage("/images/main/download_image/128x128.png")}
+            </div>
             {descriptionAndLink("MY CV", "Download", "cv")}
           </div>
           <div className={style["offered-services-box"]}>
             <div className={style["image-wraper"]}>
-              {ShowImage(dbImage)}
-              {ShowImage(codingImage)}
-              {ShowImage(uiImage)}
-              {ShowImage(cloudImage)}
+              {ShowImage("/images/main/database/128x128.png")}
+              {ShowImage("/images/main/coding/128x128.png")}
+              {ShowImage("/images/main/ui/128x128.png")}
+              {ShowImage("/images/main/cloud-data.png")}
             </div>
             {descriptionAndLink(
               "SPECIALIZATION",
@@ -97,8 +99,8 @@ export default function Main() {
           </div>
           <div className={style["profiles-box"]}>
             <div className={style["image-wraper"]}>
-              {ShowImage(twitterImage)}
-              {ShowImage(linkedinImage)}
+              {ShowImage("/images/main/socials/twitter.png")}
+              {ShowImage("/images/main/socials/linkedin.png")}
             </div>
             {descriptionAndLink("STAY WITH ME", "Profiles", "contact")}
           </div>

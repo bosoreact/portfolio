@@ -1,3 +1,46 @@
+export interface PortfolioTypes {
+    CompanyName: string;
+    domain: string;
+    description: {
+      p1: string;
+      p2: string;
+      p3: string;
+    };
+    scrolingText: string;
+    sign: string;
+    stats: {
+      experience: string;
+      colaborators: string;
+      projects: string;
+    };
+    aboutMe: {
+      short: string;
+      long: string[];
+    };
+    experience: {
+      year: string;
+      jobTitle: string;
+      companyName: string;
+      jobDescription: string;
+    }[];
+    education: {
+      year: string;
+      school: string;
+      degree: string;
+      courseDescription: string;
+    }[];
+    skills: {
+      lvl: string;
+      skill: string;
+      shortDescription: string;
+    }[];
+    awardsAndBadges: {
+      year: string;
+      name: string;
+      shortDescription: string;
+    }[];
+  }
+
 export const portfolio = {
     "CompanyName": "your company",
     "domain": "@alias",
