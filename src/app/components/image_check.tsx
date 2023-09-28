@@ -4,8 +4,9 @@ import { useState } from "react";
 interface ImageComponentProps {
     source: string;
     className: string | undefined;
+    defaultImage?: string;
   }
-  export default function ImagesCheck ({ source , className}: ImageComponentProps)  {
+  export default function ImagesCheck ({ source , className,defaultImage="/images/main/default_images/profile.png"}: ImageComponentProps)  {
     const [imgSrc, setImgSrc] = useState(source);
   
     return (
@@ -15,7 +16,7 @@ interface ImageComponentProps {
         className={className}
         width={100}
         height={100}
-        onError={() => setImgSrc("/images/main/default_images/profile.png")}
+        onError={() => setImgSrc(defaultImage)}
       />
     );
   };

@@ -4,14 +4,25 @@ import TopBar from "../components/top-bar";
 import Afoota from "../components/afoota";
 import style from "@/app/styles/main.module.css";
 import m_style from "@/app/mywork/mywork.module.css";
-import { MyWork } from "@/app/my-work";
 import exampleImage from "@/../images/main/default_images/default_project.png";
 import Image, { StaticImageData } from "next/image";
-import { resolve } from "path";
+// import { resolve } from "path";
 import { useEffect, useState } from "react";
 
+
+let myWork: any
+
+try {
+  // Attempt to import the main profile component
+  myWork = require("@pub/personal_data/my-work").MyWork;
+} catch (error) {
+  // If the main profile component is missing, import the default_profile component
+  myWork = require("@pub/personal_data/my_work_default").MyWork;
+}
+
 export default function Page() {
-  const [mywork, setMywork] = useState(MyWork);
+  const [mywork, setMywork] = useState(myWork);
+  console.log(myWork)
   /*here I will create function that will read mywork array of objects
   and depending on amount of objects will divide 1/3 obejct to left-side-mywork
   and 2/3 object to right-side-mywork. zero index must be at the begining of left-side-mywork.
