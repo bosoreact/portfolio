@@ -1,0 +1,75 @@
+$projectSquareLength: 370px;
+$bigTitleFont: 65px;
+$smallfont: 14px;
+$mediumfont: 16px;
+$gapsInFlex: 45px;
+$longBoxWidth: 760px;
+$darkShadow: #0d2750;
+$lightShadow: #ffffff;
+$dropShadow: 1vh 1vh 3vh rgba($darkShadow, 0.25),
+  -0.8vh -0.9vh 1.1vh rgba($lightShadow, 1);
+
+$innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
+  inset 8px 8px 30px rgba($darkShadow, 0.2);
+
+@mixin big-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+@mixin projectBox {
+  .project-box {
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    width: calc($projectSquareLength * 0.95);
+    height: calc($projectSquareLength * 0.95);
+    box-shadow: $dropShadow;
+    justify-content: center;
+    align-items: center;
+    .photo-style {
+      margin-top: 15px;
+      width: calc($projectSquareLength * 0.7);
+      height: auto;
+      border-radius: 5% 25%;
+    }
+  }
+  p:nth-child(1) {
+    font-size: $mediumfont;
+  }
+  p:nth-child(2) {
+    font-size: $mediumfont;
+    font-weight: bold;
+  }
+}
+
+
+.box-wrapper {
+  margin-top: 100px;
+  column-gap: $gapsInFlex;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  padding: 10px;
+
+  .left-side-mywork {
+    display: flex;
+    flex-direction: column;
+    row-gap: $gapsInFlex;
+    @include projectBox;
+  }
+  .right-side-mywork {
+    row-gap: $gapsInFlex;
+    column-gap: $gapsInFlex;
+    display: flex;
+    flex-wrap: wrap;
+    @include projectBox;
+    display: flex;
+    .page-title {
+      width: $longBoxWidth;
+      text-align: center;
+      font-size: $bigTitleFont;
+      font-weight: 800;
+    }
+  }
+}
