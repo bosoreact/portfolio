@@ -8,9 +8,9 @@ import exampleImage from "@/../images/main/default_images/default_project.png";
 import Image, { StaticImageData } from "next/image";
 // import { resolve } from "path";
 import { useEffect, useState } from "react";
+import ImagesCheck from "../components/image_check";
 
-
-let myWork: any
+let myWork: any;
 
 try {
   // Attempt to import the main profile component
@@ -22,13 +22,14 @@ try {
 
 export default function Page() {
   const [mywork, setMywork] = useState(myWork);
-  console.log(myWork)
   /*here I will create function that will read mywork array of objects
   and depending on amount of objects will divide 1/3 obejct to left-side-mywork
   and 2/3 object to right-side-mywork. zero index must be at the begining of left-side-mywork.
   index one and two must be at the begining of right-side-mywork
 */
-// const exampleImage = "/images/main/default_images/default_project.png"
+  const trimStringUpToFristDot = (phrase: string) => {
+    return phrase.slice(0, phrase.indexOf(".") + 1);
+  };
   const divideMyworkOnTwoSides = () => {
     let tempwork = mywork;
     let left = [];
@@ -42,20 +43,14 @@ export default function Page() {
   };
   const ShowImage = (imageSrc: StaticImageData) => {
     return (
-      <Image
-        src={imageSrc}
+      <ImagesCheck
+        source={"/images/main/default_images/project.png"}
+        //image style for current component
         className={m_style["photo-style"]}
-        alt="Picture of the author"
-
-        //width={100}
+        defaultImage={"/images/main/default_images/project.png"}
       />
     );
   };
-  const exampleProject = (
-    <>
-    {ShowImage(exampleImage)}
-    </>
-  );
   const displayMywork = () => {
     const { left, right } = divideMyworkOnTwoSides();
     return (
@@ -64,8 +59,11 @@ export default function Page() {
           {left.map((x: any) => {
             return (
               <div key={Object.keys(x)[0]} className={m_style["project-box"]}>
-                {exampleProject}
-                <p>{Object.keys(x)[0]}</p>
+                {ShowImage(exampleImage)}
+                <div className={m_style["description"]}>
+                  <p>{Object.keys(x)[0]}</p>
+                  <p>{trimStringUpToFristDot(x[Object.keys(x)[0]]["Brief"])}</p>
+                </div>
               </div>
             );
           })}
@@ -75,18 +73,17 @@ export default function Page() {
           {right.map((x: any) => {
             return (
               <div key={Object.keys(x)[0]} className={m_style["project-box"]}>
-                {exampleProject}
-                <p>{Object.keys(x)[0]}</p>
+                {ShowImage(exampleImage)}
+                <div className={m_style["description"]}>
+                  <p>{Object.keys(x)[0]}</p>
+                  <p>{trimStringUpToFristDot(x[Object.keys(x)[0]]["Brief"])}</p>
+                </div>
               </div>
             );
           })}
         </div>
       </div>
     );
-  };
-
-  const projectBox = () => {
-    return mywork.length;
   };
 
   return (

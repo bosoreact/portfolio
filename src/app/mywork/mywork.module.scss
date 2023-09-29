@@ -1,6 +1,6 @@
 $projectSquareLength: 370px;
 $bigTitleFont: 65px;
-$smallfont: 14px;
+$smallfont: 12px;
 $mediumfont: 16px;
 $gapsInFlex: 45px;
 $longBoxWidth: 760px;
@@ -24,21 +24,35 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
     width: calc($projectSquareLength * 0.95);
     height: calc($projectSquareLength * 0.95);
     box-shadow: $dropShadow;
-    justify-content: center;
+
     align-items: center;
+
     .photo-style {
       margin-top: 15px;
       width: calc($projectSquareLength * 0.7);
       height: auto;
       border-radius: 5% 25%;
+
     }
-  }
-  p:nth-child(1) {
-    font-size: $mediumfont;
-  }
-  p:nth-child(2) {
-    font-size: $mediumfont;
-    font-weight: bold;
+    .description{
+      width: calc($projectSquareLength * 0.95);
+      margin-bottom: 20px;
+      margin-left: 30px;
+      margin-right: 10px;
+      p{
+        font-weight:bold;
+        font-size: $mediumfont;
+        margin: 0;
+        margin-left: 30px;
+        margin-right: 20px;
+      }
+      p:nth-child(1) {
+        color: #0d2750;
+      }
+      p:nth-child(2) {
+        font-size: $smallfont;
+      }
+    }
   }
 }
 
