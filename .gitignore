@@ -3,6 +3,7 @@
 # dependencies
 /public/personal_data/portfolio.tsx
 /public/personal_data/my_work.tsx
+/public/personal_data/my-work.tsx
 /public/images/profile/*
 /public/images/my_work/*
 /node_modules
