@@ -82,7 +82,7 @@ export default function Main() {
             <div className={style["image-wraper"]}>
               {ShowImage("/images/main/download_image/128x128.png")}
             </div>
-            {descriptionAndLink("MY CV", "Download", "cv")}
+            {descriptionAndLink("MY CV", "Download", "/api/cv_download")}
           </div>
           <div className={style["offered-services-box"]}>
             <div className={style["image-wraper"]}>
