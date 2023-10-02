@@ -1,5 +1,6 @@
 $projectSquareLength: 370px;
 $squarelength: 295px;
+$smallsquareLength: 300px;
 $bigTitleFont: 65px;
 $smallfont: 12px;
 $mediumfont: 16px;
@@ -26,7 +27,7 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
   }
 }
 @mixin big-title {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
 }
 @mixin route-link-pack {
@@ -87,6 +88,24 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
   }
 }
 
+@mixin medium-title {
+  color: #0d2750;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+@mixin date-style {
+  color: #5c5c5c;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+@mixin small-title {
+  color: #5c5c5c;
+  font-weight: bold;
+  font-size: 12px;
+}
+
 .box-wrapper {
   margin-top: 100px;
   margin-bottom: 100px;
@@ -108,10 +127,24 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
       .services-box {
         display: flex;
         flex-direction: column;
+        justify-content: space-evenly;
         border-radius: 30px;
         height: $longBoxWidth + 200px;
         box-shadow: $dropShadow;
-        align-items: center;
+        align-items: flex-end;
+        .service {
+          column-gap: $gapsInFlex;
+          display: flex;
+          flex-direction: row;
+          width: 80%;
+          .photo-style {
+            height: 40px;
+            width: auto;
+          }
+          p{
+            @include big-title;
+          }
+        }
       }
     }
     .right-side-services {
@@ -128,11 +161,28 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
         font-weight: 800;
       }
       .services-description {
-        // width: $longBoxWidth;
+        display: flex;
+        flex-wrap: wrap;
         height: $longBoxWidth;
         text-align: center;
         box-shadow: $dropShadow;
         border-radius: 30px;
+        align-items: center;
+        justify-content: center;
+        row-gap: $gapsInFlex;
+        column-gap: $gapsInFlex;
+        .service-description-box{
+          box-shadow: $dropShadow;
+          border-radius: 30px;
+          width: $smallsquareLength;
+          height: calc($smallsquareLength * 0.8);
+          p:nth-child(1) {
+            @include big-title;
+          }
+          p:nth-child(2) {
+            @include date-style;
+          }
+        }
       }
     }
   }

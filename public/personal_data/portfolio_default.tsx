@@ -13,6 +13,7 @@ export interface PortfolioTypes {
       colaborators: string;
       projects: string;
     };
+    services: [{ serviceName: string }];
     aboutMe: {
       short: string;
       long: string[];
