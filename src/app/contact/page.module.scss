@@ -1,0 +1,103 @@
+$mainBackground: #e8eaec;
+$darkShadow: #0d2750;
+$lightShadow: #ffffff;
+$squarelength: 295px;
+$gapsInFlex: 45px;
+$longBoxWidth: 620px;
+$smallfont: 14px;
+$mediumfont: 16px;
+$mobileWievWidth: calc(80vw * 0.9);
+
+$dropShadow: 1vh 1vh 3vh rgba($darkShadow, 0.25),
+  -0.8vh -0.9vh 1.1vh rgba($lightShadow, 1);
+
+$innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
+  inset 8px 8px 30px rgba($darkShadow, 0.2);
+
+@mixin date-style {
+  color: #5c5c5c;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.box-wrapper {
+  margin-top: 100px;
+  column-gap: $gapsInFlex;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  width: 100%;
+  .left-side-contact {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    .contact-title {
+      font-weight: bolder;
+      margin-bottom: 30px;
+    }
+    .contact-types {
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .contact-box {
+        display: flex;
+        flex-direction: row;
+        column-gap: $gapsInFlex;
+        .image-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100px;
+          width: 100px;
+          border-radius: 10px;
+          box-shadow: $dropShadow;
+          .photo-style {
+            height: 80px;
+            width: auto;
+          }
+        }
+      }
+    }
+    .social-title {
+      margin-top: 30px;
+      font-weight: bolder;
+    }
+    .socials {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      column-gap: $gapsInFlex;
+    }
+  }
+  .right-side-contact {
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: $dropShadow;
+    .notes {
+      display: flex;
+      flex-direction: column;
+      .first-line {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        height: 20%;
+        justify-content: center;
+        p:nth-child(1) {
+          font-size: 3em;
+          margin-left: 3%;
+          font-weight: bold;
+        }
+        p:nth-child(2) {
+            font-size: 3em;
+            font-weight: bold;
+          margin-left: 0%;
+          color: #3562ac;
+        }
+      }
+      
+      
+    }
+  }
+}

@@ -1,0 +1,83 @@
+.box-wrapper {
+  margin-top: 100px;
+  -moz-column-gap: 45px;
+       column-gap: 45px;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  width: 100%;
+}
+.box-wrapper .left-side-contact {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.box-wrapper .left-side-contact .contact-title {
+  font-weight: bolder;
+  margin-bottom: 30px;
+}
+.box-wrapper .left-side-contact .contact-types {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.box-wrapper .left-side-contact .contact-types .contact-box {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 45px;
+       column-gap: 45px;
+}
+.box-wrapper .left-side-contact .contact-types .contact-box .image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+  box-shadow: 1vh 1vh 3vh rgba(13, 39, 80, 0.25), -0.8vh -0.9vh 1.1vh white;
+}
+.box-wrapper .left-side-contact .contact-types .contact-box .image-wrapper .photo-style {
+  height: 80px;
+  width: auto;
+}
+.box-wrapper .left-side-contact .social-title {
+  margin-top: 30px;
+  font-weight: bolder;
+}
+.box-wrapper .left-side-contact .socials {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 45px;
+       column-gap: 45px;
+}
+.box-wrapper .right-side-contact {
+  width: 60%;
+  border-radius: 10px;
+  box-shadow: 1vh 1vh 3vh rgba(13, 39, 80, 0.25), -0.8vh -0.9vh 1.1vh white;
+}
+.box-wrapper .right-side-contact .notes {
+  display: flex;
+  flex-direction: column;
+}
+.box-wrapper .right-side-contact .notes .first-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 20%;
+  justify-content: center;
+}
+.box-wrapper .right-side-contact .notes .first-line p:nth-child(1) {
+  font-size: 3em;
+  margin-left: 3%;
+  font-weight: bold;
+}
+.box-wrapper .right-side-contact .notes .first-line p:nth-child(2) {
+  font-size: 3em;
+  font-weight: bold;
+  margin-left: 0%;
+  color: #3562ac;
+}
+/*# sourceMappingURL=page.module.css.map */
