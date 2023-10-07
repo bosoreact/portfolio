@@ -6,6 +6,11 @@ export interface PortfolioTypes {
       p2: string;
       p3: string;
     };
+    contact: {
+        email:string;
+        number:string;
+        adress:string[]
+    }
     scrolingText: string;
     sign: string;
     stats: {
@@ -49,6 +54,11 @@ export const portfolio = {
         "p1": "profession title",
         "p2": "your full name",
         "p3": "short describtion of ur profession",
+    },
+    "contact": {
+        "email": "email@yourcompany.com",
+        "number": "078-56756-567567",
+        "adress": ["london , UK", "London"]
     },
     "scrolingText": "I Am Available For Contract or Freelance Work",
     "sign": "Surname",

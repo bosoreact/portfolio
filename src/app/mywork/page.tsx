@@ -4,8 +4,8 @@ import TopBar from "../components/top-bar";
 import Afoota from "../components/afoota";
 import style from "@/app/styles/main.module.css";
 import m_style from "@/app/mywork/mywork.module.css";
-import exampleImage from "@/../images/main/default_images/default_project.png";
-import Image, { StaticImageData } from "next/image";
+// import exampleImage from "@/../images/main/default_images/default_project.png";
+// import Image, { StaticImageData } from "next/image";
 // import { resolve } from "path";
 import { useEffect, useState } from "react";
 import ImagesCheck from "../components/image_check";
@@ -41,7 +41,7 @@ export default function Page() {
     }
     return { left, right };
   };
-  const ShowImage = (imageSrc: StaticImageData) => {
+  const ShowImage = () => {
     return (
       <ImagesCheck
         source={"/images/main/default_images/project.png"}
@@ -59,7 +59,7 @@ export default function Page() {
           {left.map((x: any) => {
             return (
               <div key={Object.keys(x)[0]} className={m_style["project-box"]}>
-                {ShowImage(exampleImage)}
+                {ShowImage()}
                 <div className={m_style["description"]}>
                   <p>{Object.keys(x)[0]}</p>
                   <p>{trimStringUpToFristDot(x[Object.keys(x)[0]]["Brief"])}</p>
@@ -73,7 +73,7 @@ export default function Page() {
           {right.map((x: any) => {
             return (
               <div key={Object.keys(x)[0]} className={m_style["project-box"]}>
-                {ShowImage(exampleImage)}
+                {ShowImage()}
                 <div className={m_style["description"]}>
                   <p>{Object.keys(x)[0]}</p>
                   <p>{trimStringUpToFristDot(x[Object.keys(x)[0]]["Brief"])}</p>
