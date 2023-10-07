@@ -5,15 +5,14 @@ import TopBar from "../components/top-bar";
 import Afoota from "../components/afoota";
 import ImagesCheck from "../components/image_check";
 import contact_style from "@/app/contact/page.module.css";
+import { PortfolioTypes } from "@pubpersonal_data/portfolio_default";
 
-let myWork: any;
+let portfolio: PortfolioTypes;
 
-try {
-  // Attempt to import the main profile component
-  myWork = require("@pub/personal_data/my-work").MyWork;
-} catch (error) {
-  // If the main profile component is missing, import the default_profile component
-  myWork = require("@pub/personal_data/my_work_default").MyWork;
+try{
+  portfolio = require("@pub/personal_data/portfolio").portfolio
+}catch  (error) {
+  portfolio = require("@pub/personal_data/portfolio_default").portfolio
 }
 
 export default function Contact() {
@@ -39,8 +38,8 @@ export default function Contact() {
               </div>
               <div className={contact_style["contact-paragraphs"]}>
                 <p>MAIL ME</p>
-                <p>2</p>
-                <p>3</p>
+                <p>{portfolio.contact.email}</p>
+                {/* <p>3</p> */}
               </div>
             </div>
             <div className={contact_style["contact-box"]}>
@@ -49,8 +48,8 @@ export default function Contact() {
               </div>
               <div className={contact_style["contact-paragraphs"]}>
                 <p>CONTACT ME</p>
-                <p>2</p>
-                <p>3</p>
+                <p>{portfolio.contact.number}</p>
+                {/* <p>3</p> */}
               </div>
             </div>
             <div className={contact_style["contact-box"]}>
@@ -59,8 +58,7 @@ export default function Contact() {
               </div>
               <div className={contact_style["contact-paragraphs"]}>
                 <p>LOCATION</p>
-                <p>2</p>
-                <p>3</p>
+                {portfolio.contact.adress.map((x , key)=>{return (<p key={key}>{x}</p>)})}
               </div>
             </div>
           </div>
@@ -73,11 +71,28 @@ export default function Contact() {
         <div className={contact_style["right-side-contact"]}>
           <div className={contact_style["notes"]}>
             <div className={contact_style["first-line"]}>
-              <p>Let &#769;s work </p>
-              <p> together</p>
+              <p>Let &#769;s work</p>
+              <p>together.</p>
             </div>
           </div>
-          right
+          <div className={contact_style["form-wrapper"]}>
+            <form onSubmit={(event) => {console.log("value",event); event.preventDefault();}}>
+              <label>
+                <input name="name" placeholder="Your Name *"/>
+              </label>
+              <label>
+                <input name="email" placeholder="Your Email *"/>
+              </label>
+              <label>
+                <input name="subject" placeholder="Your Subject *" />
+              </label>
+              <label>
+                <textarea name="message" placeholder="Your Message"/>
+              </label>
+              <input type="submit" value="Send Message" />
+            </form>
+          </div>
+
         </div>
       </div>
       <Afoota />

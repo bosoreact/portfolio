@@ -6,6 +6,7 @@ $gapsInFlex: 45px;
 $longBoxWidth: 620px;
 $smallfont: 14px;
 $mediumfont: 16px;
+$bigfont: 18px;
 $mobileWievWidth: calc(80vw * 0.9);
 
 $dropShadow: 1vh 1vh 3vh rgba($darkShadow, 0.25),
@@ -21,15 +22,15 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
 }
 
 .box-wrapper {
-  margin-top: 100px;
+  margin: 100px 0 100px 0;
   column-gap: $gapsInFlex;
   justify-content: center;
   display: flex;
   flex-direction: row;
   padding: 10px;
-  width: 100%;
+  width: 1285px;
   .left-side-contact {
-    width: 40%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     .contact-title {
@@ -58,6 +59,11 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
             width: auto;
           }
         }
+        .contact-paragraphs{
+          p:nth-child(2){
+            font-weight: 500;
+          }
+        }
       }
     }
     .social-title {
@@ -72,32 +78,88 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
     }
   }
   .right-side-contact {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 60%;
-    border-radius: 10px;
+    border-radius: 30px;
     box-shadow: $dropShadow;
     .notes {
       display: flex;
       flex-direction: column;
+      width: ($longBoxWidth * 1.15);
       .first-line {
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
         height: 20%;
-        justify-content: center;
         p:nth-child(1) {
           font-size: 3em;
-          margin-left: 3%;
+
           font-weight: bold;
+          margin-right: 14px;
         }
         p:nth-child(2) {
-            font-size: 3em;
-            font-weight: bold;
+          font-size: 3em;
+          font-weight: bold;
           margin-left: 0%;
           color: #3562ac;
         }
       }
-      
-      
+    }
+    .form-wrapper {
+      display: flex;
+      justify-content: center;
+      width: ($longBoxWidth * 1.15);
+      form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        label {
+          justify-content: center;
+          margin-bottom: 20px;
+          width: 100%;
+          display: flex;
+          input {
+            font-size: $bigfont;
+            box-shadow: $dropShadow;
+            width: 100%;
+            height: 55px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            border: 0;
+            font-family: Arial, Helvetica, sans-serif;
+          }
+        }
+        label:nth-child(4) {
+          textarea{
+            font-size: $bigfont;
+            box-shadow: $dropShadow;
+            width: 100%;
+            height: 55px;
+            border-radius: 10px;
+            border: 0;
+            resize: none;
+            height:110px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+          }
+          margin-bottom: 30px;
+        }
+        input[type="submit"] {
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: $bigfont;
+          width: 180px;
+          height: 55px;
+          border-radius: 10px;
+          border: 0;
+          box-sizing: border-box;
+          box-shadow: $dropShadow;
+          cursor: pointer;
+        }
+      }
     }
   }
 }
