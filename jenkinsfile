@@ -1,12 +1,19 @@
 pipeline {
     agent any
-    stages {
+    stages {stage('Check PATH') {
+            steps {
+                script {
+                    echo "PATH: ${env.PATH}"
+                }
+            }
+        }
         stage('Build') {
             steps {
                 echo 'Installing Dependencies'
                 sh 'npm install'
 				echo 'Building NextJS App'
-				sh 'npx babel-node node_modules/next/dist/bin/next build'
+				sh 'npx babel-node node_modules/next/dist/bin/next build' 
+
             }
         }
         stage('Test') {
