@@ -29,5 +29,13 @@ pipeline {
                 echo 'Deploying....'
             }
         }
+        stage('Run'){
+            steps {
+                echo 'Running...'
+                 nodejs('node installer 16.20') {
+                    sh 'npm run start'
+                 }
+            }
+        }
     }
 }
