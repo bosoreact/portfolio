@@ -6,7 +6,7 @@ pipeline {
                 echo 'Installing Dependencies'
                 sh 'npm install'
 				echo 'Building NextJS App'
-				sh 'node_modules/next/dist/bin/next build'
+				sh 'npm run build'
             }
         }
         stage('Test') {
