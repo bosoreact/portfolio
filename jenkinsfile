@@ -12,7 +12,7 @@ pipeline {
                 echo 'Installing Dependencies'
                 sh 'npm install'
 				echo 'Building NextJS App'
-				sh ' /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin node_modules/next/dist/bin/next build'
+				sh '/usr/bin/npx node_modules/next/dist/bin/next build'
 
             }
         }
