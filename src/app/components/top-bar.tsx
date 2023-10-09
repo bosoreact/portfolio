@@ -1,8 +1,18 @@
-import { portfolio } from "../../../public/personal_data/portfolio";
 import style from "../styles/main.module.css";
 import modeImg from "@pub/images/main/dark_mode.svg";
 import { ShowImage } from "../pages/main";
 import Link from "next/link";
+import { PortfolioTypes } from "@pub/personal_data/portfolio_default";
+
+let portfolio: PortfolioTypes;
+
+try {
+  // Attempt to import the main profile component
+  portfolio = require("@pub/personal_data/portfolio").portfolio;
+} catch (error) {
+  // If the main profile component is missing, import the default_profile component
+  portfolio = require("@pub/personal_data/portfolio_default").portfolio;
+}
 
 export default function TopBar() {
   return (
