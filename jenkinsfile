@@ -3,7 +3,8 @@ pipeline {
     tools {
         nodejs 'Node.js 16.20.0' // Specify the desired Node.js version
     }
-    stages {stage('Check PATH') {
+    stages {
+        stage('Check PATH') {
             steps {
                 script {
                     echo "PATH: ${env.PATH}"
@@ -12,11 +13,10 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo 'Installing Dependencies'
-                sh 'npm install'
-				echo 'Building NextJS App'
-				sh '/usr/bin/npx node_modules/next/dist/bin/next build'
-
+                nodejs('Node 16.x') {
+                    sh 'npm install'
+                    sh 'npm run build'
+                }
             }
         }
         stage('Test') {
