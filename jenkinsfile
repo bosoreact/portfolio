@@ -3,7 +3,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                'npm run build'
+                echo 'Installing Dependencies'
+                sh 'npm install'
+				echo 'Building NextJS App'
+				sh 'node_modules/next/dist/bin/next build'
             }
         }
         stage('Test') {
