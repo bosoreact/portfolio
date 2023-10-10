@@ -7,7 +7,8 @@ pipeline {
         stage('Check PATH') {
             steps {
                 script {
-                    echo "PATH: ${env.PATH}  ${sudo-psw} ${env.sudo-psw}"
+                    echo "PATH: ${env.PATH}  "
+                    echo "PATH:   ${sudo-psw} "
                 }
             }
         }
