@@ -13,7 +13,7 @@ pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
+ 
 npm run build creat production in build folder
 
 # To customize your profile info
