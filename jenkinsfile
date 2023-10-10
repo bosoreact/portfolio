@@ -34,11 +34,11 @@ pipeline {
             steps {
                 echo 'Running...${sudo-psw}'
                  nodejs('node installer 16.20') {
-                    // sh 'sudo npm start'
+                    sh ' npm start -p 80'
                     // sh ' sudo -S npm start'
                     // sh "sudo ${sudo_psw}"
-                    echo "Sudo Password: ${sudo_psw}"
-                    sh "echo ${sudo_psw} | sudo -S npm start"
+                    // echo "Sudo Password: ${sudo_psw}"
+                    // sh "echo ${sudo_psw} | sudo -S npm start"
 
 
                  }
