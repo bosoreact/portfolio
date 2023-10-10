@@ -33,7 +33,7 @@ pipeline {
             steps {
                 echo 'Running...'
                  nodejs('node installer 16.20') {
-                    sh 'npm start'
+                    sh 'sudo next start -p 80'
                  }
             }
         }
