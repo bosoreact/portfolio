@@ -35,7 +35,7 @@ pipeline {
                 echo 'Running...${sudo-psw}'
                  nodejs('node installer 16.20') {
                     // sh 'sudo npm start'
-                    sh 'echo ${sudo_psw} | sudo -S npm start'
+                    sh ' sudo -S npm start'
 
                  }
             }
