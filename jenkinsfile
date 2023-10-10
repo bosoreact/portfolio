@@ -34,7 +34,7 @@ pipeline {
             steps {
                 echo 'Running...${sudo-psw}'
                  nodejs('node installer 16.20') {
-                    sh 'npm start'
+                    sh 'sudo npm start'
 
                  }
             }
