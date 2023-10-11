@@ -21,28 +21,28 @@ export default function TopBar() {
 
       <div className={style["navigation-buttons"]}>
         <div className={style["nav-button"]}>
-          <Link className={style["nav-button-link"]} href="/credentials">
-            <>Credentials</>
+          <Link className={style["nav-button-link"]} href="/">
+            <>Home</>
           </Link>
         </div>
         <div className={style["nav-button"]}>
-          <Link className={style["nav-button-link"]} href="/portfolio">
-            <>Portfolio</>
+          <Link className={style["nav-button-link"]} href="/about">
+            <>About</>
           </Link>
         </div>
         <div className={style["nav-button"]}>
-          <Link className={style["nav-button-link"]} href="/download">
-            <>Download</>
+          <Link className={style["nav-button-link"]} href="/mywork">
+            <>Works</>
+          </Link>
+        </div>
+        <div className={style["nav-button"]}>
+          <Link className={style["nav-button-link"]} href="/contact">
+            <>Contact</>
           </Link>
         </div>
         <div className={style["nav-button"]}>
           <Link className={style["nav-button-link"]} href="/services">
             <>Services</>
-          </Link>
-        </div>
-        <div className={style["nav-button"]}>
-          <Link className={style["nav-button-link"]} href="/profiles">
-            <>Profiles</>
           </Link>
         </div>
       </div>
