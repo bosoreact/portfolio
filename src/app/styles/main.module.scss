@@ -175,16 +175,20 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
           font-family: Mintmolly;
           align-self: center;
         }
-        .icon-wrapper {
-          background: grey;
+        .image-wraper {
           display: flex;
-          align-items: center;
+          flex-direction: row-reverse;
           justify-content: center;
-          border-radius: 50%;
-          padding: 3px;
-          transition: transform 0.3s;
-          .icon {
-            background-color: #000000;
+          align-items: center;
+          height: 70%;
+          justify-content: space-evenly;
+          border-radius: 30px;
+          column-gap: 10px;
+  
+
+          .photo-style {
+            height: 40px;
+            width: auto;
           }
         }
       }
