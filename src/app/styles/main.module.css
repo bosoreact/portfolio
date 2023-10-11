@@ -101,17 +101,20 @@
   font-family: Mintmolly;
   align-self: center;
 }
-.main-page .Top .right-placement .theme-button .icon-wrapper {
-  background: grey;
+.main-page .Top .right-placement .theme-button .image-wraper {
   display: flex;
-  align-items: center;
+  flex-direction: row-reverse;
   justify-content: center;
-  border-radius: 50%;
-  padding: 3px;
-  transition: transform 0.3s;
+  align-items: center;
+  height: 70%;
+  justify-content: space-evenly;
+  border-radius: 30px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
 }
-.main-page .Top .right-placement .theme-button .icon-wrapper .icon {
-  background-color: #000000;
+.main-page .Top .right-placement .theme-button .image-wraper .photo-style {
+  height: 40px;
+  width: auto;
 }
 
 @media (max-width: 700px) {

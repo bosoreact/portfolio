@@ -1,8 +1,8 @@
 import style from "../styles/main.module.css";
 import modeImg from "@pub/images/main/dark_mode.svg";
-import { ShowImage } from "../pages/main";
 import Link from "next/link";
 import { PortfolioTypes } from "@pub/personal_data/portfolio_default";
+import ImagesCheck from "../components/image_check";
 
 let portfolio: PortfolioTypes;
 
@@ -12,6 +12,10 @@ try {
 } catch (error) {
   // If the main profile component is missing, import the default_profile component
   portfolio = require("@pub/personal_data/portfolio_default").portfolio;
+}
+
+const ShowImage = (imageSrc: string) => {
+  return <ImagesCheck source={imageSrc} className={style["photo-style"]} />;
 }
 
 export default function TopBar() {
@@ -48,12 +52,12 @@ export default function TopBar() {
       </div>
 
       <div className={style["right-placement"]}>
-        <button className={style["theme-button"]}>
-          <span className={style["text"]}> Dark mode </span>
-          <div className="icon-wrapper">
-            <div className="icon"> {ShowImage(modeImg)} </div>
+        <div className={style["theme-button"]}>
+          <div className={style["text"]}> Dark mode </div>
+          <div className={style["image-wraper"]}>
+            {ShowImage("/images/main/brightness.png")}
           </div>
-        </button>
+        </div>
       </div>
     </div>
   );
