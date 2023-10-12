@@ -60,20 +60,18 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
 @mixin route-link-pack {
   .route-link {
     height: 100%;
-    width: 35%;
+    width: 100%;
     display: flex;
     position: relative;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
     justify-content: flex-end;
-    margin-right: 30px;
+    margin: 20px 70px 0 0;
     .arrow {
       position: absolute;
-      width: 1.2vw;
-      height: 1.2vw;
-      border-bottom: 4px solid #000000;
-      border-right: 4px solid #000000;
+      width: 25px;
+      height: 25px;
+      border-bottom: 5px solid #000000;
+      border-right: 5px solid #000000;
       transform: rotate(45deg);
       margin: -10px;
       transform: rotate(-45deg) translate(-5px, -5px);
@@ -120,7 +118,6 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
   flex-direction: column;
   align-items: center;
   width: 90%;
-  // min-width: 1150px;
   width: 1285px;
   .Top {
     display: flex;
@@ -211,13 +208,9 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
 
   .box-line {
     column-gap: $gapsInFlex;
-    // width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    // justify-content: space-between;
-    // height: 30vh;
-
     .greetings-box {
       width: $longBoxWidth;
       border-radius: 30px;
@@ -391,7 +384,6 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
     column-gap: $gapsInFlex;
     display: flex;
     flex-direction: row;
-    // justify-content: space-between;
     height: $squarelength;
 
     .cv-box {
@@ -441,6 +433,10 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
         }
       }
       @include d-and-l-pack();
+      .description-and-link{
+        width: 92%;
+        justify-content: space-between;
+      }
     }
 
     .profiles-box {
@@ -483,9 +479,6 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
         height: 60%;
         border-radius: 30px;
         align-items: center;
-
-        //inner shadow on hover?
-        // box-shadow: $dropShadow, $innerShadow;
         p {
           margin-top: 20%;
           position: relative;
@@ -549,7 +542,6 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
 }
 @media (max-width: 1300px) {
   .box-wrapper {
-    // width: 100%;
     height: 100%;
     row-gap: $gapsInFlex;
     align-items: center;
@@ -564,9 +556,7 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
       height: 100%;
       flex-wrap: wrap;
       flex-direction: row;
-      // flex-direction: column;
       align-items: center;
-      // justify-content: space-between;
       .cv-box {
         height: $squarelength;
         width: $squarelength;
@@ -578,11 +568,9 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
         order: 2;
       }
       .offered-services-box {
-        // height: 100%;
         width: $longBoxWidth;
         order: 3;
       }
-      // height: 30%;
     }
   }
 }
