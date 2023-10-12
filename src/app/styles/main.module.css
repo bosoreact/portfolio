@@ -117,8 +117,8 @@
   width: auto;
 }
 
-@media (max-width: 700px) {
-  .Top {
+@media (max-width: 916px) {
+  .main-page .Top {
     display: none;
   }
 }
@@ -310,6 +310,9 @@
           animation: route-link-anim 2s infinite;
 }
 @media (max-width: 1300px) {
+  .box-wrapper .Top {
+    display: none;
+  }
   .box-wrapper .box-line {
     flex-direction: column;
     align-items: center;
