@@ -33,13 +33,12 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
 @mixin route-link-pack {
   .route-link {
     height: 100%;
-    width: 35%;
+    width: 100%;
     display: flex;
     position: relative;
     cursor: pointer;
     justify-content: flex-end;
-    margin-top: 20px;
-    margin-right: 70px;
+    margin: 20px 70px 0 0;
     .arrow {
       position: absolute;
       width: 25px;

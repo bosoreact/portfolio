@@ -282,21 +282,19 @@
 }
 .box-wrapper .box-line .right-nested-box .credentials-and-portfolio .c-and-p-box .description-and-link .route-link {
   height: 100%;
-  width: 35%;
+  width: 100%;
   display: flex;
   position: relative;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
   justify-content: flex-end;
-  margin-right: 30px;
+  margin: 20px 70px 0 0;
 }
 .box-wrapper .box-line .right-nested-box .credentials-and-portfolio .c-and-p-box .description-and-link .route-link .arrow {
   position: absolute;
-  width: 1.2vw;
-  height: 1.2vw;
-  border-bottom: 4px solid #000000;
-  border-right: 4px solid #000000;
+  width: 25px;
+  height: 25px;
+  border-bottom: 5px solid #000000;
+  border-right: 5px solid #000000;
   transform: rotate(45deg);
   margin: -10px;
   transform: rotate(-45deg) translate(-5px, -5px);
@@ -414,21 +412,19 @@
 }
 .box-wrapper .box-line-s .cv-box .description-and-link .route-link {
   height: 100%;
-  width: 35%;
+  width: 100%;
   display: flex;
   position: relative;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
   justify-content: flex-end;
-  margin-right: 30px;
+  margin: 20px 70px 0 0;
 }
 .box-wrapper .box-line-s .cv-box .description-and-link .route-link .arrow {
   position: absolute;
-  width: 1.2vw;
-  height: 1.2vw;
-  border-bottom: 4px solid #000000;
-  border-right: 4px solid #000000;
+  width: 25px;
+  height: 25px;
+  border-bottom: 5px solid #000000;
+  border-right: 5px solid #000000;
   transform: rotate(45deg);
   margin: -10px;
   transform: rotate(-45deg) translate(-5px, -5px);
@@ -488,21 +484,19 @@
 }
 .box-wrapper .box-line-s .offered-services-box .description-and-link .route-link {
   height: 100%;
-  width: 35%;
+  width: 100%;
   display: flex;
   position: relative;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
   justify-content: flex-end;
-  margin-right: 30px;
+  margin: 20px 70px 0 0;
 }
 .box-wrapper .box-line-s .offered-services-box .description-and-link .route-link .arrow {
   position: absolute;
-  width: 1.2vw;
-  height: 1.2vw;
-  border-bottom: 4px solid #000000;
-  border-right: 4px solid #000000;
+  width: 25px;
+  height: 25px;
+  border-bottom: 5px solid #000000;
+  border-right: 5px solid #000000;
   transform: rotate(45deg);
   margin: -10px;
   transform: rotate(-45deg) translate(-5px, -5px);
@@ -516,6 +510,10 @@
 .box-wrapper .box-line-s .offered-services-box .description-and-link .route-link:hover {
   -webkit-animation: route-link-anim 2s infinite;
           animation: route-link-anim 2s infinite;
+}
+.box-wrapper .box-line-s .offered-services-box .description-and-link {
+  width: 92%;
+  justify-content: space-between;
 }
 .box-wrapper .box-line-s .profiles-box {
   border-radius: 15%;
@@ -561,21 +559,19 @@
 }
 .box-wrapper .box-line-s .profiles-box .description-and-link .route-link {
   height: 100%;
-  width: 35%;
+  width: 100%;
   display: flex;
   position: relative;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
   justify-content: flex-end;
-  margin-right: 30px;
+  margin: 20px 70px 0 0;
 }
 .box-wrapper .box-line-s .profiles-box .description-and-link .route-link .arrow {
   position: absolute;
-  width: 1.2vw;
-  height: 1.2vw;
-  border-bottom: 4px solid #000000;
-  border-right: 4px solid #000000;
+  width: 25px;
+  height: 25px;
+  border-bottom: 5px solid #000000;
+  border-right: 5px solid #000000;
   transform: rotate(45deg);
   margin: -10px;
   transform: rotate(-45deg) translate(-5px, -5px);
