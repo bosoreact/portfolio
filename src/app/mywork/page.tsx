@@ -4,29 +4,25 @@ import TopBar from "../components/top-bar";
 import Afoota from "../components/afoota";
 import style from "@/app/styles/main.module.css";
 import m_style from "@/app/mywork/mywork.module.css";
-// import exampleImage from "@/../images/main/default_images/default_project.png";
-// import Image, { StaticImageData } from "next/image";
-// import { resolve } from "path";
 import { useEffect, useState } from "react";
 import ImagesCheck from "../components/image_check";
 
-let myWork: any;
 
-try {
-  // Attempt to import the main profile component
-  myWork = require("@pub/personal_data/my-work").MyWork;
-} catch (error) {
-  // If the main profile component is missing, import the default_profile component
-  myWork = require("@pub/personal_data/my_work_default").MyWork;
-}
 
 export default function Page() {
-  const [mywork, setMywork] = useState(myWork);
+  const [mywork, setMywork] = useState([]);
   /*here I will create function that will read mywork array of objects
   and depending on amount of objects will divide 1/3 obejct to left-side-mywork
   and 2/3 object to right-side-mywork. zero index must be at the begining of left-side-mywork.
   index one and two must be at the begining of right-side-mywork
 */
+  useEffect(() => {
+    fetch("api/portfolio")
+    .then(res => res.json())
+    .then(data => setMywork(data))
+
+  }, []);
+  
   const trimStringUpToFristDot = (phrase: string) => {
     return phrase.slice(0, phrase.indexOf(".") + 1);
   };
