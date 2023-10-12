@@ -192,9 +192,13 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
     }
   }
 }
-@media (max-width: 700px) {
-  .Top {
-    display: none;
+@media (max-width:916px) {
+  .main-page{
+
+    .Top {
+      display: none;
+      //background-color: #000000;
+    }
   }
 }
 .box-wrapper {
@@ -330,6 +334,13 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
     }
   }
   @media (max-width: 1300px) {
+
+
+      .Top {
+        display: none;
+        //background-color: #000000;
+      }
+    
     .box-line {
       flex-direction: column;
       align-items: center;
@@ -347,6 +358,7 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
     // }
   }
   @media (max-width: 700px) {
+    
     .box-line {
       .greetings-box {
         flex-direction: column;
