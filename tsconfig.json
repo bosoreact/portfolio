@@ -37,7 +37,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/app/api/images/route.js",
+    "src/app/api/images/route.ts",
     "build/types/**/*.ts"
   ],
   "exclude": [
