@@ -78,16 +78,16 @@ export default function Contact() {
           <div className={contact_style["form-wrapper"]}>
             <form onSubmit={(event) => {console.log("value",event); event.preventDefault();}}>
               <label>
-                <input name="name" placeholder="Your Name *"/>
+                <input name="name" placeholder="Your Name *" maxLength={30}/>
               </label>
               <label>
-                <input name="email" placeholder="Your Email *"/>
+                <input name="email" placeholder="Your Email *" maxLength={30}/>
               </label>
               <label>
-                <input name="subject" placeholder="Your Subject *" />
+                <input name="subject" placeholder="Your Subject *" maxLength={30}/>
               </label>
               <label>
-                <textarea name="message" placeholder="Your Message"/>
+                <textarea name="message" placeholder="Your Message" maxLength={200}/>
               </label>
               <input type="submit" value="Send Message" />
             </form>

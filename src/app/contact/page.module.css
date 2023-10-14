@@ -123,7 +123,7 @@
 .box-wrapper .right-side-contact .form-wrapper form label:nth-child(4) textarea {
   font-size: 18px;
   box-shadow: 1vh 1vh 3vh rgba(13, 39, 80, 0.25), -0.8vh -0.9vh 1.1vh white;
-  width: 100%;
+  width: 713px;
   height: 55px;
   border-radius: 10px;
   border: 0;
@@ -132,6 +132,9 @@
   padding: 12px 20px;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  word-break: break-all;
+  white-space: break-spaces;
 }
 .box-wrapper .right-side-contact .form-wrapper form input[type=submit] {
   font-family: Arial, Helvetica, sans-serif;
