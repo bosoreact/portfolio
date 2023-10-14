@@ -18,8 +18,8 @@ export default function ImagesCheck({
       src={imgSrc}
       alt="Picture of the author"
       className={className}
-      width={100}
-      height={100}
+      width={1000}
+      height={1000}
       onError={() => setImgSrc(defaultImage)}
     />
   );

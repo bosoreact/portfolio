@@ -76,6 +76,13 @@ export default function Mywork() {
           <div className={m_style["page-title"]}>✴ALL PROJECTS✴</div>
           {right.map((x: any) => {
             return (
+              <Link
+                href={{ pathname: "/mywork/project", query: { name: Object.keys(x)[0] } }}
+                style={{
+                  textDecoration: "none",
+                }}
+                key={Object.keys(x)[0] + "link"}
+              >
               <div key={Object.keys(x)[0]} className={m_style["project-box"]}>
                 {ShowImage()}
                 <div className={m_style["description"]}>
@@ -83,6 +90,7 @@ export default function Mywork() {
                   <p>{trimStringUpToFristDot(x[Object.keys(x)[0]]["Brief"])}</p>
                 </div>
               </div>
+              </Link>
             );
           })}
         </div>

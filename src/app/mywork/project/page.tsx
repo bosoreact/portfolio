@@ -5,51 +5,148 @@ import style from "@/app/styles/main.module.css";
 import p_style from "@/app/mywork/project/project.module.css";
 import ImagesCheck from "@/app/components/image_check";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
-//import { MyWorkItem } from "@pub/personal_data/my_work_default";
+import { useEffect, useState, useRef } from "react";
+import Project_Images from "./project_images";
 
-
-  
-export interface ProjectData {
-    Brief: string;
-    Learned: { learned: string }[];
-    Other_Tools_Used: string[];
-  }
-interface Projecttpes{
-    key: ProjectData | {}
+//type learnedArrTypes = Record<string, string | string[]>;
+type learnedArrTypes = { [key: string]: string | string[] };
+interface ProjectTypes {
+  Brief?: string;
+  Learned?: { learned: string }[];
+  Other_Tools_Used?: string[];
 }
+type AvailableImagesTypes = string[] | [];
+interface QueryResponseTypes {
+  available: Boolean;
+  everyotherimage?: string[];
+}
+/* n this component pictures and discription should be displayed dinamically
+depending from the nested component
+TODO
+move into separate components
+*/
 export default function Project() {
-  const [project, setProject] = useState({});
+  console.log("render");
+  const [project, setProject] = useState<ProjectTypes>({});
+
+  //const imageAvailable = useRef<QueryResponseTypes | {}>({});
   const searchParams = useSearchParams();
-  const trimStringUpToFristDot = (phrase: string| any) => {
-    if(Object.keys(project).length > 0){
-        return phrase.slice(0, phrase.indexOf(".") + 1);
+  const trimStringUpToFristDot = (phrase: string | any) => {
+    if (Object.keys(project).length > 0) {
+      return phrase.slice(0, phrase.indexOf(".") + 1);
     }
   };
   useEffect(() => {
-    const url = "@/api/portfolio";
     fetch("../api/portfolio")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data)
-        const filteredData = data.filter((x: ProjectData) => {
-
+        const filteredData = data.filter((x: ProjectTypes) => {
           return `${Object.keys(x)[0]}` == `${searchParams.get("name")}`;
         });
         const parameter = searchParams.get("name");
-        //console.log(filteredData[0][parameter])
-        //if (parameter !== null) console.log(Object.keys(filteredData[0][parameter])[0]);
         if (parameter !== null) {
-        setProject(
-            filteredData[0][parameter]
-        );
-    }
-        // }
+          console.log(filteredData[0][parameter]);
+          setProject(filteredData[0][parameter]);
+        }
       });
   }, []);
-  console.log(project)
+
+
+  const ShowImage = (_source: string) => {
+    return (
+      <ImagesCheck
+        source={_source}
+        //image style for current component
+        className={p_style["photo-style"]}
+        defaultImage={"/images/main/default_images/project.png"}
+      />
+    );
+  };
+  const topImageDisplay = (
+    <div key={"image1"} className={p_style["top-image-wrapper"]}>
+      {ShowImage(`/images/my_work/${searchParams.get("name")}/main.png`)}
+      <div className={p_style["absoulute-image"]}>
+        {ShowImage(`/images/my_work/${searchParams.get("name")}/main.png`)}
+      </div>
+    </div>
+  );
+
+  const formatLearnedBox = () => {
+    let newJsxArray = [];
+    //newJsxArray.push(topImageDisplay);
+    let cacheArray = [];
+    let counter = 0;
+    if (project.Learned !== undefined) {
+      let projectLearnedMirror = project.Learned;
+      while (projectLearnedMirror.length > 0) {
+        const x: learnedArrTypes | undefined = projectLearnedMirror.shift();
+        if (x) {
+          counter++;
+          if (Array.isArray(Object.values(x)[0])) {
+            let nestedCachedArray: string[] = Object.values(x)[0] as string[];
+            let nestedCounter = 0;
+            while (nestedCachedArray.length > 0) {
+              const y = nestedCachedArray.shift();
+              if (nestedCounter === 0) {
+                cacheArray.push(
+                  <div
+                    key={nestedCounter + "nest"}
+                    className={p_style["description-box"]}
+                  >
+                    <h1>{Object.keys(x)[0]}</h1>
+                    <p> {y}</p>
+                  </div>
+                );
+              } else {
+                cacheArray.push(
+                  <div
+                    key={nestedCounter + "nest"}
+                    className={p_style["description-box"]}
+                  >
+                    <p> {y}</p>
+                  </div>
+                );
+              }
+              nestedCounter++;
+            }
+            newJsxArray.push(
+              <div key={Object.keys(x)[0]} className={p_style["box-line"]}>
+                {cacheArray}
+              </div>
+            );
+            cacheArray = [];
+            counter = 0;
+          } else {
+            cacheArray.push(
+              <div
+                key={Object.keys(x)[0]}
+                className={p_style["description-box"]}
+              >
+                <h1>{Object.keys(x)[0]}</h1>
+                <p> {Object.values(x)[0]}</p>
+              </div>
+            );
+          }
+          if (counter == 2) {
+            newJsxArray.push(
+              <div
+                key={Object.keys(x)[0] + "box"}
+                className={p_style["box-line"]}
+              >
+                {cacheArray.map((x) => x)}
+              </div>
+            );
+            cacheArray = [];
+            counter = 0;
+          }
+        }
+      }
+    }
+
+    return newJsxArray.map((x) => x);
+  };
   const pageBody = () => {
-    const brief = Object.values(project)[0]
+    const brief = Object.values(project)[0];
     if (project !== undefined && project !== null) {
       return (
         <div className={p_style["box-wrapper"]}>
@@ -60,20 +157,19 @@ export default function Project() {
             </p>
             <p>✴{trimStringUpToFristDot(brief)}✴</p>
           </div>
-          <div className={p_style["image"]}>image</div>
-          <div className={p_style["box-line"]}>description</div>
-          <div className={p_style["all-images"]}>allimages-1</div>
-          <div className={p_style["box-line"]}>description</div>
-          <div className={p_style["image"]}>last image</div>
-          <div className={p_style["next-project"]}>next project button</div>
+          {topImageDisplay}
+          {formatLearnedBox()}
+          <Project_Images/>
         </div>
       );
     }
   };
+
   return (
     <div className={style["main-page"]}>
       <TopBar />
       {pageBody()}
+
       <Afoota />
     </div>
   );
