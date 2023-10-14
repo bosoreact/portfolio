@@ -56,6 +56,10 @@
   -moz-column-gap: 45px;
        column-gap: 45px;
 }
+.box-wrapper .left-side-contact .socials .photo-style {
+  height: 100px;
+  width: auto;
+}
 .box-wrapper .right-side-contact {
   height: 600px;
   display: flex;
