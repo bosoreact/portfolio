@@ -21,7 +21,7 @@
 }
 .box-wrapper .page-title p:nth-child(2) {
   width: 80%;
-  font-size: 65px;
+  font-size: 35px;
   font-weight: 800;
 }
 .box-wrapper .top-image-wrapper {
@@ -91,14 +91,13 @@
   font-size: 20px;
 }
 .box-wrapper .image-line {
-  margin-top: 50px;
+  row-gap: 45px;
+  -moz-column-gap: 45px;
+       column-gap: 45px;
+  justify-content: center;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
-}
-.box-wrapper .image-line .image-wrapper {
-  height: 100%;
 }
 .box-wrapper .image-line .image-wrapper .photo-style {
   border-style: solid;
@@ -106,7 +105,7 @@
   border-radius: 30px;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 616.8px;
-  height: 616.8px;
+  width: 603.95px;
+  height: 603.95px;
 }
 /*# sourceMappingURL=project.module.css.map */

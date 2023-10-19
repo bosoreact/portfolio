@@ -17,7 +17,6 @@ export default function Project_Images() {
       .then((res) => res.json())
       .then((data) => setAPiresponse(data));
   }, []);
-  console.log(apiresponse);
   const ShowImage = (_source: string) => {
     return (
       <ImagesCheck
@@ -30,7 +29,6 @@ export default function Project_Images() {
   };
   const imagesforProject = () => {
     if ("everyotherimage" in apiresponse) {
-      console.log(apiresponse["everyotherimage"]);
       const AvailableImagesArray = apiresponse.everyotherimage;
       if (AvailableImagesArray) {
         return AvailableImagesArray.map((x) => {
