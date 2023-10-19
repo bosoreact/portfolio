@@ -5,14 +5,17 @@ import style from "@/app/styles/main.module.css";
 import p_style from "@/app/mywork/project/project.module.css";
 import ImagesCheck from "@/app/components/image_check";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import Project_Images from "./project_images";
 
-//type learnedArrTypes = Record<string, string | string[]>;
-type learnedArrTypes = { [key: string]: string | string[] };
+interface learnedArrTypes  {
+  [key: string]: string;
+};
 interface ProjectTypes {
   Brief?: string;
-  Learned?: { learned: string }[];
+  Learned?: {
+    [key: string]: string | string[];
+  }[];
   Other_Tools_Used?: string[];
 }
 type AvailableImagesTypes = string[] | [];
@@ -26,10 +29,9 @@ TODO
 move into separate components
 */
 export default function Project() {
-  console.log("render");
-  const [project, setProject] = useState<ProjectTypes>({});
+  console.log("project_render");
+  const [project, setProject] = useState<ProjectTypes>({ });
 
-  //const imageAvailable = useRef<QueryResponseTypes | {}>({});
   const searchParams = useSearchParams();
   const trimStringUpToFristDot = (phrase: string | any) => {
     if (Object.keys(project).length > 0) {
@@ -45,12 +47,11 @@ export default function Project() {
         });
         const parameter = searchParams.get("name");
         if (parameter !== null) {
-          console.log(filteredData[0][parameter]);
+          console.log("use effect",filteredData[0][parameter])
           setProject(filteredData[0][parameter]);
         }
       });
   }, []);
-
 
   const ShowImage = (_source: string) => {
     return (
@@ -64,7 +65,7 @@ export default function Project() {
   };
   const topImageDisplay = (
     <div key={"image1"} className={p_style["top-image-wrapper"]}>
-      {ShowImage(`/images/my_work/${searchParams.get("name")}/main.png`)}
+      {ShowImage(`/images/main/default_images/project_background.png`)}
       <div className={p_style["absoulute-image"]}>
         {ShowImage(`/images/my_work/${searchParams.get("name")}/main.png`)}
       </div>
@@ -73,13 +74,12 @@ export default function Project() {
 
   const formatLearnedBox = () => {
     let newJsxArray = [];
-    //newJsxArray.push(topImageDisplay);
     let cacheArray = [];
     let counter = 0;
-    if (project.Learned !== undefined) {
+    if (project.Learned !== undefined && project.Learned.length > 0) {
       let projectLearnedMirror = project.Learned;
       while (projectLearnedMirror.length > 0) {
-        const x: learnedArrTypes | undefined = projectLearnedMirror.shift();
+        const x = projectLearnedMirror.shift();
         if (x) {
           counter++;
           if (Array.isArray(Object.values(x)[0])) {
@@ -155,11 +155,12 @@ export default function Project() {
               Project: &nbsp;
               {searchParams.get("name")}
             </p>
-            <p>✴{trimStringUpToFristDot(brief)}✴</p>
+            <p>✴{brief}✴</p>
           </div>
           {topImageDisplay}
           {formatLearnedBox()}
-          <Project_Images/>
+          <Project_Images />
+          {/* {otherSkills()} */}
         </div>
       );
     }
