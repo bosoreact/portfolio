@@ -1,5 +1,4 @@
 "use client";
-
 import Link from "next/link";
 import TopBar from "../components/top-bar";
 import Afoota from "../components/afoota";
@@ -35,10 +34,11 @@ export default function Mywork() {
     }
     return { left, right };
   };
-  const ShowImage = () => {
+  //ShowImage(`/images/my_work/${searchParams.get("name")}/main.png
+  const ShowImage = (projectName:string) => {
     return (
       <ImagesCheck
-        source={"/images/main/default_images/project.png"}
+        source={`/images/my_work/${projectName}/main.png`}
         //image style for current component
         className={m_style["photo-style"]}
         defaultImage={"/images/main/default_images/project.png"}
@@ -60,7 +60,8 @@ export default function Mywork() {
                 key={Object.keys(x)[0] + "link"}
               >
                 <div key={Object.keys(x)[0]} className={m_style["project-box"]}>
-                  {ShowImage()}
+                  
+                  {ShowImage(Object.keys(x)[0])}
                   <div className={m_style["description"]}>
                     <p>{Object.keys(x)[0]}</p>
                     <p>
@@ -84,7 +85,7 @@ export default function Mywork() {
                 key={Object.keys(x)[0] + "link"}
               >
               <div key={Object.keys(x)[0]} className={m_style["project-box"]}>
-                {ShowImage()}
+                {ShowImage(Object.keys(x)[0])}
                 <div className={m_style["description"]}>
                   <p>{Object.keys(x)[0]}</p>
                   <p>{trimStringUpToFristDot(x[Object.keys(x)[0]]["Brief"])}</p>

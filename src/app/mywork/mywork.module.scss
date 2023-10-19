@@ -30,7 +30,7 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
     .photo-style {
       margin-top: 15px;
       width: calc($projectSquareLength * 0.7);
-      height: auto;
+      height: calc($projectSquareLength * 0.7);
       border-radius: 5% 25%;
 
     }
