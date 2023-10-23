@@ -34,7 +34,6 @@ export default function Mywork() {
     }
     return { left, right };
   };
-  //ShowImage(`/images/my_work/${searchParams.get("name")}/main.png
   const ShowImage = (projectName:string) => {
     return (
       <ImagesCheck
