@@ -18,8 +18,6 @@ try {
 }
 
 export default function Page() {
-  if (portfolio !== undefined)
-    console.log(JSON.stringify(portfolio.aboutMe.long));
   const ShowImage = (imageSrc: string) => {
     return <ImagesCheck source={imageSrc} className={c_style["photo-style"]} />;
   };
