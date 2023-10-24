@@ -7,6 +7,7 @@ import ImagesCheck from "@/app/components/image_check";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import Project_Images from "./project_images";
+import Link from "next/link";
 
 interface learnedArrTypes  {
   [key: string]: string;
@@ -17,6 +18,7 @@ interface ProjectTypes {
     [key: string]: string | string[];
   }[];
   Other_Tools_Used?: string[];
+  repository: string;
 }
 type AvailableImagesTypes = string[] | [];
 interface QueryResponseTypes {
@@ -145,6 +147,7 @@ export default function Project() {
 
     return newJsxArray.map((x) => x);
   };
+  const repositoryLink =(<div className={p_style["repository"]}><Link href={`${project.repository}`}>{project.repository}</Link></div>)
   const pageBody = () => {
     const brief = Object.values(project)[0];
     if (project !== undefined && project !== null) {
@@ -160,7 +163,7 @@ export default function Project() {
           {topImageDisplay}
           {formatLearnedBox()}
           <Project_Images />
-          {/* {otherSkills()} */}
+          {repositoryLink}
         </div>
       );
     }
