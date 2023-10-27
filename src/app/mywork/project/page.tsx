@@ -1,3 +1,8 @@
+/* in this component pictures and discription should be displayed dinamically
+depending from the nested component
+TODO
+move into separate components
+*/
 "use client";
 import TopBar from "@/app/components/top-bar";
 import Afoota from "@/app/components/afoota";
@@ -25,14 +30,11 @@ interface QueryResponseTypes {
   available: Boolean;
   everyotherimage?: string[];
 }
-/* n this component pictures and discription should be displayed dinamically
-depending from the nested component
-TODO
-move into separate components
-*/
+const initialObjectState: ProjectTypes= {Brief:"",Learned:[{project:""}],Other_Tools_Used:[""],repository:""}
+
 export default function Project() {
   console.log("project_render");
-  const [project, setProject] = useState<ProjectTypes>({ });
+  const [project, setProject] = useState<ProjectTypes>(initialObjectState);
 
   const searchParams = useSearchParams();
   const trimStringUpToFristDot = (phrase: string | any) => {
@@ -49,7 +51,6 @@ export default function Project() {
         });
         const parameter = searchParams.get("name");
         if (parameter !== null) {
-          console.log("use effect",filteredData[0][parameter])
           setProject(filteredData[0][parameter]);
         }
       });
@@ -78,12 +79,16 @@ export default function Project() {
     let newJsxArray = [];
     let cacheArray = [];
     let counter = 0;
-    if (project.Learned !== undefined && project.Learned.length > 0) {
+    
+    if (project.Learned !== undefined && project.Learned.length > 0 && Object.keys(project).length > 0) {
       let projectLearnedMirror = project.Learned;
+      //if the array still contains items do:
       while (projectLearnedMirror.length > 0) {
+        //move the last item from array to variable
         const x = projectLearnedMirror.shift();
         if (x) {
           counter++;
+          //chceck if each array item has nested array
           if (Array.isArray(Object.values(x)[0])) {
             let nestedCachedArray: string[] = Object.values(x)[0] as string[];
             let nestedCounter = 0;
@@ -111,6 +116,7 @@ export default function Project() {
               }
               nestedCounter++;
             }
+            console.log("cache test",cacheArray)
             newJsxArray.push(
               <div key={Object.keys(x)[0]} className={p_style["box-line"]}>
                 {cacheArray}
@@ -129,17 +135,18 @@ export default function Project() {
               </div>
             );
           }
-          if (counter == 2) {
+          // if counter counts 2 elemnt in box line or there is only last element in the function top array
+          if (counter == 2 || projectLearnedMirror.length === 0) {
             newJsxArray.push(
               <div
                 key={Object.keys(x)[0] + "box"}
                 className={p_style["box-line"]}
               >
-                {cacheArray.map((x) => x)}
+                {cacheArray.map((cacheElement) => cacheElement)}
               </div>
             );
+           counter = 0;
             cacheArray = [];
-            counter = 0;
           }
         }
       }

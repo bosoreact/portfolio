@@ -73,7 +73,7 @@ export default function Mywork() {
           })}
         </div>
         <div className={m_style["right-side-mywork"]}>
-          <div className={m_style["page-title"]}>✴ALL PROJECTS✴</div>
+          <div className={m_style["page-title"]}>✴ALL PRIVATE PROJECTS✴</div>
           {right.map((x: any) => {
             return (
               <Link
