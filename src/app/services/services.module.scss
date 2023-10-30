@@ -96,7 +96,7 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
 @mixin date-style {
   color: #5c5c5c;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 @mixin small-title {
@@ -179,6 +179,7 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
             @include big-title;
           }
           p:nth-child(2) {
+            margin: 0 15px 0 15px;
             @include date-style;
           }
         }
