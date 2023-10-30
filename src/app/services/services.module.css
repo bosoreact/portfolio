@@ -102,9 +102,10 @@
   font-weight: bold;
 }
 .box-wrapper .box-line-top .right-side-services .services-description .service-description-box p:nth-child(2) {
+  margin: 0 15px 0 15px;
   color: #5c5c5c;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 13px;
 }
 .box-wrapper .box-line-bottom {
   display: flex;
