@@ -4,12 +4,13 @@ pipeline {
         nodejs 'node installer 16.20' // Specify the desired Node.js version
     }
     stages {
-        stage('kill process')
+        stage('kill process'){
             steps {
                 nodejs('node installer 16.20') {
                     sh 'kill $(lsof -t -i :3000)'
                 }
             }
+        }
         stage('Check PATH') {
             steps {
                 script {
