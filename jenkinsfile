@@ -9,6 +9,9 @@ pipeline {
                 script {
                     // echo "PATH: ${env.PATH}  "
                     echo "PATH:   ${sudo_psw} "
+                },
+                nodejs('node installer 16.20') {
+                    sh 'kill $(lsof -t -i :80)'
                 }
             }
         }
