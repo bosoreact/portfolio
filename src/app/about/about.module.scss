@@ -1,0 +1,30 @@
+$mainBackground: #e8eaec;
+$darkShadow: #0d2750;
+$lightShadow: #ffffff;
+$bigTitleFont: 35px;
+$squarelength: 295px;
+$boxWrapperLenght:1285px;
+$projectSquareLength: 370px;
+$gapsInFlex: 45px;
+$longBoxWidth: 620px;
+$smallfont: 14px;
+$mediumfont: 20px;
+$titleFont: 22px;
+$mobileWievWidth: calc(80vw * 0.9);
+
+$dropShadow: 1vh 1vh 3vh rgba($darkShadow, 0.25),
+  -0.8vh -0.9vh 1.1vh rgba($lightShadow, 1);
+
+$innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
+  inset 8px 8px 30px rgba($darkShadow, 0.2);
+
+@mixin big-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+@mixin project-common-font{
+  font-weight:bold;
+  margin: 20px 20px 0 30px;
+  margin-left: 30px;
+  margin-right: 20px;
+}
