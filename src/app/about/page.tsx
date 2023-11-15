@@ -47,7 +47,34 @@ export default function About() {
         <TopBar />
         <div className={about_style["box-wrapper"]}>
             <div className={about_style["summary-and-photo"]}>summary and photo </div>
-            <div className={about_style["exp-and-education"]}>exp and education</div>
+            <div className={about_style["exp-and-education"]}>
+                <div className={about_style["experience"]}><h3>EXPERIENCE</h3>
+      {portfolio.experience.map((x, y) => {
+        if(y<=1){
+        return (
+          <div key={`block ${y}`} className={about_style["extracted-block"]}>
+            <p key={y}>{x.year}</p>
+            <p key={y}>{x.jobTitle}</p>
+            <p key={y}>{x.companyName}</p>
+          </div>
+        );
+        }
+      })}</div>
+                <div className={about_style["education"]}><h3>EDUCATION</h3>
+      {portfolio.education.map((x, y) => {
+        if(y<=1){
+
+            return (
+                <div key={`block ${y}`} className={about_style["extracted-block"]}>
+            <p key={y}>{x.year}</p>
+            <p key={y}>{x.school}</p>
+            <p key={y}>{x.degree}</p>
+          </div>
+        );
+    }
+}
+      )}</div>
+                </div>
             <div className={about_style["box-line-bottom"]}>
                 <div className={about_style["profiles-box"]}>
                     <div className={about_style["image-wraper"]}>

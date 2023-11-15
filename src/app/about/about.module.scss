@@ -11,6 +11,7 @@ $smallfont: 14px;
 $mediumfont: 20px;
 $titleFont: 22px;
 $mobileWievWidth: calc(80vw * 0.9);
+$boxBottomMargin: 30px;
 
 $dropShadow: 1vh 1vh 3vh rgba($darkShadow, 0.25),
   -0.8vh -0.9vh 1.1vh rgba($lightShadow, 1);
@@ -84,7 +85,63 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
     @include route-link-pack;
   }
 }
-
+@mixin date-style {
+  color: #5c5c5c;
+  font-weight: bold;
+  font-size: 15px;
+}
+@mixin medium-title {
+  color: #0d2750;
+  font-weight: bold;
+  font-size: 19px;
+}
+@mixin small-title {
+  color: #5c5c5c;
+  font-weight: bold;
+  font-size: 15px;
+}
+@mixin description {
+  font-size: 13px;
+  margin-bottom: 35px;
+}
+@mixin big-title {
+  font-size: 21px;
+  font-weight: bold;
+}
+@mixin extracted-block {
+  p {
+    margin: 0;
+    margin-bottom: 4px;
+  }
+  p:nth-child(1) {
+    @include date-style;
+  }
+  p:nth-child(2) {
+    @include medium-title;
+  }
+  p:nth-child(3) {
+    @include small-title;
+  }
+  p:nth-child(4) {
+    @include description;
+  }
+}
+@mixin extracted-block-small {
+  p {
+    margin: 0;
+    margin-bottom: 4px;
+  }
+  p:nth-child(1) {
+    @include date-style;
+  }
+  p:nth-child(2) {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  p:nth-child(3) {
+    @include small-title;
+  }
+}
 .box-wrapper {
   margin-top: 100px;
   margin-bottom: 100px;
@@ -94,7 +151,44 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
   flex-direction: column;
   padding: 10px;
   row-gap: $gapsInFlex;
-
+  .exp-and-education{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: $gapsInFlex;
+    .experience{
+      width: $longBoxWidth;
+      border-radius: 30px;
+      height: $squarelength;
+      box-shadow: $dropShadow;
+      margin-bottom: $boxBottomMargin;
+      h3 {
+        margin-left: 30px;
+        @include big-title;
+      }
+      .extracted-block {
+        margin-left: 30px;
+        margin-bottom: $boxBottomMargin;
+        @include extracted-block;
+      }
+    }
+    .education{
+      width: $longBoxWidth;
+      border-radius: 30px;
+      height: $squarelength;
+      box-shadow: $dropShadow;
+      margin-bottom: $boxBottomMargin;
+      h3 {
+        margin-left: 30px;
+        @include big-title;
+      }
+      .extracted-block {
+        margin-left: 30px;
+        margin-bottom: $boxBottomMargin;
+        @include extracted-block;
+      }
+    }
+  }
   .box-line-bottom {
     display: flex;
     flex-direction: row;
