@@ -151,6 +151,37 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
   flex-direction: column;
   padding: 10px;
   row-gap: $gapsInFlex;
+  .summary-and-photo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: $gapsInFlex;
+    
+    .image-wrapper {
+      border-radius: 30px;
+      height: $squarelength;
+      box-shadow: $dropShadow;
+      margin-bottom: $boxBottomMargin;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      align-items: center;
+      //height: 70%;
+      width: 30%;
+      justify-content: space-evenly;
+      border-radius: 30px;
+      column-gap: 10px;
+
+      .photo-style {
+        border-radius: 30px;
+        height: 90%;
+        width: auto;
+      }
+    }
+    .title-and-description{
+
+    }
+  }
   .exp-and-education{
     display: flex;
     flex-direction: row;

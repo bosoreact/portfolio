@@ -9,6 +9,33 @@
   padding: 10px;
   row-gap: 45px;
 }
+.box-wrapper .summary-and-photo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  -moz-column-gap: 45px;
+       column-gap: 45px;
+}
+.box-wrapper .summary-and-photo .image-wrapper {
+  border-radius: 30px;
+  height: 295px;
+  box-shadow: 1vh 1vh 3vh rgba(13, 39, 80, 0.25), -0.8vh -0.9vh 1.1vh white;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  justify-content: space-evenly;
+  border-radius: 30px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.box-wrapper .summary-and-photo .image-wrapper .photo-style {
+  border-radius: 30px;
+  height: 90%;
+  width: auto;
+}
 .box-wrapper .exp-and-education {
   display: flex;
   flex-direction: row;
