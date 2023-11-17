@@ -1,7 +1,7 @@
 $mainBackground: #e8eaec;
 $darkShadow: #0d2750;
 $lightShadow: #ffffff;
-$bigTitleFont: 35px;
+$bigTitleFont: 55px;
 $squarelength: 295px;
 $boxWrapperLenght:1285px;
 $projectSquareLength: 370px;
@@ -18,6 +18,31 @@ $dropShadow: 1vh 1vh 3vh rgba($darkShadow, 0.25),
 
 $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
   inset 8px 8px 30px rgba($darkShadow, 0.2);
+
+  @keyframes text-scroll {
+    from {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+    to {
+      -moz-transform: translateX(250%);
+      -webkit-transform: translateX(250%);
+      transform: translateX(250%);
+    }
+  }
+  @keyframes route-link-anim {
+    0% {
+      // transform: translate(-20px, -20px);
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 0;
+      transform: translate(20px);
+    }
+  }
 
 @mixin big-title {
   font-size: 16px;
@@ -179,7 +204,25 @@ $innerShadow: inset -15px -15px 20px rgba($lightShadow, 0.7),
       }
     }
     .title-and-description{
-
+      width: 70%;
+      .page-title {
+        width: $longBoxWidth;
+        text-align: center;
+        font-size: $bigTitleFont;
+        font-weight: 800;
+      }
+      .about-me {
+        border-radius: 30px;
+        height: $squarelength * 0.7;
+        box-shadow: $dropShadow;
+        margin-bottom: $boxBottomMargin;
+        //width: 70%;
+        margin-bottom: $boxBottomMargin;
+        p {
+          @include description;
+          margin-bottom: 10px;
+        }
+      }
     }
   }
   .exp-and-education{

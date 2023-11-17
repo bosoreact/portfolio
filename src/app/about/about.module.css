@@ -1,3 +1,37 @@
+@-webkit-keyframes text-scroll {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(250%);
+  }
+}
+@keyframes text-scroll {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(250%);
+  }
+}
+@-webkit-keyframes route-link-anim {
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(20px);
+  }
+}
+@keyframes route-link-anim {
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(20px);
+  }
+}
 .box-wrapper {
   margin-top: 100px;
   margin-bottom: 100px;
@@ -35,6 +69,27 @@
   border-radius: 30px;
   height: 90%;
   width: auto;
+}
+.box-wrapper .summary-and-photo .title-and-description {
+  width: 70%;
+}
+.box-wrapper .summary-and-photo .title-and-description .page-title {
+  width: 620px;
+  text-align: center;
+  font-size: 55px;
+  font-weight: 800;
+}
+.box-wrapper .summary-and-photo .title-and-description .about-me {
+  border-radius: 30px;
+  height: 206.5px;
+  box-shadow: 1vh 1vh 3vh rgba(13, 39, 80, 0.25), -0.8vh -0.9vh 1.1vh white;
+  margin-bottom: 30px;
+  margin-bottom: 30px;
+}
+.box-wrapper .summary-and-photo .title-and-description .about-me p {
+  font-size: 13px;
+  margin-bottom: 35px;
+  margin-bottom: 10px;
 }
 .box-wrapper .exp-and-education {
   display: flex;

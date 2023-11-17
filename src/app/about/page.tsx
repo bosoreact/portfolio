@@ -19,6 +19,16 @@ try {
 }
 
 export default function About() {
+
+  const aboutMe = (
+    <div className={about_style["about-me"]}>
+      <h3>BOGDAN ANDREW TODOROW</h3>
+      {portfolio.aboutMe.long.map((x, y) => {
+        return <p key={y}>{x}</p>;
+      })}
+    </div>
+  );
+
   const showImage = (imageSrc: string) => {
     return (
       <ImagesCheck source={imageSrc} className={about_style["photo-style"]} />
@@ -60,7 +70,8 @@ export default function About() {
             {ShowImage("/images/profile/photo.png")}
           </div>
           <div className={about_style["title-and-description"]}>
-            title and description
+            <div className={about_style["page-title"]}>✴SELF SUMMARY✴</div>
+            {aboutMe}
           </div>
         </div>
         <div className={about_style["exp-and-education"]}>
