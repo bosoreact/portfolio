@@ -18,6 +18,7 @@ try {
 }
 
 export default function Page() {
+  
   const showImage = (imageSrc: string) => {
     return <ImagesCheck source={imageSrc} className={style_s["photo-style"]} />;
   };
