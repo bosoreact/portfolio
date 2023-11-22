@@ -88,8 +88,12 @@ export default function Page() {
         <div className={style_s["box-line-bottom"]}>
           <div className={style_s["profiles-box"]}>
             <div className={style_s["image-wraper"]}>
-              {showImage("/images/main/socials/twitter.png")}
+            <Link href={`https://twitter.com/BogdanTodorow`}>
+             {showImage("/images/main/socials/twitter.png")}
+             </Link>
+             <Link href={`https://www.linkedin.com/in/bogdan-todorow/`}>
               {showImage("/images/main/socials/linkedin.png")}
+              </Link>
             </div>
             {descriptionAndLink("STAY WITH ME", "Profiles", "contact")}
           </div>
