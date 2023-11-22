@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import style from "@/app/styles/main.module.css";
 import TopBar from "../components/top-bar";
 import Afoota from "../components/afoota";
@@ -64,8 +65,12 @@ export default function Contact() {
           </div>
           <div className={contact_style["social-title"]}>SOCIAL INFO</div>
           <div className={contact_style["socials"]}>
-            {showImage("/images/main/socials/linkedin.png")}
-            {showImage("/images/main/socials/twitter.png")}
+          <Link href={`https://www.linkedin.com/in/bogdan-todorow/`}>
+              {showImage("/images/main/socials/linkedin.png")}
+              </Link>
+            <Link href={`https://twitter.com/BogdanTodorow`}>
+             {showImage("/images/main/socials/twitter.png")}
+             </Link>
           </div>
         </div>
         <div className={contact_style["right-side-contact"]}>

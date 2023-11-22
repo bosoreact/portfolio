@@ -113,8 +113,12 @@ export default function About() {
         <div className={about_style["box-line-bottom"]}>
           <div className={about_style["profiles-box"]}>
             <div className={about_style["image-wraper"]}>
-              {showImage("/images/main/socials/twitter.png")}
-              {showImage("/images/main/socials/linkedin.png")}
+            <Link href={`https://twitter.com/BogdanTodorow`}>
+             {showImage("/images/main/socials/twitter.png")}
+             </Link>
+             <Link href={`https://www.linkedin.com/in/bogdan-todorow/`}>
+              {ShowImage("/images/main/socials/linkedin.png")}
+              </Link>
             </div>
             {descriptionAndLink("STAY WITH ME", "Profiles", "contact")}
           </div>
