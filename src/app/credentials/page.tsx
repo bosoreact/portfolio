@@ -1,9 +1,11 @@
 "use client";
+
 import Afoota from "../components/afoota";
 import TopBar from "../components/top-bar";
 import style from "@/app/styles/main.module.css";
 import c_style from "@/app/credentials/credentials.module.css";
 import React, { useState } from "react";
+import Link from "next/link";
 import ImagesCheck from "../components/image_check";
 import { PortfolioTypes } from "@pub/personal_data/portfolio_default";
 
@@ -107,8 +109,12 @@ export default function Page() {
             </div>
             <div className={c_style["profiles-box"]}>
               <div className={c_style["image-wraper"]}>
-                {ShowImage("/images/main/socials/twitter.png")}
-                {ShowImage("/images/main/socials/linkedin.png")}
+              <Link href={portfolio.socials.twitter}>
+             {ShowImage("/images/main/socials/twitter.png")}
+             </Link>
+             <Link href={portfolio.socials.linkedin}>
+              {ShowImage("/images/main/socials/linkedin.png")}
+              </Link>
               </div>
             </div>
             <div className={c_style["contact-button"]}>Contact me</div>
