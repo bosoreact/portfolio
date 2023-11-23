@@ -99,10 +99,10 @@ export default function Main() {
           </div>
           <div className={style["profiles-box"]}>
             <div className={style["image-wraper"]}>
-            <Link href={`https://twitter.com/BogdanTodorow`}>
+            <Link href={portfolio.socials.twitter}>
              {ShowImage("/images/main/socials/twitter.png")}
              </Link>
-             <Link href={`https://www.linkedin.com/in/bogdan-todorow/`}>
+             <Link href={portfolio.socials.linkedin}>
               {ShowImage("/images/main/socials/linkedin.png")}
               </Link>
             </div>

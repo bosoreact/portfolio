@@ -65,10 +65,10 @@ export default function Contact() {
           </div>
           <div className={contact_style["social-title"]}>SOCIAL INFO</div>
           <div className={contact_style["socials"]}>
-          <Link href={`https://www.linkedin.com/in/bogdan-todorow/`}>
+          <Link href={portfolio.socials.linkedin}>
               {showImage("/images/main/socials/linkedin.png")}
               </Link>
-            <Link href={`https://twitter.com/BogdanTodorow`}>
+            <Link href={portfolio.socials.twitter}>
              {showImage("/images/main/socials/twitter.png")}
              </Link>
           </div>

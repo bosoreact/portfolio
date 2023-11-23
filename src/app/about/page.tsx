@@ -22,7 +22,7 @@ export default function About() {
 
   const aboutMe = (
     <div className={about_style["about-me"]}>
-      <h3>BOGDAN ANDREW TODOROW</h3>
+      <h3>{portfolio.description.p2}</h3>
       {portfolio.aboutMe.long.map((x, y) => {
         return <p key={y}>{x}</p>;
       })}
@@ -59,11 +59,9 @@ export default function About() {
       <ImagesCheck source={imageSrc} className={about_style["photo-style"]} />
     );
   };
-
   return (
     <div className={style["main-page"]}>
       <TopBar />
-
       <div className={about_style["box-wrapper"]}>
         <div className={about_style["summary-and-photo"]}>
           <div className={about_style["image-wrapper"]}>
@@ -113,11 +111,11 @@ export default function About() {
         <div className={about_style["box-line-bottom"]}>
           <div className={about_style["profiles-box"]}>
             <div className={about_style["image-wraper"]}>
-            <Link href={`https://twitter.com/BogdanTodorow`}>
+            <Link href={portfolio.socials.twitter}>
              {showImage("/images/main/socials/twitter.png")}
              </Link>
-             <Link href={`https://www.linkedin.com/in/bogdan-todorow/`}>
-              {ShowImage("/images/main/socials/linkedin.png")}
+             <Link href={portfolio.socials.linkedin}>
+              {showImage("/images/main/socials/linkedin.png")}
               </Link>
             </div>
             {descriptionAndLink("STAY WITH ME", "Profiles", "contact")}
