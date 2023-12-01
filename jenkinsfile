@@ -1,56 +1,74 @@
+// pipeline {
+//     agent any
+//     tools {
+//         nodejs 'node installer 16.20' // Specify the desired Node.js version
+//     }
+//     stages {
+//         stage('kill process'){
+//             steps {
+//                 nodejs('node installer 16.20') {
+//                     sh 'kill $(lsof -t -i :3000)'
+//                 }
+//             }
+//         }
+//         stage('Check PATH') {
+//             steps {
+//                 script {
+//                     // echo "PATH: ${env.PATH}  "
+//                     echo "PATH:${sudo_psw}"
+//                 }
+//             }
+//         }
+//         stage('Build') {
+//             steps {
+//                 nodejs('node installer 16.20') {
+//                     sh 'npm install'
+//                     sh 'npm run build'
+//                 }
+//             }
+//         }
+//         stage('Test') {
+//             steps {
+//                 echo 'Testing..'
+//             }
+//         }
+//         stage('Deploy') {
+//             steps {
+//                 echo 'Deploying....'
+//             }
+//         }
+//         stage('Run'){
+//             steps {
+//                 // echo 'Running...${sudo-psw}'
+//                  nodejs('node installer 16.20') {
+//                     // sh ' npm start -p 80'
+//                     sh ' npm start '
+//                     // sh ' sudo -S npm start'
+//                     // sh "sudo ${sudo_psw}"
+//                     // echo "Sudo Password: ${sudo_psw}"
+//                     // sh "echo ${sudo_psw} | sudo -S npm start"
+
+
+//                  }
+//             }
+//         }
+//     }
+// }
+
 pipeline {
-    agent any
-    tools {
-        nodejs 'node installer 16.20' // Specify the desired Node.js version
-    }
+    agent { dockerfile true }
     stages {
-        // stage('kill process'){
-        //     steps {
-        //         nodejs('node installer 16.20') {
-        //             sh 'kill $(lsof -t -i :3000)'
-        //         }
-        //     }
-        // }
-        stage('Check PATH') {
+        stage('build') {
             steps {
-                script {
-                    // echo "PATH: ${env.PATH}  "
-                    echo "PATH:${sudo_psw}"
-                }
+                echo 'building...'
+                app = docker.build("portfolio-image")
             }
         }
-        stage('Build') {
-            steps {
-                nodejs('node installer 16.20') {
-                    sh 'npm install'
-                    sh 'npm run build'
-                }
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
-        stage('Run'){
-            steps {
-                // echo 'Running...${sudo-psw}'
-                 nodejs('node installer 16.20') {
-                    // sh ' npm start -p 80'
-                    sh ' npm start '
-                    // sh ' sudo -S npm start'
-                    // sh "sudo ${sudo_psw}"
-                    // echo "Sudo Password: ${sudo_psw}"
-                    // sh "echo ${sudo_psw} | sudo -S npm start"
 
-
-                 }
-            }
+        stage('deploy') {
+            echo 'docker scripts ;]...'
+            sh "docker container rm -f portfolio-container || true"
+            sh "docker run -d -p 3000:3000 --name portfolio-container portfolio-image"
         }
     }
 }
