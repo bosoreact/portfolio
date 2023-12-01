@@ -56,12 +56,12 @@
 // }
 
 pipeline {
-    agent { dockerfile true }
+    agent any
     stages {
         stage('build') {
             steps {
                 echo 'building...'
-                app = docker.build("portfolio-image")
+                docker.build("portfolio-image")
             }
         }
 
