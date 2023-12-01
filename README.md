@@ -13,22 +13,23 @@ pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ 
+npm run build creat production in build folder
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# To customize your profile info
+1. create portfolio.tsx in /public/personal_data/
+2. copy object portfolio from portfolio_default.tsx 
+3. the app will use portfolio.tsx as primary source
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# To customize you work
+1. create ```my_work.tsx ```in /public/personal_data/
+2. copy object "MyWork" from ```my_work_default.tsx``` to ```my_work.tsx```
+3. keep the same pattern to add more data
 
-## Learn More
+# To customize your profile image 
+1. open public/images/profile
+2. add your photo and name it ```photo.png```
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# To add your CV
+1. open public/personal_data/
+2. add your CV and name it ```my_cv.pdf``` 
