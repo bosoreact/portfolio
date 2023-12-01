@@ -62,9 +62,7 @@ pipeline {
             steps {
                 echo 'building...'
 
-                script {
-                    docker.build("portfolio-image")
-                }
+                sh "docker build -t portfolio-image ."
             }
         }
 
