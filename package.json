@@ -2,10 +2,11 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 80",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 3000",
     "lint": "next lint"
   },
   "dependencies": {
